@@ -1,0 +1,116 @@
+
+
+article {
+	.story-header {
+		position: relative;
+		margin-bottom: -20px;
+		.title {
+			font-weight: 900;
+			line-height: 1.2;
+			font-size: 42px;
+			padding: 30px 100px 0 100px;
+			letter-spacing: -1px;
+		}
+		.sub-title {
+			padding: 0 100px;
+			font-size: 20px;
+			margin: 0 0 20px 0;
+		}
+		.meta {
+				font-size: 14px;
+				a {
+					color: @darkgrey;
+					line-height: 32px;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+				img {
+					width: 32px;
+					height: 32px;
+					-webkit-border-radius: 100%;
+					-moz-border-radius: 100%;
+					border-radius: 100%;
+					margin-right: 10px;
+					margin-top: -5px;
+				}
+		}
+	}
+	.story-content {
+		p {
+			font-size: 16px;
+			line-height: 1.6;
+			font-family: @body-font;
+			margin: 30px 100px 30px 100px;
+			img {
+			float: left;
+			margin: 30px 30px 30px 0;
+			}
+		}	
+		blockquote {
+			p {
+				margin: 0 60px 40px 60px;
+				font-weight: bold;
+				font-style: italic;
+				font-size: 22px;
+				line-height: 26px;
+				padding: 0;
+				color: @darkgrey;
+			}
+		}
+		.article-aside {
+			float: right;
+			width: 300px;
+			margin: 35px 80px 10px 40px;
+			position: relative;
+			transition: .3s;
+			p {
+				margin: 0;
+				font-size: 12px;
+				padding: 5px 10px 5px 50px;
+				position: absolute;
+				bottom: -1px;
+				width: 100%;
+				background: rgba(0, 0, 0, 0.7);
+				color: #FFF;
+				font-weight: bold;
+				font-family: @primary-font;
+				-webkit-font-smoothing: antialiased;
+				text-align: right;
+				line-height: 13px;
+				z-index: 1;
+			}
+			.video-src {
+			}
+		}
+	}		
+}
+
+
+
+.youtube-cover:after {
+	background: url('../img/youtube-play.png') center center no-repeat;
+	position: absolute;
+	content: '';
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+}
+
+.youtube-cover:hover:after {
+	background: url('../img/youtube-play-hover.png') center center no-repeat;
+}
+
+
+.slideshow {
+	height: 459px;
+	width: 100%;
+	position: relative;
+}
+
+aside.sidebar {
+	.news-feed {
+		height: 100%;
+	}
+}

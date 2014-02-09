@@ -1,0 +1,71 @@
+/*------------------------------------------------------------------
+[Sidebar Stylesheet]
+
+Project:	USA Rugby
+Version:	2.0
+
+1. Sidebar
+2. Menu Level 1
+3. Menu Level 2
+4. Fixed Element
+
+--------------------------------------------------------------------*/
+
+/* 1. Sidebar  -----------------------------------------------------*/
+
+.sidebar {
+	padding: 0;
+	background: @sidebar;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		&:after {
+			content: '';
+			height: 4px;
+			width: 100%;
+			background: #202329;
+			border-bottom: 1px solid #2D343D;
+			border-top: 1px solid #000;
+			position: absolute;
+			bottom: -4px;
+		}
+	}
+}
+
+/* 2. Menu Level 1 --------------------------------------------------*/
+
+.menu > li > a {
+	display: block;
+	font-size: 14px;
+	position: relative;
+	color: #BBC0C9;
+	line-height: 50px;
+	padding-left: 30px;
+    border-bottom: 1px solid #212425;
+	background: @sidebar;
+}
+
+/* 3. Menu Level 2 --------------------------------------------------*/
+
+.menu ul li a {
+	height: 40px;
+	display: block;
+	position: relative;
+	color: #FFF;
+	padding-left: 40px;
+	line-height: 40px;
+	font-size: 12px;
+	background: #253447;
+}
+
+
+.sub-menu {
+	display: none;
+}
+
+/* 3. Fixed Element --------------------------------------------------*/
+
+.menu.fixed {
+	 width: 250px; top: 0px;
+}

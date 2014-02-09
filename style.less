@@ -1,0 +1,102 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:	USA Rugby
+Version:	2.0
+
+1. Imports
+2. Fonts
+3. Colors
+4. Shadows
+5. Utilities
+6. Layout
+
+--------------------------------------------------------------------*/
+
+/* 1. Imports  -----------------------------------------------------*/
+
+//vendor
+@import "less/vendor/foundation.less";
+@import "less/vendor/font-awesome.less";
+@import "less/vendor/jquery.fancybox.less";
+@import "less/vendor/slider.less";
+@import "less/vendor/mobile-menu.less";
+
+//unique
+@import "less/header.less";
+@import "less/home.less";
+@import "less/widgets.less";
+@import "less/article.less";
+@import "less/page.less";
+@import "less/sidebar.less";
+@import "less/responsive.less";
+
+
+/* 2. Fonts  ------------------------------------------------------*/
+
+@body-font: "source-sans-pro";
+@narrow-font: "refrigerator-deluxe";
+@primary-font: "source-sans-pro";
+
+a {
+	text-decoration: none;
+}
+
+/* 3. Colors ------------------------------------------------------*/
+
+@primary-font-color: #444;
+@lightgrey: #F9F9F9;
+@midgrey: #DDD;
+@darkgrey: #555;
+@darkblue: #012141;
+@red: #D82731;
+@sidebar: #1c2939;
+
+/* 4. Shadows -----------------------------------------------------*/
+
+@box-shadow-light: 0 1px 3px #CCC;
+@box-shadow-medium: 0 0 10px 0 rgba(0,0,0,.3);
+@box-shadow-heavy: 0 0 30px 0  rgba(0, 0, 0, 0.8);
+
+
+/* 5. Utilities -----------------------------------------------------*/
+
+.fixed { position: fixed;}
+
+/* 6. Layout -----------------------------------------------------*/
+
+body {
+	font-family: @primary-font;
+	color: @darkgrey;
+	background: #F9F9F9 url('../img/background.jpg') center top no-repeat;
+}
+
+#page {
+	max-width: 2000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+main {
+	background: @sidebar;
+	min-height: 1200px;
+	box-shadow: @box-shadow-medium;
+}
+
+#content {
+	position: relative;
+	background: #FFF;
+	padding-left: 0;
+	padding-right: 0;
+	min-height: 1200px;
+	z-index: 1;
+	position: relative;
+}
+
+#menu-main-menu, header, .sidebar, .menu-club-menu-container, #content, .entry-header, .entry-content, #page-content, .mobile-menu, #content, .page-header {
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden; /* Chrome and Safari */
+    -moz-backface-visibility:hidden; /* Firefox */
+    -ms-backface-visibility:hidden; /* Internet Explorer 10+ */
+}
+

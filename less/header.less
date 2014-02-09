@@ -1,0 +1,134 @@
+/*------------------------------------------------------------------
+[Header Stylesheet]
+
+Project:	USA Rugby
+Version:	2.0
+
+1. Header
+2. Toolbar
+3. Register
+4. Branding
+5. Navigation
+
+-------------------------------------------------------------------*/
+
+
+/* 1. Header ------------------------------------------------------*/
+
+header {
+	.header-container {
+		max-width: 1022px;
+		margin: 0 auto;
+		position: relative;
+	}
+}
+
+/* 2. Toolbar ----------------------------------------------------*/
+
+#toolbar {
+	height: 35px;
+	ul {
+		li {
+			float: right;
+			a {
+			font-size: 12px;
+			color: #B4B9BD;
+			font-weight: bold;
+			line-height: 35px;
+			-webkit-font-smoothing:antialiased;
+			}
+		}
+	}
+}
+
+/* 3. Register -----------------------------------------------------*/
+
+#register {
+	height: 35px;
+	position: relative;
+	a {
+		position: absolute;
+		right: 30px;
+		top: 20px;
+		background: @red;
+		color: #FFF;
+		padding: 10px 20px;
+		font-size: 13px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		-webkit-font-smoothing:antialiased;
+	}
+}
+
+/* 4. Branding --------------------------------------------------*/
+
+#branding {
+	float: left;
+	position: absolute;
+	top: -90px;
+	left: -10px;
+	z-index: 4;
+	h1 {
+		padding: 0;
+		font-size: 0;
+		line-height: 80px;
+		margin: 0;
+		img {
+			height: 127px;
+		}
+	}
+}
+
+/* 5. Navigation ------------------------------------------------*/
+
+#main-navigation {
+    z-index: 1;
+    transition: all .3s ease;
+    position: relative;
+    height: 45px;
+    margin-top: 40px;
+    z-index: 3;
+    box-shadow: @box-shadow-medium;
+    background: url('../img/header-bg.png') center top no-repeat;
+    &:before {
+    	position: absolute;
+		width: 10px;
+		height: 10px;
+		left: 1px;
+		bottom: -10px;
+		content: '';
+		background: url('../img/nav-left.png');
+    }
+      &:after {
+    	position: absolute;
+		width: 10px;
+		height: 10px;
+		right: 1px;
+		bottom: -10px;
+		content: '';
+		background: url('../img/nav-right.png');
+    }
+	ul {
+		margin: 0;
+		float: right;
+		li {
+			margin: 0;
+			-webkit-transition: all 0.2s ease-out;
+			padding: 0 36px 0 8px;
+			background: url('http://www.arsenal.com/assets/images/structure/blue-ribbon-a.png') right center no-repeat;
+			&:last-child {
+				background: transparent;
+				padding-right: 30px;
+			}
+		}
+	}
+	a {
+		color: #FFF;
+		font-size: 16px;
+		font-family: @narrow-font;
+		line-height: 45px;
+		text-transform: uppercase;
+		-webkit-font-smoothing:antialiased;
+		font-weight: bold;
+	}
+ }
