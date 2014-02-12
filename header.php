@@ -16,7 +16,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <!-- Type Kit -->
-<script type="text/javascript" src="//use.typekit.net/duy5rgp.js"></script>
+<script type="text/javascript" src="//use.typekit.net/wtk8eul.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 
@@ -32,35 +32,24 @@
 </div>
 <div id="page-content">
 <header>
-	<div id="toolbar">
-		<ul class="inline-list header-container show-for-large-up">
-			<li><a href="#"><i style="line-height: 35px;" class="fa fa-caret-down"> </i> More</a></li>
-			<li><a href="#"><i style="line-height: 35px;" class="fa fa-facebook"> </i> 40,141 Likes</a></li>
-			<li><a href="#"><i style="line-height: 35px;" class="fa fa-twitter"> </i> 21,241 Followers</a></li>
-		</ul>
-	</div>
 
-	<div id="register" class="header-container show-for-large-up">
-		<a>Join USA Rugby <i style="padding-left: 5px;" class="fa fa-chevron-circle-right"></i></a>
-	</div>
-
-	<div class="header-container">
+	<div class="row">
 	
-		<h1 id="branding" class="header-container">
+		<div id="branding" class="large-4 columns">
 	  		<a href="<?php echo home_url(); ?>"> 
-	  			<img src="<?php echo get_template_directory_uri(); ?>/img/small-logo.png" data-interchange="[<?php echo get_template_directory_uri(); ?>/img/small-logo.png, (default)], [<?php echo get_template_directory_uri(); ?>/img/small-logo.png, (screen and (max-width: 568px))], [<?php echo get_template_directory_uri(); ?>/img/logo.png, (large)]">
+	  			<img src="http://localhost:8888/usarrookierugby/wp-content/themes/rookierugby/img/rookierugby-logo-web-logo-dark.png">
 	  		</a>
-	  	</h1>
+	  	</div> 
 
-		<nav id="mobile-navigation" class="hide-for-large-up">
-			<a href="#" id="open-left"><img src="<?php echo get_template_directory_uri(); ?>/img/menu-icon.png"></a>
-		</nav>
-
-		<nav id="main-navigation" class="medium.shadow show-for-large-up" role="navigation">
+		<nav id="main-navigation" class="large-8 columns show-for-large-up" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'inline-list') ); ?>
 		</nav>
-	
+
 	</div>
+
+	<nav id="mobile-navigation" class="hide-for-large-up">
+			<a href="#" id="open-left"><img src="<?php echo get_template_directory_uri(); ?>/img/menu-icon.png"></a>
+		</nav>
 
 </header>
 

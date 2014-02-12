@@ -66,15 +66,15 @@ function rookie_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Hero', 'rookie' ),
 		'id'            => 'hero',
-		'before_widget' => '<div id="hero">',
+		'before_widget' => '<div class="row">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="hide">',
 		'after_title'   => '</h2>',
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Club Sidebar', 'rookie' ),
-		'id'            => 'club-side-bar',
+		'name'          => __( 'Top-A', 'rookie' ),
+		'id'            => 'top-a',
 		'before_widget' => '<div>',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="hide">',

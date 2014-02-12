@@ -34,9 +34,9 @@ Version:	2.0
 
 /* 2. Fonts  ------------------------------------------------------*/
 
-@body-font: "source-sans-pro";
-@narrow-font: "refrigerator-deluxe";
-@primary-font: "source-sans-pro";
+@body-font:"proxima-nova";
+@narrow-font: "proxima-nova";
+@primary-font: "proxima-nova";
 
 a {
 	text-decoration: none;
@@ -62,25 +62,45 @@ a {
 /* 5. Utilities -----------------------------------------------------*/
 
 .fixed { position: fixed;}
+.btn {
+	border-radius: 5px;
+	padding: 10px 30px;
+	letter-spacing: 1px;
+	font-size: 16px;
+	color: #FFF;
+	background: #3CA1F6;
+	-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	-o-transition: 300ms;
+	transition: 300ms;
+	&:hover {
+		background: #3CA1F6;
+	}
+}
 
 /* 6. Layout -----------------------------------------------------*/
 
 body {
 	font-family: @primary-font;
 	color: @darkgrey;
-	background: #F9F9F9 url('../img/background.jpg') center top no-repeat;
+	background: url('../img/background.jpg') center top repeat;
 }
 
-#page {
-	max-width: 2000px;
+#page-content {
+	max-width: 1200px;
 	margin: 0 auto;
 	position: relative;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(0, 0, 0, 0.15), 0 4px 30px rgba(0, 0, 0, 0.15);
+	background: #FFF;
 }
 
 main {
-	background: @sidebar;
 	min-height: 1200px;
 	box-shadow: @box-shadow-medium;
+}
+
+.home main {
+	box-shadow: none;
 }
 
 #content {

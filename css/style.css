@@ -3562,7 +3562,7 @@ th.hide-for-touch {
 }
 .rsContent .rsGCaption h1 {
   color: #FFF;
-  font-family: "source-sans-pro";
+  font-family: "proxima-nova";
   font-weight: bold;
   text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px;
   margin-bottom: 0px;
@@ -3570,7 +3570,7 @@ th.hide-for-touch {
   line-height: 54px;
 }
 .rsContent .rsGCaption p {
-  font-family: "source-sans-pro";
+  font-family: "proxima-nova";
   font-size: 22px;
   margin: 0 0 10px 0;
   line-height: 30px;
@@ -4408,24 +4408,15 @@ Version:	2.0
 
 -------------------------------------------------------------------*/
 /* 1. Header ------------------------------------------------------*/
+header {
+  background: #FFF;
+  border-top: 3px solid #EB0042;
+  background: linear-gradient(to bottom, #f9f9f9, #f0f0f0);
+}
 header .header-container {
-  max-width: 1022px;
   margin: 0 auto;
   position: relative;
-}
-/* 2. Toolbar ----------------------------------------------------*/
-#toolbar {
-  height: 35px;
-}
-#toolbar ul li {
-  float: right;
-}
-#toolbar ul li a {
-  font-size: 12px;
-  color: #B4B9BD;
-  font-weight: bold;
-  line-height: 35px;
-  -webkit-font-smoothing: antialiased;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
 }
 /* 3. Register -----------------------------------------------------*/
 #register {
@@ -4447,10 +4438,9 @@ header .header-container {
 /* 4. Branding --------------------------------------------------*/
 #branding {
   float: left;
-  position: absolute;
-  top: -90px;
-  left: -10px;
   z-index: 4;
+  width: 270px;
+  margin-top: 8px;
 }
 #branding h1 {
   padding: 0;
@@ -4466,52 +4456,31 @@ header .header-container {
   z-index: 1;
   transition: all .3s ease;
   position: relative;
-  height: 45px;
-  margin-top: 40px;
+  height: 55px;
   z-index: 3;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  background: url('../img/header-bg.png') center top no-repeat;
-}
-#main-navigation:before {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  left: 1px;
-  bottom: -10px;
-  content: '';
-  background: url('../img/nav-left.png');
-}
-#main-navigation:after {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  right: 1px;
-  bottom: -10px;
-  content: '';
-  background: url('../img/nav-right.png');
 }
 #main-navigation ul {
   margin: 0;
   float: right;
+  border-right: 1px solid #FFF;
+  border-left: 1px solid #DFDFDF;
 }
 #main-navigation ul li {
   margin: 0;
   -webkit-transition: all 0.2s ease-out;
-  padding: 0 36px 0 8px;
-  background: url('http://www.arsenal.com/assets/images/structure/blue-ribbon-a.png') right center no-repeat;
 }
 #main-navigation ul li:last-child {
   background: transparent;
-  padding-right: 30px;
 }
 #main-navigation a {
-  color: #FFF;
-  font-size: 16px;
-  font-family: "refrigerator-deluxe";
-  line-height: 45px;
+  color: #555;
+  font-size: 12px;
+  line-height: 55px;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
-  font-weight: bold;
+  border-left: 1px solid #FFF;
+  border-right: 1px solid #DFDFDF;
+  padding: 0 20px;
 }
 /*------------------------------------------------------------------
 [Home Stylesheet]
@@ -4524,6 +4493,106 @@ Version:	2.0
 3. Sidebar
 
 -------------------------------------------------------------------*/
+#hero {
+  height: 550px;
+  background: url('http://localhost:8888/usarrookierugby/wp-content/themes/rookierugby/img/home-leader.jpg') center top no-repeat;
+}
+.intro {
+  margin-top: 170px;
+  margin-left: 20px;
+  z-index: 1;
+  position: relative;
+}
+.intro h3 {
+  color: #FFF;
+  font-size: 42px;
+  line-height: 48px;
+  margin: 0;
+  font-weight: bold;
+  width: 550px;
+  margin-left: 10px;
+}
+.intro p {
+  font-size: 20px;
+  line-height: 26px;
+  margin: 10px 0;
+  color: #FFF;
+  width: 400px;
+  margin-left: 10px;
+}
+.intro .action {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.intro .action a.flat-btn {
+  margin-top: 10px;
+}
+#roles {
+  margin-top: -40px;
+  margin-bottom: 80px;
+}
+#roles .circle img {
+  border-radius: 500px;
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  border: 5px solid #FFF;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+#roles a h3 {
+  text-align: center;
+  margin: 10px 0 5px 0;
+  line-height: 24px;
+  color: #536270;
+  font-size: 20px;
+}
+#roles p {
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+  color: #536270;
+}
+#about {
+  background: url('../img/divider.jpg') center top no-repeat;
+}
+#about .small-9.columns {
+  padding-left: 0;
+}
+#about .image {
+  width: 500px;
+  margin-left: -115px;
+}
+#about h1 {
+  font-size: 56px;
+  color: #536270;
+  font-weight: 100;
+  letter-spacing: -1px;
+  text-align: center;
+}
+#about h1 span {
+  font-weight: 700;
+}
+#about li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+#about li img {
+  float: left;
+  height: 50px;
+  margin-right: 20px;
+}
+#about li h3 {
+  margin: 0;
+}
+#about li p {
+  font-size: 12px;
+  line-height: 16px;
+}
+#about li .fa {
+  color: #3CA1F6;
+}
 /*------------------------------------------------------------------
 [Widget Stylesheet]
 
@@ -4577,7 +4646,7 @@ Version:	2.0
   text-transform: uppercase;
   font-weight: bold;
   color: #012141;
-  font-family: "source-sans-pro";
+  font-family: "proxima-nova";
   -webkit-font-smoothing: antialiased;
   margin-top: 6px;
 }
@@ -4637,7 +4706,7 @@ Version:	2.0
 }
 .row.news .featured-post h3 a {
   font-weight: bold;
-  font-family: "refrigerator-deluxe";
+  font-family: "proxima-nova";
   font-size: 22px;
   color: #444444;
   padding: 0;
@@ -4680,7 +4749,7 @@ Version:	2.0
 }
 .news .recent-posts .post .article-copy h3 a {
   font-weight: bold;
-  font-family: "refrigerator-deluxe";
+  font-family: "proxima-nova";
   -webkit-font-smoothing: antialiased;
   font-size: 18px;
   color: #444444;
@@ -4740,7 +4809,7 @@ article .story-header .meta img {
 article .story-content p {
   font-size: 16px;
   line-height: 1.6;
-  font-family: "source-sans-pro";
+  font-family: "proxima-nova";
   margin: 30px 100px 30px 100px;
 }
 article .story-content p img {
@@ -4773,7 +4842,7 @@ article .story-content .article-aside p {
   background: rgba(0, 0, 0, 0.7);
   color: #FFF;
   font-weight: bold;
-  font-family: "source-sans-pro";
+  font-family: "proxima-nova";
   -webkit-font-smoothing: antialiased;
   text-align: right;
   line-height: 13px;
@@ -4825,7 +4894,7 @@ Version:	2.0
   color: #FFF;
   margin: 0;
   padding-left: 30px;
-  font-family: "refrigerator-deluxe";
+  font-family: "proxima-nova";
 }
 .content-wrapper {
   background: #FFF;
@@ -4850,7 +4919,7 @@ Version:	2.0
 #content p {
   font-size: 16px;
   line-height: 1.6;
-  font-family: "source-sans-pro";
+  font-family: "proxima-nova";
   margin: 30px 100px 30px 100px;
 }
 #content img {
@@ -5034,21 +5103,40 @@ a {
 .fixed {
   position: fixed;
 }
+.btn {
+  border-radius: 5px;
+  padding: 10px 30px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  color: #FFF;
+  background: #3CA1F6;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+.btn:hover {
+  background: #3CA1F6;
+}
 /* 6. Layout -----------------------------------------------------*/
 body {
-  font-family: "source-sans-pro";
+  font-family: "proxima-nova";
   color: #555555;
-  background: #f9f9f9 url('../img/background.jpg') center top no-repeat;
+  background: url('../img/background.jpg') center top repeat;
 }
-#page {
-  max-width: 2000px;
+#page-content {
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(0, 0, 0, 0.15), 0 4px 30px rgba(0, 0, 0, 0.15);
+  background: #FFF;
 }
 main {
-  background: #1c2939;
   min-height: 1200px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+.home main {
+  box-shadow: none;
 }
 #content {
   background: #FFF;

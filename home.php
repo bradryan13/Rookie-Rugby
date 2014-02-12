@@ -6,44 +6,88 @@
 
 get_header(); ?>
 
-<div id="hero" class="row">
+<div id="hero">
 	<?php if ( ! dynamic_sidebar( 'hero' ) ) : ?>
+	<?php endif; ?>
+</div>
+
+<div class="row" id="roles">
+	<?php if ( ! dynamic_sidebar( 'top-a' ) ) : ?>
 	<?php endif; ?>
 </div>
 
 <main>
 
-	<section id="latest-news" class="content-area row">
+	<section id="about" class="content-area row">
+		
+		<h1>Get started with <span>rugby.</span></h1>
 
-		<div class="large-9 columns news-area">
+		<div class="large-4 columns">
+			<div class="image"><img src="wp-content/themes/rookie/img/box.jpg"></div>
+		</div>
+		
+		<div class="large-4 columns">
+			<ul>
 
-			<header class="widget-header row">
-					<div class="inner-wrapper">
-
-	  				<div class="medium-10 columns">
-			  			<h2 class="widget-title">Latest News</h2> 
+				<li class="row"> 
+					<div class="small-3 columns">
+						<i class="fa fa-dribbble fa-2x"></i>
+						</div>
+					<div class="small-9 columns">
+						<h3>Play with Flags</h3>
+						<p>Bring Rookie Rugby to your local orgnization. Bring Rookie Rugby to your local orgnization.</p>
 					</div>
+				</li>
 
-			  		<div class="medium-2 columns">
+				<li class="row"> 
+					<div class="small-3 columns"><i class="fa fa-dribbble fa-2x"></i></div>
+					<div class="small-9 columns">
+						<h3>Play with Flags</h3>
+						<p>Bring Rookie Rugby to your local orgnization. Bring Rookie Rugby to your local orgnization.</p>
 					</div>
+				</li>
 
-				</div>
-			</header>
-
-
-			<div class="news row">
-
-				<div class="medium-6 columns featured-post">
-					<?php if ( ! dynamic_sidebar( 'main-top-left' ) ) : ?>
-					<?php endif; ?>
-				</div>
-
-				<div class="medium-6 columns recent-posts">
-					<?php if ( ! dynamic_sidebar( 'main-top-right' ) ) : ?>
-					<?php endif; ?>
-				</div>
+				<li class="row"> 
+					<div class="small-3 columns"><i class="fa fa-dribbble fa-2x"></i></div>
+					<div class="small-9 columns">
+						<h3>Play with Flags</h3>
+						<p>Bring Rookie Rugby to your local orgnization. Bring Rookie Rugby to your local orgnization.</p>
+					</div>
+				</li>
 				
-			</div>
+			</ul>
+		</div>
+
+		<div class="large-4 columns">
+			<ul data-clearing>
+
+				<li class="row"> 
+					<div class="small-3 columns"><i class="fa fa-dribbble fa-2x"></i></div>
+					<div class="small-9 columns">
+						<h3>Play with Flags</h3>
+						<p>Bring Rookie Rugby to your local orgnization. Bring Rookie Rugby to your local orgnization.</p>
+					</div>
+				</li>
+
+				<li class="row"> 
+					<div class="small-3 columns"><i class="fa fa-dribbble fa-2x"></i></div>
+					<div class="small-9 columns">
+						<h3>Play with Flags</h3>
+						<p>Bring Rookie Rugby to your local orgnization. Bring Rookie Rugby to your local orgnization.</p>
+					</div>
+				</li>
+
+				<li class="row"> 
+					<div class="small-3 columns"><i class="fa fa-dribbble fa-2x"></i></div>
+					<div class="small-9 columns">
+						<h3>Play with Flags</h3>
+						<p>Bring Rookie Rugby to your local orgnization. Bring Rookie Rugby to your local orgnization.</p>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+
 
 	</section> 
 
