@@ -46,21 +46,26 @@ jQuery(document).ready(function ($) {
       snapper.close();
     });
 
+    $(window).stellar({ 
+        horizontalScrolling: false
+    });
 
-	//enable fitvids.
-    jQuery('.video').fitVids();
 
-	//enable foundation.
-	$(document).foundation();
+
+	// //enable fitvids.
+ //    jQuery('.video').fitVids();
+
+	// //enable foundation.
+	// $(document).foundation();
 		
 
-	//enable Fancybox
-	$(".fancybox").fancybox({
-        padding : 0,
-        openEffect : 'elastic',
-        closeEffect : 'elastic',
-        iframe: { preload: false }
-    });
+	// //enable Fancybox
+	// $(".fancybox").fancybox({
+ //        padding : 0,
+ //        openEffect : 'elastic',
+ //        closeEffect : 'elastic',
+ //        iframe: { preload: false }
+ //    });
 
             //Fix side-menu
 
@@ -76,7 +81,7 @@ jQuery(document).ready(function ($) {
 
  	//menu Menu Functionality 
  	
- 	$( ".menu li a" ).addClass( "ajax" );
+ 	// $( " a" ).addClass( "ajax" );
 
 
     // // get width of li

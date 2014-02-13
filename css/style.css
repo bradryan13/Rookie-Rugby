@@ -3551,792 +3551,6 @@ th.hide-for-touch {
   
   }
 }
-.rsContent .rsGCaption {
-  position: absolute;
-  bottom: 10px;
-  width: 80%;
-  margin-left: 10%;
-  margin-bottom: 20px;
-  z-index: 1;
-  text-align: left;
-}
-.rsContent .rsGCaption h1 {
-  color: #FFF;
-  font-family: "proxima-nova";
-  font-weight: bold;
-  text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px;
-  margin-bottom: 0px;
-  font-size: 42px;
-  line-height: 54px;
-}
-.rsContent .rsGCaption p {
-  font-family: "proxima-nova";
-  font-size: 22px;
-  margin: 0 0 10px 0;
-  line-height: 30px;
-  text-indent: 35px;
-  position: relative;
-  text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 1px;
-  color: #FFF;
-}
-.rsContent .rsGCaption p:before {
-  height: 4px;
-  width: 25px;
-  background: #d82731;
-  position: absolute;
-  top: 12px;
-  left: 0px;
-  content: '';
-}
-.rsContent .rsGCaption a {
-  color: #FFF;
-  font-size: 14px;
-}
-.rsContent .bottom-mask {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 30%, rgba(10, 20, 40, 0.7) 100%);
-  position: absolute;
-  height: 40%;
-  bottom: 0px;
-  width: 100%;
-  z-index: 0;
-}
-.rsUni {
-  background: transparent;
-}
-.rsThumbsVer {
-  max-height: 495px;
-  background: #012140;
-  color: #FFF;
-  box-shadow: inset 8px 0 30px -4px rgba(0, 0, 0, 0.25);
-}
-.rsThumbsContainer {
-  margin-bottom: 20px;
-}
-.rsThumb {
-  padding: 20px;
-}
-.rsUni .rsTmb {
-  font-size: 15px;
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-  margin: 0;
-  padding: 0;
-  line-height: 20px;
-  color: #FFF;
-}
-.rsUni .rsTmb.tabDescription {
-  font-size: 13px;
-  text-transform: none;
-  letter-spacing: 0;
-  font-weight: bold;
-  line-height: 16px;
-  z-index: 1;
-  color: #B4B9BD;
-  -webkit-font-smoothing: antialiased;
-}
-.rsUni .rsThumb.rsNavSelected {
-  background: #0B2E50;
-  box-shadow: inset 4px 0 10px -2px rgba(0, 0, 0, 0.2);
-}
-/***************
-*
-*  6. Play/close video button
-*
-****************/
-.rsUni .rsPlayBtn {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
-  width: 64px;
-  height: 64px;
-  margin-left: -32px;
-  margin-top: -32px;
-  cursor: pointer;
-}
-.rsUni .rsPlayBtnIcon {
-  width: 64px;
-  display: block;
-  height: 64px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  transition: .3s;
-  background: url('.../img/rs-universal.png') no-repeat 0 -32px;
-  background-color: #383838;
-  background-color: rgba(0, 0, 0, 0.75);
-  *background-color: #383838;
-}
-.rsUni .rsPlayBtn:hover .rsPlayBtnIcon {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-.rsUni .rsBtnCenterer {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 20px;
-  height: 20px;
-}
-.rsUni .rsCloseVideoBtn {
-  right: 0;
-  top: 0;
-  width: 44px;
-  height: 44px;
-  z-index: 500;
-  position: absolute;
-  cursor: pointer;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-}
-.rsUni .rsCloseVideoBtn.rsiOSBtn {
-  top: -38px;
-  right: -6px;
-}
-.rsUni .rsCloseVideoIcn {
-  margin: 6px;
-  width: 32px;
-  height: 32px;
-  background: url('.../img/rs-universal.png') -64px 0;
-  background-color: #383838;
-  background-color: rgba(0, 0, 0, 0.75);
-  *background-color: #383838;
-}
-.rsUni .rsCloseVideoIcn:hover {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-/***************
-*
-*  7. Preloader
-*
-****************/
-.rsUni .rsPreloader {
-  width: 20px;
-  height: 20px;
-  background-image: url('../img/preloader-white.gif');
-  left: 50%;
-  top: 50%;
-  margin-left: -10px;
-  margin-top: -10px;
-}
-/******************************
-*
-*  RoyalSlider Universal Skin
-*
-*    1. Arrows 
-*    2. Bullets
-*    3. Thumbnails
-*    4. Tabs
-*    5. Fullscreen button
-*    6. Play/close video button
-*    7. Preloader
-*    8. Caption
-*    
-*  Sprite: 'rs-universal.png'
-*  Feel free to edit anything
-*  If you don't some part - just delete it
-* 
-******************************/
-/* Background */
-.rsUni,
-.rsUni .rsOverflow,
-.rsUni .rsSlide,
-.rsUni .rsVideoFrameHolder,
-.rsUni .rsThumbs {
-  color: #FFF;
-}
-/***************
-*
-*  1. Arrows
-*
-****************/
-.rsUni .rsArrow {
-  height: 100%;
-  width: 60px;
-  position: absolute;
-  display: block;
-  cursor: pointer;
-  z-index: 21;
-}
-.rsUni.rsVer .rsArrow {
-  width: 100%;
-  height: 60px;
-}
-.rsUni.rsVer .rsArrowLeft {
-  top: 0;
-  left: 0;
-}
-.rsUni.rsVer .rsArrowRight {
-  bottom: 0;
-  left: 0;
-}
-.rsUni .rsArrowIcn {
-  width: 32px;
-  height: 32px;
-  top: 50%;
-  left: 50%;
-  margin-top: -16px;
-  margin-left: -16px;
-  position: absolute;
-  cursor: pointer;
-  background: url('.../img/rs-universal.png');
-  opacity: 0.5;
-  border-radius: 2px;
-}
-.rsUni .rsArrow:hover .rsArrowIcn {
-  opacity: 1;
-}
-.rsUni.rsVer .rsArrowLeft .rsArrowIcn {
-  background-position: -96px -32px;
-}
-.rsUni.rsVer .rsArrowRight .rsArrowIcn {
-  background-position: -96px -64px;
-}
-.rsUni .rsArrowDisabled .rsArrowIcn {
-  opacity: .1 !important;
-  filter: alpha(opacity=20);
-  *display: none;
-}
-/***************
-*
-*  3. Thumbnails
-*
-****************/
-.rsUni .rsThumbsVer {
-  width: 96px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  max-height: 460px;
-}
-.rsUni.rsWithThumbsVer .rsThumbsContainer {
-  position: relative;
-  width: 100%;
-}
-.rsUni .rsThumb {
-  float: left;
-  overflow: hidden;
-  width: 96px;
-  height: 72px;
-  border-bottom: 1px solid #001830;
-  border-top: 1px solid #112B44;
-}
-.rsUni .rsThumb img {
-  width: 100%;
-  height: 100%;
-}
-.rsUni .rsThumb.rsNavSelected img {
-  opacity: 0.7;
-  filter: alpha(opacity=30);
-}
-.rsUni .rsThumb.rsNavSelected .thumbIco {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border: 2px solid #FFF;
-  border: 2px solid rgba(255, 255, 255, 0.9);
-  -webkit-backface-visibility: hidden;
-}
-.rsUni .rsTmb {
-  display: block;
-}
-/* Thumbnails arrow icons */
-.rsUni .rsThumbsArrow {
-  height: 100%;
-  width: 20px;
-  position: absolute;
-  display: block;
-  cursor: pointer;
-  z-index: 21;
-}
-.rsUni.rsWithThumbsVer .rsThumbsArrow {
-  width: 100%;
-  height: 20px;
-  background: linear-gradient(to bottom, #005791 0%, #004b79 100%);
-}
-.rsUni.rsWithThumbsVer .rsThumbsArrowLeft {
-  top: 0;
-  left: 0;
-}
-.rsUni.rsWithThumbsVer .rsThumbsArrowRight {
-  bottom: 0;
-  left: 0;
-}
-.rsUni .rsThumbsArrowIcn {
-  width: 16px;
-  height: 16px;
-  top: 50%;
-  left: 50%;
-  margin-top: -8px;
-  margin-left: -8px;
-  position: absolute;
-  cursor: pointer;
-  background: url('../img/rs-universal.png') transparent;
-}
-.rsUni.rsWithThumbsVer .rsThumbsArrowLeft .rsThumbsArrowIcn {
-  background-position: -144px -32px;
-}
-.rsUni.rsWithThumbsVer .rsThumbsArrowRight .rsThumbsArrowIcn {
-  background-position: -144px -48px;
-}
-.rsUni .rsThumbsArrowDisabled {
-  display: none !important;
-}
-/* Thumbnails resizing on smaller screens */
-@media screen and (min-width: 0px) and (max-width: 800px) {
-  .rsUni .rsThumb {
-    width: 59px;
-    height: 44px;
-  }
-  .rsUni .rsThumbsVer {
-    width: 59px;
-  }
-}
-/***************
-*
-*  6. Play/close video button
-*
-****************/
-.rsUni .rsPlayBtn {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
-  width: 64px;
-  height: 64px;
-  margin-left: -32px;
-  margin-top: -32px;
-  cursor: pointer;
-}
-.rsUni .rsPlayBtnIcon {
-  width: 64px;
-  display: block;
-  height: 64px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  transition: .3s;
-  background: url('../img/rs-universal.png') no-repeat 0 -32px;
-  background-color: #383838;
-  background-color: rgba(0, 0, 0, 0.75);
-  *background-color: #383838;
-}
-.rsUni .rsPlayBtn:hover .rsPlayBtnIcon {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-.rsUni .rsBtnCenterer {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 20px;
-  height: 20px;
-}
-.rsUni .rsCloseVideoBtn {
-  right: 0;
-  top: 0;
-  width: 44px;
-  height: 44px;
-  z-index: 500;
-  position: absolute;
-  cursor: pointer;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-}
-.rsUni .rsCloseVideoBtn.rsiOSBtn {
-  top: -38px;
-  right: -6px;
-}
-.rsUni .rsCloseVideoIcn {
-  margin: 6px;
-  width: 32px;
-  height: 32px;
-  background: url('../img/rs-universal.png') -64px 0;
-  background-color: #383838;
-  background-color: rgba(0, 0, 0, 0.75);
-  *background-color: #383838;
-}
-.rsUni .rsCloseVideoIcn:hover {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-.rsVideoContainer {
-  position: relative;
-  z-index: 0;
-}
-/* v1.0.5 WordPress version */
-/* Core RS CSS file. 95% of time you shouldn't change anything here. */
-.royalSlider {
-  width: 600px;
-  height: 400px;
-  position: relative;
-  direction: ltr;
-}
-.royalSlider > * {
-  float: left;
-}
-.rsWebkit3d .rsSlide {
-  -webkit-transform: translateZ(0);
-}
-.royalSlider > .rsContent,
-.royalSlider > .rsSlideRoot {
-  visibility: hidden;
-}
-.rsWebkit3d .rsSlide,
-.rsWebkit3d .rsContainer,
-.rsWebkit3d .rsThumbs,
-.rsWebkit3d .rsPreloader,
-.rsWebkit3d img,
-.rsWebkit3d .rsOverflow,
-.rsWebkit3d .rsBtnCenterer,
-.rsWebkit3d .rsAbsoluteEl,
-.rsWebkit3d .rsABlock,
-.rsWebkit3d .rsLink,
-.rsWebkit3d .rsContent,
-.rsWebkit3d .rsBtnCenterer {
-  -webkit-backface-visibility: hidden;
-}
-.rsFade.rsWebkit3d .rsSlide,
-.rsFade.rsWebkit3d .rsContent,
-.rsFade.rsWebkit3d img,
-.rsFade.rsWebkit3d .rsContainer {
-  -webkit-transform: none;
-}
-.rsOverflow {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  float: left;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-.rsVisibleNearbyWrap {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  left: 0;
-  top: 0;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-.rsVisibleNearbyWrap .rsOverflow {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.rsContainer {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-.rsArrow,
-.rsThumbsArrow {
-  cursor: pointer;
-}
-.rsThumb {
-  float: left;
-  position: relative;
-}
-.rsArrow,
-.rsNav,
-.rsThumbsArrow {
-  opacity: 1;
-  -webkit-transition: opacity 0.3s linear;
-  -moz-transition: opacity 0.3s linear;
-  -o-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-}
-.rsHidden {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: visibility 0s linear 0.3s,opacity 0.3s linear;
-  -moz-transition: visibility 0s linear 0.3s,opacity 0.3s linear;
-  -o-transition: visibility 0s linear 0.3s,opacity 0.3s linear;
-  transition: visibility 0s linear 0.3s,opacity 0.3s linear;
-}
-.rsGCaption {
-  width: 100%;
-  float: left;
-  text-align: center;
-  z-index: 90;
-}
-/* Fullscreen options, very important ^^ */
-.royalSlider.rsFullscreen {
-  position: fixed !important;
-  height: auto !important;
-  width: auto !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  z-index: 2147483647 !important;
-  top: 0 !important;
-  left: 0 !important;
-  bottom: 0 !important;
-  right: 0 !important;
-}
-.royalSlider .rsSlide.rsFakePreloader {
-  opacity: 1 !important;
-  -webkit-transition: 0s;
-  -moz-transition: 0s;
-  -o-transition: 0s;
-  transition: 0s;
-  display: none;
-}
-.rsSlide {
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: block;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-}
-.royalSlider.rsAutoHeight,
-.rsAutoHeight .rsSlide {
-  height: auto !important;
-}
-.rsContent {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.rsAutoHeight .rsContent {
-  position: relative;
-  height: auto;
-}
-.rsPreloader {
-  position: absolute;
-  z-index: 0;
-}
-.rsNav {
-  -moz-user-select: -moz-none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-.rsNav {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
-.rsNavItem {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.25);
-}
-.rsThumbs {
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  float: left;
-  z-index: 22;
-}
-.rsTabs {
-  float: left;
-  background: none !important;
-}
-.rsTabs,
-.rsThumbs {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-.rsVideoContainer {
-  /*left: 0;
-	top: 0;
-	position: absolute;*/
-
-  /*width: 100%;
-	height: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-	float: left;*/
-
-  width: auto;
-  height: auto;
-  line-height: 0;
-  position: relative;
-}
-.rsVideoFrameHolder {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: #141414;
-  opacity: 0;
-  -webkit-transition: .3s;
-}
-.rsVideoFrameHolder.rsVideoActive {
-  opacity: 1;
-}
-.rsVideoContainer iframe,
-.rsVideoContainer video,
-.rsVideoContainer embed,
-.rsVideoContainer .rsVideoObj {
-  position: absolute;
-  z-index: 50;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-/* ios controls over video bug, shifting video */
-.rsVideoContainer.rsIOSVideo iframe,
-.rsVideoContainer.rsIOSVideo video,
-.rsVideoContainer.rsIOSVideo embed {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-right: 44px;
-}
-.rsABlock,
-.rsSBlock {
-  left: 0;
-  top: 0;
-  position: absolute;
-  z-index: 15;
-}
-img.rsImg {
-  max-width: none;
-}
-.grab-cursor {
-  cursor: url(grab.png) 8 8, move;
-}
-.grabbing-cursor {
-  cursor: url(grabbing.png) 8 8, move;
-}
-.rsNoDrag {
-  cursor: auto;
-}
-a.rsLink {
-  left: 0;
-  top: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: block;
-  z-index: 20;
-  background: url(blank.gif);
-  -webkit-backface-visibility: hidden;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.abBlackBox {
-  color: #FFF;
-  background: #000;
-  background: rgba(0, 0, 0, 0.75);
-  padding: 15px;
-}
-.abWhiteBox {
-  color: #000;
-  background: #FFF;
-  background: rgba(255, 255, 255, 0.75);
-  padding: 15px;
-}
-.abTextAlignCenter {
-  text-align: center;
-}
-/***************
-*
-*  1. Arrows
-*
-****************/
-.rsDefault .rsArrow {
-  height: 100%;
-  width: 44px;
-  position: absolute;
-  display: block;
-  cursor: pointer;
-  z-index: 21;
-}
-.rsDefault.rsVer .rsArrow {
-  width: 100%;
-  height: 44px;
-}
-.rsDefault.rsVer .rsArrowLeft {
-  top: 0;
-  left: 0;
-}
-.rsDefault.rsVer .rsArrowRight {
-  bottom: 0;
-  left: 0;
-}
-.rsDefault.rsHor .rsArrowLeft {
-  left: 0;
-  top: 0;
-}
-.rsDefault.rsHor .rsArrowRight {
-  right: 0;
-  top: 0;
-}
-.rsDefault .rsArrowIcn {
-  width: 32px;
-  height: 32px;
-  top: 50%;
-  left: 50%;
-  margin-top: -16px;
-  margin-left: -16px;
-  position: absolute;
-  cursor: pointer;
-  background: url('../img/rs-default.png');
-  background-color: #000;
-  background-color: rgba(0, 0, 0, 0.75);
-  *background-color: #000;
-  border-radius: 2px;
-}
-.rsDefault .rsArrowIcn:hover {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-.rsDefault.rsHor .rsArrowLeft .rsArrowIcn {
-  background-position: -64px -32px;
-}
-.rsDefault.rsHor .rsArrowRight .rsArrowIcn {
-  background-position: -64px -64px;
-}
-.rsDefault.rsVer .rsArrowLeft .rsArrowIcn {
-  background-position: -96px -32px;
-}
-.rsDefault.rsVer .rsArrowRight .rsArrowIcn {
-  background-position: -96px -64px;
-}
-.rsDefault .rsArrowDisabled .rsArrowIcn {
-  opacity: .2;
-  filter: alpha(opacity=20);
-  *display: none;
-}
-/***************
-*
-*  2. Bullets
-*
-****************/
-.rsDefault .rsBullets {
-  position: absolute;
-  z-index: 35;
-  left: 0;
-  bottom: 10px;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 8px;
-  overflow: hidden;
-}
-.rsDefault .rsBullet {
-  width: 12px;
-  height: 16px;
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-  padding: 6px 5px 6px;
-}
-.rsDefault .rsBullet span {
-  display: block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #777;
-  background: rgba(255, 255, 255, 0.5);
-}
-.rsDefault .rsBullet.rsNavSelected span {
-  background-color: #FFF;
-}
 .snap-drawers {
   position: absolute;
   top: 0;
@@ -4410,8 +3624,8 @@ Version:	2.0
 /* 1. Header ------------------------------------------------------*/
 header {
   background: #FFF;
-  border-top: 3px solid #EB0042;
-  background: linear-gradient(to bottom, #f9f9f9, #f0f0f0);
+  border-radius: 6px;
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
 }
 header .header-container {
   margin: 0 auto;
@@ -4439,31 +3653,27 @@ header .header-container {
 #branding {
   float: left;
   z-index: 4;
-  width: 270px;
-  margin-top: 8px;
+  width: 260px;
+  height: 70px;
+  margin-left: -60px;
+  padding-right: 30px;
+  margin-right: 30px;
+  border-right: 1px solid #EEE;
 }
-#branding h1 {
-  padding: 0;
-  font-size: 0;
-  line-height: 80px;
-  margin: 0;
-}
-#branding h1 img {
-  height: 127px;
+#branding img {
+  margin-top: 16px;
 }
 /* 5. Navigation ------------------------------------------------*/
 #main-navigation {
   z-index: 1;
   transition: all .3s ease;
   position: relative;
-  height: 55px;
+  height: 70px;
   z-index: 3;
 }
 #main-navigation ul {
   margin: 0;
-  float: right;
-  border-right: 1px solid #FFF;
-  border-left: 1px solid #DFDFDF;
+  float: left;
 }
 #main-navigation ul li {
   margin: 0;
@@ -4473,14 +3683,13 @@ header .header-container {
   background: transparent;
 }
 #main-navigation a {
-  color: #555;
-  font-size: 12px;
-  line-height: 55px;
-  text-transform: uppercase;
+  color: #536270;
+  font-size: 18px;
+  line-height: 70px;
+  text-transform: lowercase;
   -webkit-font-smoothing: antialiased;
-  border-left: 1px solid #FFF;
-  border-right: 1px solid #DFDFDF;
   padding: 0 20px;
+  font-family: "futura-pt";
 }
 /*------------------------------------------------------------------
 [Home Stylesheet]
@@ -4494,30 +3703,32 @@ Version:	2.0
 
 -------------------------------------------------------------------*/
 #hero {
-  height: 550px;
-  background: url('http://localhost:8888/usarrookierugby/wp-content/themes/rookierugby/img/home-leader.jpg') center top no-repeat;
+  height: 530px;
+  background: url('../img/leader.jpg');
+  background-position: 50% 0;
 }
 .intro {
-  margin-top: 170px;
-  margin-left: 20px;
+  margin-top: 180px;
+  margin-left: -20px;
   z-index: 1;
   position: relative;
 }
 .intro h3 {
   color: #FFF;
   font-size: 42px;
-  line-height: 48px;
+  line-height: 38px;
   margin: 0;
   font-weight: bold;
   width: 550px;
   margin-left: 10px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 .intro p {
   font-size: 20px;
   line-height: 26px;
   margin: 10px 0;
   color: #FFF;
-  width: 400px;
+  width: 480px;
   margin-left: 10px;
 }
 .intro .action {
@@ -4549,7 +3760,6 @@ Version:	2.0
 }
 #roles p {
   font-size: 14px;
-  font-weight: 300;
   text-align: center;
   margin: 0;
   color: #536270;
@@ -4593,183 +3803,17 @@ Version:	2.0
 #about li .fa {
   color: #3CA1F6;
 }
-/*------------------------------------------------------------------
-[Widget Stylesheet]
-
-Project:	USA Rugby
-Version:	2.0
-
-1. Widget Header
-2. News Widget
-
--------------------------------------------------------------------*/
-/* 1. Widget Header -----------------------------------------------*/
-.widget-header {
-  display: block;
-  padding-left: 0;
+#feature {
+  height: 400px;
+  background: url('../img/feature-bg.jpg');
+  background-position: 50% 0;
 }
-.widget-header .inner-wrapper {
-  max-width: 816px;
-  height: 44px;
-  margin-left: 15px;
-  position: relative;
-  border: 1px solid #F1F1F1;
-  -moz-box-shadow: 0 1px 3px #ccc;
-  -ms-box-shadow: 0 1px 3px #ccc;
-  -webkit-box-shadow: 0 1px 3px #CCC;
-  box-shadow: 0 1px 3px #CCC;
-  background: transparent;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjZmNmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmM2YzZjMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, #fcfcfc 0%, #f3f3f3 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, #f3f3f3));
-  background: -webkit-linear-gradient(top, #fcfcfc 0%, #f3f3f3 100%);
-  background: -o-linear-gradient(top, #fcfcfc 0%, #f3f3f3 100%);
-  background: -ms-linear-gradient(top, #fcfcfc 0%, #f3f3f3 100%);
-  background: linear-gradient(top, #fcfcfc 0%, #f3f3f3 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f3f3f3', GradientType=0);
-}
-.widget-header .inner-wrapper:before {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  left: -1px;
-  bottom: -11px;
-  content: '';
-  background: url('../img/nav-left.png');
-}
-.widget-header .fb-like {
-  margin-top: 10px;
-}
-.widget-title {
-  position: relative;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #012141;
-  font-family: "proxima-nova";
-  -webkit-font-smoothing: antialiased;
-  margin-top: 6px;
-}
-.widget-title.red-arrow {
-  padding: 8px 8px 10px 8px;
+#feature h1 {
   color: #FFF;
-  background: -webkit-linear-gradient(top, #db2a33 0%, #ce2229 100%);
+  font-size: 80px;
+  line-height: 400px;
   text-align: center;
-  position: relative;
-  font-size: 16px;
-  margin-bottom: 10px;
-  margin: 0;
-}
-.widget-title.red-arrow:after {
-  border-right: 10px solid rgba(0, 0, 0, 0);
-  border-left: 10px solid rgba(0, 0, 0, 0);
-  border-top: 10px solid #d82731;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  margin-left: -5px;
-  content: '';
-  background: transparent;
-  height: 10px;
-  width: 10px;
-}
-.widget-title:after {
-  height: 3px;
-  width: 40px;
-  background: #d82731;
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  content: '';
-}
-/* 2. News Widget ------------------------------------------------------*/
-.row.news {
-  background: #FFF;
-  box-shadow: 0 1px 3px #cccccc;
-  margin-left: 10px;
-  margin-bottom: 30px;
-  padding-top: 20px;
-}
-.row.news .featured-post .featured-wrapper {
-  padding: 10px 10px 10px 20px;
-  position: absolute;
-  left: -30px;
-}
-.row.news .featured-post .featured-wrapper:before {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  left: 20px;
-  bottom: 70px;
-  content: '';
-  background: url('../img/nav-left.png');
-}
-.row.news .featured-post h3 a {
-  font-weight: bold;
-  font-family: "proxima-nova";
-  font-size: 22px;
-  color: #444444;
-  padding: 0;
-  margin-left: 30px;
-}
-.row.news .featured-post p {
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-  text-indent: 40px;
-  position: relative;
-  margin-left: 30px;
-}
-.row.news .featured-post p:before {
-  height: 4px;
-  width: 30px;
-  background: #d82731;
-  position: absolute;
-  top: 9px;
-  left: 0px;
-  content: '';
-}
-.news .recent-posts .post {
-  padding: 10px 10px 10px 0;
-  background: #FFF;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  border-bottom: 1px solid #f9f9f9;
-}
-.news .recent-posts .post:last-child {
-  border-bottom: 0;
-}
-.news .recent-posts .post .article-image {
-  padding: 0 0 0 10px;
-}
-.news .recent-posts .post .article-copy h3 {
-  padding: 0;
-  margin: 0;
-  line-height: 20px;
-}
-.news .recent-posts .post .article-copy h3 a {
-  font-weight: bold;
-  font-family: "proxima-nova";
-  -webkit-font-smoothing: antialiased;
-  font-size: 18px;
-  color: #444444;
-}
-.news .recent-posts .post .article-copy p {
-  padding: 0;
-  margin: 0;
-  font-size: 12px;
-  text-indent: 25px;
-  position: relative;
-  line-height: 16px;
-}
-.news .recent-posts .post .article-copy p:before {
-  height: 2px;
-  width: 15px;
-  background: #d82731;
-  position: absolute;
-  top: 7px;
-  left: 0px;
-  content: '';
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
 article .story-header {
   position: relative;
@@ -4883,32 +3927,31 @@ Version:	2.0
 -------------------------------------------------------------------*/
 /* 1. Header ------------------------------------------------------*/
 .page-header {
-  background: url('../img/header-bg.jpg') center top no-repeat;
-  min-height: 180px;
-  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.8);
+  background: #5687B8;
+  min-height: 140px;
   position: relative;
+  max-width: 100%;
 }
 .page-header h1 {
-  line-height: 180px;
-  font-size: 80px;
+  line-height: 140px;
+  font-size: 50px;
   color: #FFF;
   margin: 0;
   padding-left: 30px;
-  font-family: "proxima-nova";
+  font-weight: normal;
+}
+main.row {
+  max-width: 100%;
 }
 .content-wrapper {
   background: #FFF;
   padding: 0;
-}
-#content {
-  box-shadow: -2px -2px 8px -4px rgba(0, 0, 0, 0.5);
 }
 #content .title {
   font-size: 32px;
   height: 70px;
   line-height: 75px;
   letter-spacing: -1px;
-  background: #EEF0F3;
   margin: 0;
   padding: 0 0 0 100px;
   border-bottom: 1px solid #d6dae3;
@@ -5093,9 +4136,54 @@ Version:	2.0
     top: 18px;
   }
 }
+footer {
+  background: #182638;
+  color: #FFF;
+  min-height: 100px;
+  border-radius: 0 0 6px 6px;
+  box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.5);
+}
+footer .row {
+  margin: 0 20px;
+  max-width: 1160px;
+}
+footer .usar-logo {
+  margin-top: 30px;
+}
+footer .usar-logo img {
+  width: 240px;
+}
+footer .copyright {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 14px;
+  color: #798698;
+  line-height: 18px;
+}
+footer .social {
+  margin-top: 20px;
+}
+footer .social ul {
+  float: right;
+}
+footer .social ul li {
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  font-size: 22px;
+  padding: 15px;
+  width: 60px;
+  text-align: center;
+  margin: 0 10px 0 0;
+}
 /* 2. Fonts  ------------------------------------------------------*/
 a {
   text-decoration: none;
+}
+h1,
+h2,
+h3 {
+  font-family: "futura-pt";
 }
 /* 3. Colors ------------------------------------------------------*/
 /* 4. Shadows -----------------------------------------------------*/
@@ -5128,11 +4216,12 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(0, 0, 0, 0.15), 0 4px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(0, 0, 0, 0.15), 0 0 60px rgba(0, 0, 0, 0.2);
   background: #FFF;
+  margin: 20px auto 40px auto;
+  border-radius: 6px;
 }
 main {
-  min-height: 1200px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 .home main {

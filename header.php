@@ -35,13 +35,13 @@
 
 	<div class="row">
 	
-		<div id="branding" class="large-4 columns">
+		<div id="branding">
 	  		<a href="<?php echo home_url(); ?>"> 
-	  			<img src="http://localhost:8888/usarrookierugby/wp-content/themes/rookierugby/img/rookierugby-logo-web-logo-dark.png">
+	  			<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png">
 	  		</a>
 	  	</div> 
 
-		<nav id="main-navigation" class="large-8 columns show-for-large-up" role="navigation">
+		<nav id="main-navigation" class="show-for-large-up" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'inline-list') ); ?>
 		</nav>
 

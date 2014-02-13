@@ -17,8 +17,8 @@ Version:	2.0
 
 header {
 	background: #FFF;
-	border-top: 3px solid #EB0042;
-	background: linear-gradient(to bottom, #F9F9F9, #F0F0F0);
+	border-radius: 6px;
+	background: linear-gradient(to bottom, #FFF, #F9F9F9);
 	.header-container {
 		margin: 0 auto;
 		position: relative;
@@ -51,16 +51,14 @@ header {
 #branding {
 	float: left;
 	z-index: 4;
-	width: 270px;
-	margin-top: 8px;
-	h1 {
-		padding: 0;
-		font-size: 0;
-		line-height: 80px;
-		margin: 0;
-		img {
-			height: 127px;
-		}
+	width: 260px;
+	height: 70px;
+	margin-left: -60px;
+	padding-right: 30px;
+	margin-right: 30px;
+	border-right: 1px solid #EEE;
+	img {
+		margin-top: 16px;
 	}
 }
 
@@ -70,13 +68,13 @@ header {
     z-index: 1;
     transition: all .3s ease;
     position: relative;
-    height: 55px;
+    height: 70px;
     z-index: 3;
 	ul {
 		margin: 0;
-		float: right;
-		border-right: 1px solid #FFF;
-		border-left: 1px solid #DFDFDF;
+		float: left;
+		// border-right: 1px solid #FFF;
+		// border-left: 1px solid #DFDFDF;
 		li {
 			margin: 0;
 			-webkit-transition: all 0.2s ease-out;
@@ -86,13 +84,14 @@ header {
 		}
 	}
 	a {
-		color: #555;
-		font-size: 12px;
-		line-height: 55px;
-		text-transform: uppercase;
+		color: #536270;
+		font-size: 18px;
+		line-height: 70px;
+		text-transform: lowercase;
 		-webkit-font-smoothing:antialiased;
-		border-left: 1px solid #FFF;
-		border-right: 1px solid #DFDFDF;
+		// border-left: 1px solid #FFF;
+		// border-right: 1px solid #DFDFDF;
 		padding: 0 20px;
+		font-family: @secondary-font;
 	}
 }

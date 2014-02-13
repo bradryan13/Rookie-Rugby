@@ -30,16 +30,20 @@ Version:	2.0
 @import "less/page.less";
 @import "less/sidebar.less";
 @import "less/responsive.less";
+@import "less/footer.less";
 
 
 /* 2. Fonts  ------------------------------------------------------*/
 
 @body-font:"proxima-nova";
-@narrow-font: "proxima-nova";
-@primary-font: "proxima-nova";
+@secondary-font: "futura-pt";
 
 a {
 	text-decoration: none;
+}
+
+h1, h2, h3 {
+	font-family: @secondary-font;
 }
 
 /* 3. Colors ------------------------------------------------------*/
@@ -81,7 +85,7 @@ a {
 /* 6. Layout -----------------------------------------------------*/
 
 body {
-	font-family: @primary-font;
+	font-family: @body-font;
 	color: @darkgrey;
 	background: url('../img/background.jpg') center top repeat;
 }
@@ -90,12 +94,13 @@ body {
 	max-width: 1200px;
 	margin: 0 auto;
 	position: relative;
-	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(0, 0, 0, 0.15), 0 4px 30px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(0, 0, 0, 0.15), 0 0 60px rgba(0, 0, 0, .2);
 	background: #FFF;
+	margin: 20px auto 40px auto;
+	border-radius: 6px;
 }
 
 main {
-	min-height: 1200px;
 	box-shadow: @box-shadow-medium;
 }
 

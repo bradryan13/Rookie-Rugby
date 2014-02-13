@@ -15,7 +15,7 @@ get_header(); ?>
 <div class="row page-header">
 
 	<div class="large-8 columns">
-		<h1>Club Rugby</h1>
+		<h1>Teachers</h1>
 	</div>
 
 	<div class="large-4 columns">
@@ -24,10 +24,10 @@ get_header(); ?>
 </div>
 
 <main class="row">
-	
+
 	<aside class="large-3 medium-3 columns sidebar" data-snap-ignore="true">
 
-		<?php if ( ! dynamic_sidebar( 'club-side-bar' ) ) : ?>
+		<?php if ( ! dynamic_sidebar( 'teacher-sidebar' ) ) : ?>
 		<?php endif; ?>	
 
 	</aside>

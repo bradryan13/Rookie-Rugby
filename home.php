@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-<div id="hero">
+<div id="hero" data-stellar-background-ratio="0.6">
 	<?php if ( ! dynamic_sidebar( 'hero' ) ) : ?>
 	<?php endif; ?>
 </div>
@@ -90,6 +90,10 @@ get_header(); ?>
 
 
 	</section> 
+
+	<section id="feature" data-stellar-background-ratio="0.7"> 
+		<h1>Rugby for all.</h1>
+	</section>
 
 </main>
 
