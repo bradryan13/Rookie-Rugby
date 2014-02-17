@@ -20,5 +20,5 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-	<?php edit_post_link( __( 'Edit', 'USAWCR' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+	<?php edit_post_link( __( 'Edit', 'USAWCR' ), '<div class="entry-meta"><span class="edit-link">', '</span></div>' ); ?>
 </article><!-- #post-## -->

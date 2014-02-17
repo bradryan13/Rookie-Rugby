@@ -70,7 +70,7 @@ jQuery(document).ready(function ($) {
             //Fix side-menu
 
         $(window).bind('scroll', function() {
-            if ($(window).scrollTop() > 332) {
+            if ($(window).scrollTop() > 340) {
                 $('.menu').addClass('fixed');
             }
             else {
@@ -81,7 +81,15 @@ jQuery(document).ready(function ($) {
 
  	//menu Menu Functionality 
  	
- 	// $( " a" ).addClass( "ajax" );
+ 	$( ".menu a" ).addClass( "ajax" );
+
+    $( "ul.sub-menu" ).attr( 'id', 'drop' );
+
+    $( "ul.sub-menu" ).addClass( "f-dropdown content" );
+
+    $( "ul.sub-menu" ).attr( 'data-dropdown-content', '' ); 
+
+    $( ".menu-item-has-children a" ).attr( 'data-dropdown', 'drop' );
 
 
     // // get width of li

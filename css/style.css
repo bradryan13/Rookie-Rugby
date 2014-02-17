@@ -3568,7 +3568,7 @@ th.hide-for-touch {
   left: auto;
   width: 265px;
   height: auto;
-  background: #1c2939;
+  background: #eeeeee;
   background-color: #0C0C0C;
   z-index: 0;
   overflow: auto;
@@ -3596,7 +3596,7 @@ th.hide-for-touch {
   line-height: 50px;
   padding-left: 30px;
   border-bottom: 1px solid #212425;
-  background: #1c2939;
+  background: #eeeeee;
 }
 .mobile-menu ul li a {
   height: 40px;
@@ -3690,6 +3690,22 @@ header .header-container {
   -webkit-font-smoothing: antialiased;
   padding: 0 20px;
   font-family: "futura-pt";
+}
+#main-navigation .current-menu-item {
+  position: relative;
+}
+#main-navigation .current-menu-item:before {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #3f74a9;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -8px;
+  z-index: 1;
 }
 /*------------------------------------------------------------------
 [Home Stylesheet]
@@ -3927,14 +3943,14 @@ Version:	2.0
 -------------------------------------------------------------------*/
 /* 1. Header ------------------------------------------------------*/
 .page-header {
-  background: #5687B8;
-  min-height: 140px;
+  background: url('../img/teacher-header.jpg');
+  min-height: 250px;
   position: relative;
   max-width: 100%;
 }
 .page-header h1 {
-  line-height: 140px;
-  font-size: 50px;
+  line-height: 250px;
+  font-size: 80px;
   color: #FFF;
   margin: 0;
   padding-left: 30px;
@@ -3948,13 +3964,13 @@ main.row {
   padding: 0;
 }
 #content .title {
-  font-size: 32px;
-  height: 70px;
-  line-height: 75px;
+  font-size: 40px;
+  height: 104px;
+  line-height: 104px;
   letter-spacing: -1px;
   margin: 0;
   padding: 0 0 0 100px;
-  border-bottom: 1px solid #d6dae3;
+  border-bottom: 1px solid #EEE;
   color: #001830;
   position: relative;
   font-weight: 300;
@@ -3998,33 +4014,25 @@ Version:	2.0
 /* 1. Sidebar  -----------------------------------------------------*/
 .sidebar {
   padding: 0;
-  background: #1c2939;
+  background: #eeeeee;
 }
 .sidebar ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-.sidebar ul:after {
-  content: '';
-  height: 4px;
-  width: 100%;
-  background: #202329;
-  border-bottom: 1px solid #2D343D;
-  border-top: 1px solid #000;
-  position: absolute;
-  bottom: -4px;
+  border-bottom: 1px solid #ffffff;
 }
 /* 2. Menu Level 1 --------------------------------------------------*/
 .menu > li > a {
   display: block;
   font-size: 14px;
   position: relative;
-  color: #BBC0C9;
+  color: #536270;
   line-height: 50px;
   padding-left: 30px;
-  border-bottom: 1px solid #212425;
-  background: #1c2939;
+  border-bottom: 1px solid #E1E1E1;
+  border-top: 1px solid #FFF;
+  background: #eeeeee;
 }
 /* 3. Menu Level 2 --------------------------------------------------*/
 .menu ul li a {
@@ -4035,14 +4043,14 @@ Version:	2.0
   padding-left: 40px;
   line-height: 40px;
   font-size: 12px;
-  background: #253447;
+  background: #98A1B2;
 }
 .sub-menu {
   display: none;
 }
 /* 3. Fixed Element --------------------------------------------------*/
 .menu.fixed {
-  width: 250px;
+  width: 300px;
   top: 0px;
 }
 @media only screen and (min-width: 64em) {
@@ -4052,7 +4060,7 @@ Version:	2.0
 }
 @media only screen and (max-width: 64em) {
   body {
-    background: #1c2939;
+    background: #eeeeee;
   }
   .page-header,
   main.row {
@@ -4141,7 +4149,7 @@ footer {
   color: #FFF;
   min-height: 100px;
   border-radius: 0 0 6px 6px;
-  box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.15);
 }
 footer .row {
   margin: 0 20px;
@@ -4169,7 +4177,7 @@ footer .social ul {
 footer .social ul li {
   border-radius: 5px;
   background: rgba(0, 0, 0, 0);
-  border: 2px solid rgba(255, 255, 255, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.15);
   font-size: 22px;
   padding: 15px;
   width: 60px;
@@ -4223,9 +4231,11 @@ body {
 }
 main {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  background: #EEE;
 }
 .home main {
   box-shadow: none;
+  background: transparent;
 }
 #content {
   background: #FFF;
