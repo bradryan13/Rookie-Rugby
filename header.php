@@ -27,6 +27,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div class="container">
 
 <div class="mobile-menu">
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'my-menu') ); ?>
@@ -34,7 +35,6 @@
 <div id="page-content">
 <header>
 
-	<div class="row">
 	
 		<div id="branding">
 	  		<a href="<?php echo home_url(); ?>"> 
@@ -44,9 +44,9 @@
 
 		<nav id="main-navigation" class="show-for-large-up" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'inline-list') ); ?>
+			<div id="login-reg"><a href="#" id="login">Login </a> • <a href="#" id="register">Register</a></div>
 		</nav>
 
-	</div>
 
 	<nav id="mobile-navigation" class="hide-for-large-up">
 			<a href="#" id="open-left"><img src="<?php echo get_template_directory_uri(); ?>/img/menu-icon.png"></a>

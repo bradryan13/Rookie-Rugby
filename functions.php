@@ -42,8 +42,12 @@ function rookie_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' 	 => __( 'Primary Menu', 'rookie' ), 
-		'club' 	 => __( 'Club Menu', 'rookie' ), 
+		'primary' 			 => __( 'Primary Menu', 'rookie' ), 
+		'teachers' 	 		 => __( 'Teachers Menu', 'rookie' ), 
+		'coaches' 	 		 => __( 'Coaches Menu', 'rookie' ), 
+		'organizations' 	 => __( 'Organizations Menu', 'rookie' ), 
+		'players' 			 => __( 'Players Menu', 'rookie' ), 
+
 	) );
 
 
@@ -91,31 +95,41 @@ function rookie_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Main Top Left', 'rookie' ),
-		'id'            => 'main-top-left',
-		'before_widget' => '<div id="main-top-left">',
+		'name'          => __( 'Forums Sidebar', 'rookie' ),
+		'id'            => 'forums-sidbar',
+		'before_widget' => '<div>',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="hide">',
 		'after_title'   => '</h2>',
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Main Top Right', 'rookie' ),
-		'id'            => 'main-top-right',
-		'before_widget' => '<div id="main-top-right">',
+		'name'          => __( 'Organizations Sidebar', 'rookie' ),
+		'id'            => 'organizations-sidbar',
+		'before_widget' => '<div>',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="hide">',
 		'after_title'   => '</h2>',
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Sidebar Right', 'rookie' ),
-		'id'            => 'sidebar-right',
-		'before_widget' => '<div id="sidebar-right">',
+		'name'          => __( 'Coaches Sidebar', 'rookie' ),
+		'id'            => 'coaches-sidbar',
+		'before_widget' => '<div>',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="hide">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Players Sidebar', 'rookie' ),
+		'id'            => 'players-sidbar',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="hide">',
+		'after_title'   => '</h2>',
+	) );
+
 }
 add_action( 'widgets_init', 'rookie_widgets_init' );
 
@@ -129,7 +143,11 @@ function rookie_scripts() {
 	wp_enqueue_script( 'rookie-customjs', get_template_directory_uri() . '/js/custom.js', array(), '20120206', true );
 	wp_enqueue_script( 'rookie-mobile-menu', get_template_directory_uri() . '/js/mobile-menu.js', array(), '20120206', true );
 	wp_enqueue_script( 'rookie-drop-menu', get_template_directory_uri() . '/js/jquery.dropdown.js', array(), '20120206', true );
-
+	wp_enqueue_script( 'rookie-modern', get_template_directory_uri() . '/js/modernizr.custom.js', array(), '20120206', true );
+	wp_enqueue_script( 'rookie-classie', get_template_directory_uri() . '/js/classie.js', array(), '20120206', true );
+	wp_enqueue_script( 'rookie-cookiejs', get_template_directory_uri() . '/js/cookie.js', array(), '20120206', true );
+	wp_enqueue_script( 'rookie-isotope', get_template_directory_uri() . '/js/jquery.isotope.min.js', array(), '20120206', true );
+	wp_enqueue_script( 'rookie-modal', get_template_directory_uri() . '/js/jquery.fancybox.pack.js', array(), '20120206', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -147,7 +165,7 @@ add_image_size( 'main', 816, 459, true );
 if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
 function my_jquery_enqueue() {
    wp_deregister_script('jquery');
-   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js", false, null);
+   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js", false, null);
    wp_enqueue_script('jquery');
 }
 

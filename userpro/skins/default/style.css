@@ -1,0 +1,87 @@
+
+
+
+.overlay div.userpro {
+	background: transparent;
+	border: none;
+	color: #FFF;
+	margin-top: 100px;
+	max-width: 600px;
+}
+
+.overlay div.userpro-label label {
+	color: #FFF !important;
+}
+
+
+.overlay div.userpro-head, div.userpro-centered {
+	background: transparent;
+}
+
+.overlay div.userpro-head, div.userpro-centered {
+	border-bottom: none;
+}
+
+.overlay div.userpro-input input[type=text], div.userpro-input input[type=password], div.userpro-input textarea {
+	background: transparent !important;
+	color: #FFF !important;
+	box-shadow: none !important;
+	font-size: 40px !important;
+	line-height: 44px;
+	height: 60px !important;
+	padding: 10px !important;
+}
+ 
+.overlay div.userpro-float div.userpro-input {
+	width: 100%;
+}
+
+.overlay div.userpro-label span.userpro-field-icon {
+	background: transparent;
+	border: none;
+	color: #FFF;
+	position: absolute;
+	left: -6px;
+}
+
+.overlay div.userpro-label.iconed {
+	padding-left: 25px;
+	margin-bottom: 5px;
+}
+
+.overlay div.userpro-field {
+	margin: 30px 0 0 0;
+}
+
+
+.overlay div.userpro-section, .overlay div.userpro-section.userpro-collapsed-1 {
+	color: #FFF !important;
+	text-shadow: none !important;
+}
+
+.overlay input.userpro-button, a.userpro-button, div.userpro div.ajax-file-upload, .overlay div.userpro-submit input[type=submit].userpro-button {
+	border: none !important;
+	box-shadow: none !important;
+	background: #D82731 !important;
+	padding: 0 30px !important;
+}
+
+.overlay input.userpro-button.secondary, .overlay a.userpro-button.secondary {
+	background: #EEE !important;
+	border: none !important;
+}
+
+
+.overlay div.userpro-input input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px #477CB1 inset !important;
+	color: #FFF !important; 
+	outline-color: #FFF;
+	-webkit-text-fill-color: #FFF !important;
+}
+
+.overlay div.userpro-input input[type=text], .overlay .div.userpro-input input[type=text]:focus, .overlay div.userpro-input input[type=password]:focus, .overlay div.userpro-input textarea:focus {
+	box-shadow: none !important;
+	-webkit-box-shadow: 0 0 0px 1000px #477CB1 inset !important;
+	color: #FFF !important;
+	border: 1px solid #FFF !important;
+}

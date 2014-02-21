@@ -52,6 +52,9 @@ jQuery(document).ready(function ($) {
 
 
 
+
+
+
 	// //enable fitvids.
  //    jQuery('.video').fitVids();
 
@@ -91,19 +94,28 @@ jQuery(document).ready(function ($) {
 
     $( ".menu-item-has-children a" ).attr( 'data-dropdown', 'drop' );
 
+    //menu Dropdown
+    $( ".menu-item-type-custom a" ).attr( 'data-dropdown', 'drop2' );
+    $( ".menu-item-type-custom ul" ).attr( 'id', 'drop2' );
 
-    // // get width of li
-    // var menuWidth = $('.menu ul').outerWidth(true)
 
-    
-    // $('ul.menu').css('width', menuWidth);
+    $( "a[data-dropdown='drop2']" ).click(function(){
+        if($("header").hasClass("drop-open")) {
+            $( "header" ).removeClass( "drop-open" );
+        } else {
+            $( "header" ).addClass( "drop-open" );
+        }
+        if($(".drop-down").hasClass("drop-open")) {
+            $( ".drop-down" ).removeClass( "drop-open" );
+        } else {
+            $( ".drop-down" ).addClass( "drop-open" );
+        }
+    });
+
 
 	// Store variables
     var menu_head = $('.menu > li > a'),
         menu_body = $('.menu li > .sub-menu');
-
-    // Open the first tab on load
-	// menu_head.first().addClass('active').next().slideDown('normal');
 
     // Click function
     menu_head.on('click', function(event) {
@@ -122,4 +134,10 @@ jQuery(document).ready(function ($) {
 
 
 	});
+
+      $('.ajax-modal').fancybox({
+            padding : 0,
+        });
+
 });
+

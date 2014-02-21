@@ -21,6 +21,8 @@ Version:	2.0
 @import "less/vendor/jquery.fancybox.less";
 @import "less/vendor/slider.less";
 @import "less/vendor/mobile-menu.less";
+@import "less/vendor/overlay.less";
+
 
 //unique
 @import "less/header.less";
@@ -30,19 +32,35 @@ Version:	2.0
 @import "less/page.less";
 @import "less/sidebar.less";
 @import "less/responsive.less";
+@import "less/game-cards.less";
 @import "less/footer.less";
+@import "less/modal.less";
 
 
 /* 2. Fonts  ------------------------------------------------------*/
 
 @body-font:"proxima-nova";
-@secondary-font: "futura-pt";
+@secondary-font: 'chunkfiveroman';
+@third-font: "futura-pt";
+
+
+@font-face {
+    font-family: 'chunkfiveroman';
+    src: url('../fonts/_-webfont.eot');
+    src: url('../fonts/_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/_-webfont.woff') format('woff'),
+         url('../fonts/_-webfont.ttf') format('truetype'),
+         url('../fonts/_-webfont.svg#chunkfiveroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 a {
 	text-decoration: none;
 }
 
-h1, h2, h3 {
+h1, h2 {
 	font-family: @secondary-font;
 }
 
@@ -54,7 +72,7 @@ h1, h2, h3 {
 @darkgrey: #555;
 @darkblue: #012141;
 @red: #D82731;
-@sidebar: #EEE;
+@sidebar: #F1F0F4;
 
 /* 4. Shadows -----------------------------------------------------*/
 
@@ -94,15 +112,13 @@ body {
 	max-width: 1200px;
 	margin: 0 auto;
 	position: relative;
-	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(0, 0, 0, 0.15), 0 0 60px rgba(0, 0, 0, .2);
+	box-shadow: 0 0 50px -2px rgba(0, 0, 0, 0.3);
 	background: #FFF;
-	margin: 20px auto 40px auto;
-	border-radius: 6px;
+	margin: 0 auto;
 }
 
 main {
-	box-shadow: @box-shadow-medium;
-	background: #EEE;
+	background: @sidebar;
 }
 
 .home main {
@@ -113,11 +129,10 @@ main {
 #content {
 	position: relative;
 	background: #FFF;
-	padding-left: 0;
-	padding-right: 0;
 	min-height: 1200px;
 	z-index: 1;
 	position: relative;
+	box-shadow: -5px 0px 15px -5px rgba(0,0,0,0.4);
 }
 
 #menu-main-menu, header, .sidebar, .menu-club-menu-container, #content, .entry-header, .entry-content, #page-content, .mobile-menu, #content, .page-header {
