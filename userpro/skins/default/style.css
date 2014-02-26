@@ -1,87 +1,64 @@
-
-
-
-.overlay div.userpro {
-	background: transparent;
-	border: none;
-	color: #FFF;
-	margin-top: 100px;
-	max-width: 600px;
+div.userpro-body {
+	padding: 0 15px 15px 40px;
 }
 
-.overlay div.userpro-label label {
+#login-form {
+	width: 600px;
+}
+
+div.userpro-warning {
+	background: #D82731 !important; 
+	border-radius: 0 !important;
+	border: 0 !important;
+}
+
+div.userpro-label span.userpro-field-icon.icon-active {
+	color: #D4D4D4;
+	border-color: #D4D4D4;
+}
+
+input.userpro-button, a.userpro-button, div.userpro div.ajax-file-upload, input.userpro-button:hover, input.userpro-button.secondary:hover, input.userpro-button.secondary {
+	border-radius: 5px !important;
+	letter-spacing: 1px !important;
 	color: #FFF !important;
-}
-
-
-.overlay div.userpro-head, div.userpro-centered {
-	background: transparent;
-}
-
-.overlay div.userpro-head, div.userpro-centered {
-	border-bottom: none;
-}
-
-.overlay div.userpro-input input[type=text], div.userpro-input input[type=password], div.userpro-input textarea {
-	background: transparent !important;
-	color: #FFF !important;
+	background: #3CA1F6 !important ;
+	-webkit-transition: 300ms !important ;
+	-moz-transition: 300ms !important ;
+	-o-transition: 300ms !important;
+	transition: 300ms !important;
+	border: 0 !important;
 	box-shadow: none !important;
-	font-size: 40px !important;
-	line-height: 44px;
-	height: 60px !important;
-	padding: 10px !important;
-}
- 
-.overlay div.userpro-float div.userpro-input {
-	width: 100%;
+	letter-spacing: 0px !important;
+	height: 32px !important;
+	line-height: 32px !important;
+	font-size: 13px !important;
 }
 
-.overlay div.userpro-label span.userpro-field-icon {
-	background: transparent;
-	border: none;
-	color: #FFF;
-	position: absolute;
-	left: -6px;
-}
-
-.overlay div.userpro-label.iconed {
-	padding-left: 25px;
-	margin-bottom: 5px;
-}
-
-.overlay div.userpro-field {
-	margin: 30px 0 0 0;
-}
-
-
-.overlay div.userpro-section, .overlay div.userpro-section.userpro-collapsed-1 {
-	color: #FFF !important;
-	text-shadow: none !important;
-}
-
-.overlay input.userpro-button, a.userpro-button, div.userpro div.ajax-file-upload, .overlay div.userpro-submit input[type=submit].userpro-button {
-	border: none !important;
-	box-shadow: none !important;
-	background: #D82731 !important;
+div.userpro-submit input[type=submit].userpro-button {
 	padding: 0 30px !important;
+	height: 30px !important;
+	line-height: 30px !important;
+	font-size: 13px !important;
 }
 
-.overlay input.userpro-button.secondary, .overlay a.userpro-button.secondary {
-	background: #EEE !important;
-	border: none !important;
-}
-
-
-.overlay div.userpro-input input:-webkit-autofill {
-	-webkit-box-shadow: 0 0 0px 1000px #477CB1 inset !important;
-	color: #FFF !important; 
-	outline-color: #FFF;
-	-webkit-text-fill-color: #FFF !important;
-}
-
-.overlay div.userpro-input input[type=text], .overlay .div.userpro-input input[type=text]:focus, .overlay div.userpro-input input[type=password]:focus, .overlay div.userpro-input textarea:focus {
-	box-shadow: none !important;
-	-webkit-box-shadow: 0 0 0px 1000px #477CB1 inset !important;
+input.userpro-button:hover, div.userpro div.ajax-file-upload:hover {
+	background: #6FB3EC !important ;
+	font-size: 13px !important;
 	color: #FFF !important;
-	border: 1px solid #FFF !important;
+	border: 0 !important;
+	font-size: 13px !important;
+}
+
+input.userpro-button.secondary {
+	background: #FFF !important;
+	color: #536270 !important;
+	border: 1px solid #D8E3EC !important;
+	font-size: 13px !important;
+}
+
+input.userpro-button.secondary:hover {
+	background: #F9F9F9 !important;
+	color: #536270 !important;
+	border: 1px solid #D8E3EC !important;
+	font-size: 13px !important;
 }

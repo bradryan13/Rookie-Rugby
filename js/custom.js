@@ -137,7 +137,9 @@ jQuery(document).ready(function ($) {
 
       $('.ajax-modal').fancybox({
             padding : 0,
-           
+            openEffect: 'elastic',
+            openSpeed: 250,
+            closeEffect: 'elastic',
         });
 
 
