@@ -10,6 +10,7 @@ Version:	2.0
 4. Branding
 5. Navigation
 6. Dropdown
+7. Active Section Indicator
 
 -------------------------------------------------------------------*/
 
@@ -56,7 +57,7 @@ header {
 	height: 70px;
 	margin-left: 20px;
 	padding-right: 30px;
-	margin-right: 10px;
+	margin-right: 6px;
 	border-right: 1px solid #EEE;
 	img {
 		margin-top: 16px;
@@ -88,6 +89,22 @@ header {
 				padding: 0 23px;
 				font-family: @third-font;
 				background: url('../img/menu-div.png') right center no-repeat;
+			}
+			.current-menu-item {
+				position: relative;
+				&:after {
+					width: 0; 
+					height: 0; 
+					border-left: 8px solid transparent;
+					border-right: 8px solid transparent;
+					border-bottom: 8px solid #3f74a9;
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					margin-left: -8px;
+					z-index: 1;
+				}
 			}
 			&:last-child a {
 				background: transparent;
@@ -216,4 +233,44 @@ header #main-navigation ul.sub-menu {
 
 	}
 }
+
+/* 7. Active Section Indicator ------------------------------------------------------*/
+
+
+#main-navigation {
+.current-menu-item {
+		position: relative;
+		font-weight: bold;
+			&:after {
+			width: 0; 
+			height: 0; 
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-bottom: 8px solid #3f74a9;
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			margin-left: -8px;
+			z-index: 1;
+		}
+	}
+}
+
+.page-template-page-coaches-php #main-navigation .current-menu-item:after {
+	border-bottom: 8px solid #222;
+}
+
+.page-template-page-organizations-php #main-navigation .current-menu-item:after {
+	border-bottom: 8px solid green;
+}
+
+.page-template-page-teachers-php #main-navigation .current-menu-item:after {
+	border-bottom: 8px solid yellow;
+}
+
+.page-template-page-parents-php #main-navigation .current-menu-item:after {
+	border-bottom: 8px solid red;
+}
+
 

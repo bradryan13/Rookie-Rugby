@@ -3720,6 +3720,7 @@ Version:	2.0
 4. Branding
 5. Navigation
 6. Dropdown
+7. Active Section Indicator
 
 -------------------------------------------------------------------*/
 /* 1. Header ------------------------------------------------------*/
@@ -3758,7 +3759,7 @@ header .header-container {
   height: 70px;
   margin-left: 20px;
   padding-right: 30px;
-  margin-right: 10px;
+  margin-right: 6px;
   border-right: 1px solid #EEE;
 }
 #branding img {
@@ -3791,6 +3792,22 @@ header .header-container {
   padding: 0 23px;
   font-family: "futura-pt";
   background: url('../img/menu-div.png') right center no-repeat;
+}
+#main-navigation ul li .current-menu-item {
+  position: relative;
+}
+#main-navigation ul li .current-menu-item:after {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #3f74a9;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -8px;
+  z-index: 1;
 }
 #main-navigation ul li:last-child a {
   background: transparent;
@@ -3906,6 +3923,36 @@ header #main-navigation ul.sub-menu li a {
 }
 #main-navigation .drop-open .fa.fa-bars:before {
   content: "\f05c";
+}
+/* 7. Active Section Indicator ------------------------------------------------------*/
+#main-navigation .current-menu-item {
+  position: relative;
+  font-weight: bold;
+}
+#main-navigation .current-menu-item:after {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #3f74a9;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -8px;
+  z-index: 1;
+}
+.page-template-page-coaches-php #main-navigation .current-menu-item:after {
+  border-bottom: 8px solid #222;
+}
+.page-template-page-organizations-php #main-navigation .current-menu-item:after {
+  border-bottom: 8px solid green;
+}
+.page-template-page-teachers-php #main-navigation .current-menu-item:after {
+  border-bottom: 8px solid yellow;
+}
+.page-template-page-parents-php #main-navigation .current-menu-item:after {
+  border-bottom: 8px solid red;
 }
 /*------------------------------------------------------------------
 [Home Stylesheet]
