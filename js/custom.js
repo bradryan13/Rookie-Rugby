@@ -137,7 +137,10 @@ jQuery(document).ready(function ($) {
 
       $('.ajax-modal').fancybox({
             padding : 0,
+           
         });
+
+
 
 });
 

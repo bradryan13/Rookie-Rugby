@@ -34,7 +34,6 @@
 </div>
 <div id="page-content">
 <header>
-
 	
 		<div id="branding">
 	  		<a href="<?php echo home_url(); ?>"> 
@@ -44,7 +43,7 @@
 
 		<nav id="main-navigation" class="show-for-large-up" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'inline-list') ); ?>
-			<div id="login-reg"><a href="#" id="login">Login </a> • <a href="#" id="register">Register</a></div>
+			<div id="login-reg"><a href="#login-form" class="ajax-modal" id="login">Login </a> • <a href="#" id="register">Register</a></div>
 		</nav>
 
 
@@ -54,6 +53,10 @@
 
 </header>
 
-
+<div style="display:none">
+    <div id="login-form">
+		<?php echo do_shortcode('[userpro template=login]'); ?>
+	</div>
+</div>
 
 
