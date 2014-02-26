@@ -91,6 +91,10 @@ get_header(); ?>
 
 	</section> 
 
+	<section id="feature" data-stellar-background-ratio="0.7"> 
+		<h1>Rugby for all.</h1>
+	</section>
+
 	<section id="about" class="content-area row">
 		
 		<h1>Get started with <span>rugby.</span></h1>
@@ -164,9 +168,6 @@ get_header(); ?>
 
 	</section> 
 
-	<section id="feature" data-stellar-background-ratio="0.7"> 
-		<h1>Rugby for all.</h1>
-	</section>
 
 </main>
 

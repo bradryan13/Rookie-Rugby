@@ -18,7 +18,9 @@ $image = get_field( "image", $post_id );
 $difficulty = implode(', ', get_field('difficulty', $post_id )); 
 $principles = implode(', ', get_field('principles', $post_id ));
 $description = get_field( "description", $post_id ); 
-$card_image = get_field( "card_image", $post_id ); 
+$card_image = get_field( "card_image", $post_id );
+
+// get checkbox values
 ?>
 
 <!-- facebook script  -->
@@ -46,9 +48,9 @@ $card_image = get_field( "card_image", $post_id );
 
 <div class="meta">
 	<div class="meta-item"><span class="meta-label">Difficulty: </span><?php echo $difficulty; ?></div>	
-	<div class="meta-item"><span class="meta-label">Time: </span><?php echo $time; ?></div>
-	<div class="meta-item"><span class="meta-label">Space: </span><?php echo $space; ?></div>
-	<div class="meta-item"><span class="meta-label">Equipment: </span><?php echo $equipment; ?></div>
+	<div class="meta-item"><span class="meta-label">Suggested Time Allocation: </span><?php echo $time; ?></div>
+	<div class="meta-item"><span class="meta-label">Equipment and Space Needed: </span><?php $none = ''; if($equipment = 'none'){echo $none; echo $space;} else { echo $equipment.' '; echo $space; } ?></div>
+	<div class="meta-item"><span class="meta-label">Principles of Play: </span><?php echo $principles; ?></div>
 </div>
 
 <div class="row main-content">
@@ -75,7 +77,6 @@ $card_image = get_field( "card_image", $post_id );
 		
 		<h3>Key Skills</h3>
 		<?php echo $key_skills; ?>
-		<?php echo $principles; ?>
 
 	</div>
 

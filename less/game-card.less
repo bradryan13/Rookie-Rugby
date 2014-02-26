@@ -1,0 +1,78 @@
+/*------------------------------------------------------------------
+[Game Card Stylesheet]
+
+Project:	USA Rugby
+Version:	2.0
+
+1. Globals
+2. Modal Header
+3. Modal Body
+4. Modal Footer
+
+--------------------------------------------------------------------*/
+
+/* 1. Globals
+---------------------------------------------------------*/
+@red-border: 3px solid @red;
+
+/* End Globals ------------------------------------------*/
+
+
+/* Set Global Reference Point
+--------------------------------------------------------------------*/
+.card {
+	padding: 20px;
+	overflow: hidden;
+
+	/* 2. Modal Header ---------------------------------------------*/
+
+		.modal-header {
+			h3, div, p {
+			}
+		}
+
+	/* 3. Modal Body -----------------------------------------------*/
+
+		.modal-body {
+
+			.meta-item {
+				float: left;
+				display: inline;
+				margin: 0 10px 10px 0;
+				font-size: 12px;
+
+				.meta-label {
+					font-weight: bold;
+				}
+			}
+
+			h3 {
+				font-weight: normal;
+				font-family: @secondary-font;
+				font-size: 17px;
+				color: @red;
+			}
+
+			.row {
+				display: inline-block;
+				position: relative;
+
+				li {
+					margin: 15px 0;
+					font-size: 14px;
+				}
+
+				.image {
+					margin-top: 2%;
+				}
+			}
+		}
+
+	/* 4. Modal Footer ---------------------------------------------*/
+
+		.modal-footer {
+			width: 100%;
+		}
+
+/* End Global Reference Point --------------------------------------*/
+}

@@ -50,20 +50,24 @@ main.row {
 			letter-spacing: -1px;
 			margin: 0;
 			border-bottom: 1px solid #EEE;
-			color: #001830;
 			position: relative;
 			font-weight: 300;
 			padding: 0 30px;
+			font-family: @third-font;
 	}
 	p {
 		font-size: 16px;
 		line-height: 1.6;
 		font-family: @body-font;
-		padding: 10px 30px;
+		padding: 0 30px;
+		margin: 30px 0;
+		&:first-of-type {
+			margin: 0 0 30px 0;
+		}
 	}
 	img {
 	float: left;
-	margin: 30px 30px 30px 0;
+	margin: 0 30px 30px 0;
 	}
 }
 
