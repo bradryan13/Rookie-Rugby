@@ -43,7 +43,7 @@
 
 		<nav id="main-navigation" class="show-for-large-up" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'inline-list') ); ?>
-			<div id="login-reg"><a href="#login-form" class="ajax-modal" id="login">Login </a> • <a href="#" id="register">Register</a></div>
+			<div id="login-reg"><a href="#login-form" class="ajax-modal" id="login">Login • </a><a class="ajax-modal" href="#register-form" id="register">Register</a></div>
 		</nav>
 
 
@@ -56,6 +56,12 @@
 <div style="display:none">
     <div id="login-form">
 		<?php echo do_shortcode('[userpro template=login]'); ?>
+	</div>
+</div>
+
+<div style="display:none">
+    <div id="register-form">
+		<?php echo do_shortcode('[userpro template=register]'); ?>
 	</div>
 </div>
 
