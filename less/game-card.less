@@ -13,21 +13,21 @@ Version:	2.0
 
 /* 1. Globals
 ---------------------------------------------------------*/
-@red-border: 3px solid @red;
+@red-border: 1px solid @red;
 
 /* End Globals ------------------------------------------*/
 
 
 /* Set Global Reference Point
 --------------------------------------------------------------------*/
-.card {
-	padding: 20px;
+.fancybox-inner {
 	overflow: hidden;
 
 	/* 2. Modal Header ---------------------------------------------*/
 
 		.modal-header {
 			h3, div, p {
+				border: @red-border
 			}
 		}
 
@@ -39,27 +39,33 @@ Version:	2.0
 				float: left;
 				display: inline;
 				margin: 0 10px 10px 0;
-				font-size: 12px;
+				font-size: 14px;
 
 				.meta-label {
 					font-weight: bold;
 				}
 			}
 
+			.main-content {
+				border-top-width: 2px!important;
+			}
+
 			h3 {
-				font-weight: normal;
-				font-family: @secondary-font;
-				font-size: 17px;
 				color: @red;
+				font-weight: normal;
+				text-transform: uppercase;
 			}
 
 			.row {
+				border: @red-border;
+				border-left-width: 2px;
+				border-right-width: 2px;
+				margin: -0.05em auto;
 				display: inline-block;
 				position: relative;
 
 				li {
 					margin: 15px 0;
-					font-size: 14px;
 				}
 
 				.image {
@@ -72,6 +78,7 @@ Version:	2.0
 
 		.modal-footer {
 			width: 100%;
+			border-bottom-width: 2px!important;
 		}
 
 /* End Global Reference Point --------------------------------------*/

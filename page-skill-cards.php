@@ -81,13 +81,12 @@ $the_query = new WP_Query( $args );
 		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
   
      <?php if(get_field('objective')) {
-       $princples = get_field('objective'); $objective = implode (" ", $objective); 
-       $diffulties = get_field('difficulty'); $difficulty = implode (" ", $difficulty); 
+       $difficulty = get_field('difficulty'); $difficulty = implode (" ", $difficulty); 
       } 
     ?>
 
 
-		<div class="card <?php echo $difficulty; ?> <?php echo $objective; ?> ">
+		<div class="card <?php echo $difficulty; ?>">
 			<div class="image">
 				<img src="<?php the_field(card_image) ?>"/>
 			</div>

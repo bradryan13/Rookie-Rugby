@@ -4430,13 +4430,11 @@ Version:	2.0
     top: 18px;
   }
 }
-#skill-cards,
 #game-cards {
   margin: 0 auto;
   max-width: 1100px;
   min-height: 1200px;
 }
-#skill-cards .card,
 #game-cards .card {
   position: relative;
   cursor: pointer;
@@ -4447,18 +4445,15 @@ Version:	2.0
   -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
 }
-#skill-cards .card .description,
 #game-cards .card .description {
   height: 225px;
   width: 245px;
   position: absolute;
   top: 0;
 }
-#skill-cards .card .description:hover .filter,
 #game-cards .card .description:hover .filter {
   display: block;
 }
-#skill-cards .card .description .filter,
 #game-cards .card .description .filter {
   background: rgba(27, 38, 50, 0.7);
   position: absolute;
@@ -4467,7 +4462,6 @@ Version:	2.0
   height: 100%;
   display: none;
 }
-#skill-cards .card .description .filter p,
 #game-cards .card .description .filter p {
   font-size: 20px;
   line-height: 28px;
@@ -4479,46 +4473,38 @@ Version:	2.0
   border-bottom: 1px solid #FFF;
   margin: 30px 20px;
 }
-#skill-cards .card .meta p,
 #game-cards .card .meta p {
   font-size: 18px;
   width: 150px;
   padding: 5px 20px;
   line-height: 24px;
 }
-#skill-cards .card .meta .ratings,
 #game-cards .card .meta .ratings {
   position: absolute;
   bottom: 18px;
   right: 22px;
 }
-#skill-cards .card .meta .ratings .tooltip.top,
 #game-cards .card .meta .ratings .tooltip.top {
   width: 140px;
 }
-#skill-cards .card .meta .ratings img,
 #game-cards .card .meta .ratings img {
   width: 16px;
   height: 16px;
 }
-#skill-cards .card .title,
 #game-cards .card .title {
   margin: 20px 15px 0px 20px;
 }
-#skill-cards .card .title a,
 #game-cards .card .title a {
   color: #dddddd;
   font-size: 28px;
   font-weight: 200;
   line-height: 24px;
 }
-#skill-cards .card .title p,
 #game-cards .card .title p {
   font-size: 14px;
   margin: 0 0 10px 0;
   padding: 0;
 }
-#skill-cards .card .comments,
 #game-cards .card .comments {
   position: absolute;
   bottom: 10px;
@@ -5190,6 +5176,482 @@ img.mfp-img {
   padding-top: 0;
 }
 /*------------------------------------------------------------------
+[Skill Card Stylesheet]
+
+Project:	USA Rugby
+Version:	2.0
+
+1. Globals
+2. Modal Header
+3. Modal Body
+4. Modal Footer
+
+--------------------------------------------------------------------*/
+/* 1. Globals
+---------------------------------------------------------*/
+/* End Globals ------------------------------------------*/
+/* Set Global Reference Point
+--------------------------------------------------------------------*/
+.page-template-page-skill-cards-php .fancybox-inner {
+  overflow: hidden;
+  /* 2. Modal Header ---------------------------------------------*/
+
+  /* 3. Modal Body -----------------------------------------------*/
+
+  /* 4. Modal Footer ---------------------------------------------*/
+
+  /* End Global Reference Point --------------------------------------*/
+
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-header {
+  padding: 15px;
+  border-bottom: 0!important;
+  background-color: #fff!important;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-header h3,
+.page-template-page-skill-cards-php .fancybox-inner .modal-header div,
+.page-template-page-skill-cards-php .fancybox-inner .modal-header p {
+  border: 1px solid #012141;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-header .ratings {
+  border: 0;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-header .pull-right {
+  display: none;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-header h3 {
+  border-bottom-width: 0;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-header h3 img {
+  border: 1px solid #012141;
+  border-bottom: 0;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-header h3 span {
+  position: absolute;
+  left: 505px;
+  top: 145px;
+  z-index: 1;
+  font-size: 20pt;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body {
+  background-color: #fff!important;
+  border-top: 0!important;
+  padding-top: 0;
+  margin-top: -15px;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .meta {
+  border: 1px solid #012141;
+  border-width: 2px;
+  border-top: 0;
+  border-bottom-width: 0;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .meta .h-divider {
+  margin-left: 93px!important;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .group-items span {
+  padding-left: 20px;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .group-items .meta-item {
+  display: inline;
+  margin: 0 10px 10px 0;
+  font-size: 14px;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .group-items .meta-description {
+  border-top: 1px solid #012141;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .group-items .h-divider {
+  font-size: 20pt;
+  position: relative;
+  top: 5px;
+  margin-left: 44px;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .group-items:nth-child(2) p:first-child {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .meta-item {
+  display: block;
+  margin: 0 10px 10px 0;
+  font-size: 14px;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .meta-item .meta-label {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12pt;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .main-content {
+  border-top-width: 0!important;
+  border-bottom-width: 0!important;
+  margin: -1.3em auto -0.1em !important;
+  padding-top: 25px;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .main-content .large-8.columns {
+  padding-left: 0;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body h3 {
+  color: #012141;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .row {
+  border: 1px solid #012141;
+  border-top: 0;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  margin: -0.05em auto;
+  display: inline-block;
+  position: relative;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .row li {
+  margin: 15px 0;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .row .image {
+  border: 2px dashed #012141;
+  position: absolute;
+  right: .75%;
+  top: 5%;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .sub-content h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25pt;
+  margin-top: 0;
+  margin-bottom: -10px;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .sub-content .large-6 h3 {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #012141;
+  color: #fff;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .sub-content h2 + .large-6 ol {
+  border-right: 1px solid #012141;
+  margin-top: -23px;
+  margin-right: -10px;
+  margin-bottom: -10px;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-body .sub-content .large-6 + .large-6 ol {
+  border-left: 1px solid #012141;
+  margin-left: -20px;
+  margin-top: -20px;
+  margin-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 35px;
+}
+.page-template-page-skill-cards-php .fancybox-inner .modal-footer {
+  width: 100%;
+  border-bottom-width: 2px!important;
+}
+#skill-cards {
+  margin: 0 auto;
+  max-width: 1100px;
+  min-height: 1200px;
+}
+#skill-cards .card {
+  position: relative;
+  cursor: pointer;
+  height: 350px;
+  width: 245px;
+  background: #FFF;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+}
+#skill-cards .card .description {
+  height: 225px;
+  width: 245px;
+  position: absolute;
+  top: 0;
+}
+#skill-cards .card .description:hover .filter {
+  display: block;
+}
+#skill-cards .card .description .filter {
+  background: rgba(27, 38, 50, 0.7);
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+#skill-cards .card .description .filter p {
+  font-size: 20px;
+  line-height: 28px;
+  position: absolute;
+  padding: 20px;
+  color: #FFF;
+  font-weight: 200;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  margin: 30px 20px;
+}
+#skill-cards .card .meta p {
+  font-size: 18px;
+  width: 150px;
+  padding: 5px 20px;
+  line-height: 24px;
+}
+#skill-cards .card .meta .ratings {
+  position: absolute;
+  bottom: 18px;
+  right: 22px;
+}
+#skill-cards .card .meta .ratings .tooltip.top {
+  width: 140px;
+}
+#skill-cards .card .meta .ratings img {
+  width: 16px;
+  height: 16px;
+}
+#skill-cards .card .title {
+  margin: 20px 15px 0px 20px;
+}
+#skill-cards .card .title a {
+  color: #dddddd;
+  font-size: 28px;
+  font-weight: 200;
+  line-height: 24px;
+}
+#skill-cards .card .title p {
+  font-size: 14px;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#skill-cards .card .comments {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  color: #999;
+}
+#filters {
+  position: absolute;
+  top: 90px;
+  right: 80px;
+}
+/**** Isotope CSS3 transitions ****/
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  transition-property: height, width;
+}
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  transition-property: transform, opacity;
+}
+/*
+@import url('demo.css');
+@import url('common.css');
+@import url('icons.css');
+*/
+.cd-dropdown {
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -o-perspective: 800px;
+  -ms-perspective: 800px;
+  perspective: 800px;
+}
+.cd-dropdown > span {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 0%;
+  -moz-transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  -o-transition: -o-transform 0.3s;
+  -ms-transition: -ms-transform 0.3s;
+  transition: transform .3s;
+}
+.cd-dropdown,
+.cd-select {
+  position: relative;
+  width: 200px;
+  margin: 20px auto;
+  display: block;
+}
+.cd-dropdown > span {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #999;
+  font-weight: 700;
+  font-size: 16px;
+  background: #fff;
+  display: block;
+  padding: 0 50px 0 30px;
+  position: relative;
+  cursor: pointer;
+}
+.cd-dropdown > span:after {
+  content: '\25BC';
+  position: absolute;
+  right: 0px;
+  top: 0%;
+  width: 40px;
+  text-align: center;
+  font-size: 10px;
+  padding: 14px;
+  height: 100%;
+  line-height: 24px;
+  border-left: 1px solid #ddd;
+}
+.cd-dropdown.cd-active > span:after {
+  content: '\25B2';
+}
+.cd-dropdown ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: relative;
+}
+.cd-dropdown ul li {
+  display: block;
+}
+.cd-dropdown ul li span {
+  width: 100%;
+  background: #fff;
+  line-height: 45px;
+  padding: 0 30px 0 30px;
+  display: block;
+  color: #bcbcbc;
+  cursor: pointer;
+  font-weight: 700;
+}
+.cd-dropdown > span,
+.cd-dropdown ul li span {
+  -webkit-backface-visibility: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.cd-dropdown > span span[class^="icon-"],
+.cd-dropdown > span span[class*=" icon-"] {
+  padding: 0 30px 0 45px;
+}
+/* Select fallback styling */
+.cd-select {
+  border: 1px solid #ddd;
+}
+.cd-dropdown > span:active {
+  -webkit-transform: rotateX(60deg);
+  -moz-transform: rotateX(60deg);
+  -o-transform: rotateX(60deg);
+  -ms-transform: rotateX(60deg);
+  transform: rotateX(60deg);
+}
+.cd-dropdown > span,
+.cd-dropdown ul li:nth-last-child(-n+3) span {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.cd-dropdown ul {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.cd-dropdown ul li {
+  position: absolute;
+  width: 100%;
+}
+.cd-active.cd-dropdown > span {
+  color: #f8b161;
+}
+.cd-active.cd-dropdown > span,
+.cd-active.cd-dropdown ul li span {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.cd-active.cd-dropdown ul li span {
+  -webkit-transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  -ms-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+}
+.cd-active.cd-dropdown ul li span:hover {
+  background: #f8b161;
+  color: #fff;
+}
+.modal-header {
+  padding: 9px 15px;
+  border-bottom: 1px solid #eee;
+  background-color: #FFF;
+  border-top: 1px solid #DDD;
+}
+.modal-header .close {
+  margin-top: 2px;
+}
+.modal-header h3 {
+  margin: 0;
+  line-height: 30px;
+}
+.modal-body {
+  position: relative;
+  padding: 15px;
+  background-color: #FFF;
+  border-top: 1px solid #DDD;
+}
+.modal-form {
+  margin-bottom: 0;
+}
+.modal-footer {
+  padding: 14px 15px 15px;
+  margin-bottom: 0;
+  text-align: right;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: inset 0 1px 0 #ffffff;
+  -moz-box-shadow: inset 0 1px 0 #ffffff;
+  box-shadow: inset 0 1px 0 #ffffff;
+  *zoom: 1;
+}
+.modal-footer:before,
+.modal-footer:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.modal-footer:after {
+  clear: both;
+}
+.modal-footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+/*------------------------------------------------------------------
 [Game Card Stylesheet]
 
 Project:	USA Rugby
@@ -5206,8 +5668,7 @@ Version:	2.0
 /* End Globals ------------------------------------------*/
 /* Set Global Reference Point
 --------------------------------------------------------------------*/
-.card {
-  padding: 20px;
+.fancybox-inner {
   overflow: hidden;
   /* 2. Modal Header ---------------------------------------------*/
 
@@ -5218,34 +5679,45 @@ Version:	2.0
   /* End Global Reference Point --------------------------------------*/
 
 }
-.card .modal-body .meta-item {
+.fancybox-inner .modal-header h3,
+.fancybox-inner .modal-header div,
+.fancybox-inner .modal-header p {
+  border: 1px solid #e74c3c;
+}
+.fancybox-inner .modal-body .meta-item {
   float: left;
   display: inline;
   margin: 0 10px 10px 0;
-  font-size: 12px;
+  font-size: 14px;
 }
-.card .modal-body .meta-item .meta-label {
+.fancybox-inner .modal-body .meta-item .meta-label {
   font-weight: bold;
 }
-.card .modal-body h3 {
-  font-weight: normal;
-  font-family: 'chunkfiveroman';
-  font-size: 17px;
-  color: #e74c3c;
+.fancybox-inner .modal-body .main-content {
+  border-top-width: 2px!important;
 }
-.card .modal-body .row {
+.fancybox-inner .modal-body h3 {
+  color: #e74c3c;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.fancybox-inner .modal-body .row {
+  border: 1px solid #e74c3c;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  margin: -0.05em auto;
   display: inline-block;
   position: relative;
 }
-.card .modal-body .row li {
+.fancybox-inner .modal-body .row li {
   margin: 15px 0;
-  font-size: 14px;
 }
-.card .modal-body .row .image {
+.fancybox-inner .modal-body .row .image {
   margin-top: 2%;
 }
-.card .modal-footer {
+.fancybox-inner .modal-footer {
   width: 100%;
+  border-bottom-width: 2px!important;
 }
 /* 2. Fonts  ------------------------------------------------------*/
 @font-face {
