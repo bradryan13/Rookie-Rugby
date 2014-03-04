@@ -9,6 +9,9 @@ get_header(); ?>
 <div id="hero" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="0">
 	<?php if ( ! dynamic_sidebar( 'hero' ) ) : ?>
 	<?php endif; ?>
+	<div id="hero-video" class="video">
+		<iframe width="1200" id="video" height="515" src="//www.youtube.com/embed/qKK_kB8gtGM" frameborder="0" allowfullscreen></iframe>
+	</div>
 </div>
 
 <div class="row" id="roles">

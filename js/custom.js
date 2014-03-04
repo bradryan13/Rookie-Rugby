@@ -112,6 +112,16 @@ jQuery(document).ready(function ($) {
         }
     });
 
+        $( "a[data-dropdown='playvideo']" ).click(function(){
+        if($("#hero-video").hasClass("open")) {
+            $( "#hero-video" ).removeClass( "open" );
+        } else {
+            $( "#hero-video" ).addClass( "open" );
+        }
+        $("#video")[0].src += "&autoplay=1";
+        ev.preventDefault();
+    });
+
 
 	// Store variables
     var menu_head = $('.menu > li > a'),

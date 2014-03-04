@@ -3749,7 +3749,7 @@ header .header-container {
   position: absolute;
   right: 30px;
   top: 20px;
-  background: #d82731;
+  background: #e74c3c;
   color: #FFF;
   padding: 10px 20px;
   font-size: 13px;
@@ -3969,6 +3969,7 @@ Version:	2.0
 1. Hero
 2. News Area
 3. Sidebar
+4. Hero Video
 
 -------------------------------------------------------------------*/
 #hero {
@@ -4085,6 +4086,17 @@ Version:	2.0
   line-height: 400px;
   text-align: center;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+/* -------------------------------------------------------------------*/
+#hero-video {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+#hero-video.open {
+  display: block;
 }
 article .story-header {
   position: relative;
@@ -4392,7 +4404,7 @@ Version:	2.0
     width: 175px;
     top: 10px;
     box-shadow: 0;
-    border: 1px solid #d82731;
+    border: 1px solid #e74c3c;
     right: 50%;
     position: absolute;
   }
@@ -5219,7 +5231,7 @@ Version:	2.0
   font-weight: normal;
   font-family: 'chunkfiveroman';
   font-size: 17px;
-  color: #d82731;
+  color: #e74c3c;
 }
 .card .modal-body .row {
   display: inline-block;
@@ -5291,12 +5303,14 @@ main {
   box-shadow: none;
   background: transparent;
 }
+.content-wrapper {
+  box-shadow: -3px -5px 10px -3px rgba(0, 0, 0, 0.25);
+}
 #content {
   background: #FFF;
   min-height: 1200px;
   z-index: 1;
   position: relative;
-  box-shadow: -3px -5px 10px -3px rgba(0, 0, 0, 0.2);
 }
 #menu-main-menu,
 header,

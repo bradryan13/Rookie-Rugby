@@ -68,12 +68,14 @@ h1, h2 {
 /* 3. Colors ------------------------------------------------------*/
 
 @primary-font-color: #444;
-@lightgrey: #F9F9F9;
 @midgrey: #DDD;
 @darkgrey: #555;
-@darkblue: #012141;
-@red: #D82731;
 @sidebar: #F1F0F4;
+@red: #E74C3C;
+@light-grey: #ECF0F1;
+@bright-blue: #3CA1F6;
+@green-blue: #2980B9;
+@flat-blue: #2C3E50;
 @blue: #4183BA;
 
 /* 4. Shadows -----------------------------------------------------*/
@@ -128,13 +130,16 @@ main {
 	background: transparent;
 }
 
+.content-wrapper {
+	box-shadow: -3px -5px 10px -3px rgba(0, 0, 0, 0.25);
+}
+
 #content {
 	position: relative;
 	background: #FFF;
 	min-height: 1200px;
 	z-index: 1;
 	position: relative;
-	box-shadow: -3px -5px 10px -3px rgba(0, 0, 0, 0.2);
 }
 
 #menu-main-menu, header, .sidebar, .menu-club-menu-container, #content, .entry-header, .entry-content, #page-content, .mobile-menu, #content, .page-header {
