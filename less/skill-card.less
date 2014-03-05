@@ -5,9 +5,9 @@ Project:	USA Rugby
 Version:	2.0
 
 1. Globals
-2. Modal Header
-3. Modal Body
-4. Modal Footer
+2. Card Header
+3. Card Body
+4. Card Footer
 
 --------------------------------------------------------------------*/
 
@@ -16,19 +16,9 @@ Version:	2.0
 @darkblue: #012141;
 @blue-border: 1px solid @darkblue;
 
-/* End Globals ------------------------------------------*/
-
-
-/* Set Global Reference Point
---------------------------------------------------------------------*/
-.page-template-page-skill-cards-php {
-
-	.fancybox-inner {
-		overflow: hidden;
-
-		/* 2. Modal Header ---------------------------------------------*/
-
-			.modal-header {
+#skill-card {
+		border: @blue-border;
+			.card-header {
 				padding: 15px; 
 				border-bottom: 0!important;
 				background-color: #fff!important;
@@ -61,9 +51,9 @@ Version:	2.0
 				}
 			}
 
-		/* 3. Modal Body -----------------------------------------------*/
+		/* 3. Card Body -----------------------------------------------*/
 
-			.modal-body {
+			.card-body {
 				background-color: #fff!important;
 				border-top: 0!important;
 				padding-top: 0;
@@ -205,12 +195,10 @@ Version:	2.0
 				}
 			}
 
-		/* 4. Modal Footer ---------------------------------------------*/
+		/* 4. Card Footer ---------------------------------------------*/
 
-			.modal-footer {
+			.card-footer {
 				width: 100%;
 				border-bottom-width: 2px!important;
 			}
-	/* End Global Reference Point --------------------------------------*/
-	}
 }

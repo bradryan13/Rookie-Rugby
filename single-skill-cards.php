@@ -31,57 +31,55 @@ $card_image = get_field( "card_image", $post_id );
 }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div>
+<div id="skill-card">
 
-<div class="modal-dialog">
-	<div class="modal-content card">
-		<div class="modal-header row">
-			<h3><img src="http://localhost:8888/rookie/wp-content/themes/rookie/img/skill-card-header.jpg" width="100%" /> <span><?php echo get_the_title($post_id); ?></span> </h3>
-			 <div class="ratings"> <?php if(function_exists('the_ratings')) { the_ratings(); } ?> </div>
-			<p class="pull-right"><?php echo get_the_author($post_id); ?></p>
+	<div class="card-header row">
+		<h3><img src="<?php echo get_template_directory_uri(); ?>/img/skill-card-header.jpg" width="100%" /> <span><?php echo get_the_title($post_id); ?></span> </h3>
+	</div>
+
+	<div class="card-body row">
+
+		<div class="meta">
+				<div class="group-items">
+					<span class="meta-item"><span class="meta-label">Objective: </span></span> <span class="h-divider">|</span> <span class="meta-item"><span class="meta-label">Suggested Time Allocation: </span><?php echo $time; ?></span>
+					<div class="meta-description"><?php echo $objective; ?> </div>
+				</div>
 		</div>
 
-<div class="modal-body full-card row">
+		<div class="row main-content">
 
-<div class="meta">
-	<div class="group-items">
-		<span class="meta-item"><span class="meta-label">Objective: </span></span> <span class="h-divider">|</span> <span class="meta-item"><span class="meta-label">Suggested Time Allocation: </span><?php echo $time; ?></span>
-		<div class="meta-description"><?php echo $objective; ?> </div>
-	</div>
-</div>
+			<div class="large-8 columns copy">
+				<div class="group-items">
+					<span class="meta-item"><span class="meta-label">What to Coach: </span></span> <span class="h-divider">|</span> <span class="meta-item"><span class="meta-label">Difficulty: </span><?php echo $difficulty; ?></span>
+					<div class="meta-description"><?php echo $what_to_coach; ?> </div>
+				</div>
+			</div>
 
-<div class="row main-content">
+			<div class="large-4 columns image">
+				<img src="<?php echo $image; ?>">
+			</div>
 
-	<div class="large-8 columns copy">
-		<div class="group-items">
-			<span class="meta-item"><span class="meta-label">What to Coach: </span></span> <span class="h-divider">|</span> <span class="meta-item"><span class="meta-label">Difficulty: </span><?php echo $difficulty; ?></span>
-			<div class="meta-description"><?php echo $what_to_coach; ?> </div>
 		</div>
-	</div>
 
-	<div class="large-4 columns image">
-		<img src="<?php echo $image; ?>">
-	</div>
+		<div class="sub-content row">
 
-</div>
+			<h2>Coaching Notes</h2>
 
-<div class="sub-content row">
-	<h2>Coaching Notes</h2>
-	<div class="large-6 columns">
-		<h3>Skill Progressions</h3>
-		<?php echo $skill_progressions; ?>
-	</div>
+			<div class="large-6 columns">
+				<h3>Skill Progressions</h3>
+				<?php echo $skill_progressions; ?>
+			</div>
 
-	<div class="large-6 columns">
-		
-		<h3>Check and Correct</h3>
-		<?php echo $check_and_correct; ?>
+			<div class="large-6 columns">
+				<h3>Check and Correct</h3>
+				<?php echo $check_and_correct; ?>
+			</div>
 
-	</div>
+		</div>
 
-</div>
+	</div><!--  End modal body -->
 
-	<div class="modal-footer row">
+	<div class="card-footer row">
 
 			<!-- @TODO if user clicks on card again, social media doesn't show up.  -->
 			<div class="facebook large-2 columns">
@@ -97,16 +95,13 @@ $card_image = get_field( "card_image", $post_id );
 				<a href="<?php echo $link ?>">Link</a>
 			</div>
 
-			<div class="favorite large-2 columns">
-			</div>
+			<div class="favorite large-2 columns"></div>
 
 			<div class="favorite large-4 columns">
 			<a class="btn right" data-dismiss="modal">Close</a>
 			</div>
-
-
 	</div>
 
-</div>
+</div> <!-- End #skill-card  -->
 
 

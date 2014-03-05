@@ -5182,121 +5182,114 @@ Project:	USA Rugby
 Version:	2.0
 
 1. Globals
-2. Modal Header
-3. Modal Body
-4. Modal Footer
+2. Card Header
+3. Card Body
+4. Card Footer
 
 --------------------------------------------------------------------*/
 /* 1. Globals
 ---------------------------------------------------------*/
-/* End Globals ------------------------------------------*/
-/* Set Global Reference Point
---------------------------------------------------------------------*/
-.page-template-page-skill-cards-php .fancybox-inner {
-  overflow: hidden;
-  /* 2. Modal Header ---------------------------------------------*/
+#skill-card {
+  border: 1px solid #012141;
+  /* 3. Card Body -----------------------------------------------*/
 
-  /* 3. Modal Body -----------------------------------------------*/
-
-  /* 4. Modal Footer ---------------------------------------------*/
-
-  /* End Global Reference Point --------------------------------------*/
+  /* 4. Card Footer ---------------------------------------------*/
 
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-header {
+#skill-card .card-header {
   padding: 15px;
   border-bottom: 0!important;
   background-color: #fff!important;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-header h3,
-.page-template-page-skill-cards-php .fancybox-inner .modal-header div,
-.page-template-page-skill-cards-php .fancybox-inner .modal-header p {
+#skill-card .card-header h3,
+#skill-card .card-header div,
+#skill-card .card-header p {
   border: 1px solid #012141;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-header .ratings {
+#skill-card .card-header .ratings {
   border: 0;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-header .pull-right {
+#skill-card .card-header .pull-right {
   display: none;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-header h3 {
+#skill-card .card-header h3 {
   border-bottom-width: 0;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-header h3 img {
+#skill-card .card-header h3 img {
   border: 1px solid #012141;
   border-bottom: 0;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-header h3 span {
+#skill-card .card-header h3 span {
   position: absolute;
   left: 505px;
   top: 145px;
   z-index: 1;
   font-size: 20pt;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body {
+#skill-card .card-body {
   background-color: #fff!important;
   border-top: 0!important;
   padding-top: 0;
   margin-top: -15px;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .meta {
+#skill-card .card-body .meta {
   border: 1px solid #012141;
   border-width: 2px;
   border-top: 0;
   border-bottom-width: 0;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .meta .h-divider {
+#skill-card .card-body .meta .h-divider {
   margin-left: 93px!important;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .group-items span {
+#skill-card .card-body .group-items span {
   padding-left: 20px;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .group-items .meta-item {
+#skill-card .card-body .group-items .meta-item {
   display: inline;
   margin: 0 10px 10px 0;
   font-size: 14px;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .group-items .meta-description {
+#skill-card .card-body .group-items .meta-description {
   border-top: 1px solid #012141;
   padding-top: 10px;
   padding-left: 10px;
   margin-bottom: 20px;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .group-items .h-divider {
+#skill-card .card-body .group-items .h-divider {
   font-size: 20pt;
   position: relative;
   top: 5px;
   margin-left: 44px;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .group-items:nth-child(2) p:first-child {
+#skill-card .card-body .group-items:nth-child(2) p:first-child {
   margin-top: 0;
   margin-bottom: 20px;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .meta-item {
+#skill-card .card-body .meta-item {
   display: block;
   margin: 0 10px 10px 0;
   font-size: 14px;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .meta-item .meta-label {
+#skill-card .card-body .meta-item .meta-label {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 12pt;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .main-content {
+#skill-card .card-body .main-content {
   border-top-width: 0!important;
   border-bottom-width: 0!important;
   margin: -1.3em auto -0.1em !important;
   padding-top: 25px;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .main-content .large-8.columns {
+#skill-card .card-body .main-content .large-8.columns {
   padding-left: 0;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body h3 {
+#skill-card .card-body h3 {
   color: #012141;
   font-weight: normal;
   text-transform: uppercase;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .row {
+#skill-card .card-body .row {
   border: 1px solid #012141;
   border-top: 0;
   border-left-width: 2px;
@@ -5305,23 +5298,23 @@ Version:	2.0
   display: inline-block;
   position: relative;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .row li {
+#skill-card .card-body .row li {
   margin: 15px 0;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .row .image {
+#skill-card .card-body .row .image {
   border: 2px dashed #012141;
   position: absolute;
   right: .75%;
   top: 5%;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .sub-content h2 {
+#skill-card .card-body .sub-content h2 {
   text-align: center;
   text-transform: uppercase;
   font-size: 25pt;
   margin-top: 0;
   margin-bottom: -10px;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .sub-content .large-6 h3 {
+#skill-card .card-body .sub-content .large-6 h3 {
   text-align: center;
   text-transform: uppercase;
   background-color: #012141;
@@ -5331,7 +5324,7 @@ Version:	2.0
   margin-left: -15px;
   margin-right: -15px;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .sub-content h2 + .large-6 ol {
+#skill-card .card-body .sub-content h2 + .large-6 ol {
   border-right: 1px solid #012141;
   margin-top: -23px;
   margin-right: -10px;
@@ -5340,7 +5333,7 @@ Version:	2.0
   padding-right: 10px;
   padding-bottom: 10px;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-body .sub-content .large-6 + .large-6 ol {
+#skill-card .card-body .sub-content .large-6 + .large-6 ol {
   border-left: 1px solid #012141;
   margin-left: -20px;
   margin-top: -20px;
@@ -5348,7 +5341,7 @@ Version:	2.0
   padding-top: 20px;
   padding-bottom: 35px;
 }
-.page-template-page-skill-cards-php .fancybox-inner .modal-footer {
+#skill-card .card-footer {
   width: 100%;
   border-bottom-width: 2px!important;
 }
@@ -5650,74 +5643,6 @@ Version:	2.0
 }
 .modal-footer .btn-block + .btn-block {
   margin-left: 0;
-}
-/*------------------------------------------------------------------
-[Game Card Stylesheet]
-
-Project:	USA Rugby
-Version:	2.0
-
-1. Globals
-2. Modal Header
-3. Modal Body
-4. Modal Footer
-
---------------------------------------------------------------------*/
-/* 1. Globals
----------------------------------------------------------*/
-/* End Globals ------------------------------------------*/
-/* Set Global Reference Point
---------------------------------------------------------------------*/
-.fancybox-inner {
-  overflow: hidden;
-  /* 2. Modal Header ---------------------------------------------*/
-
-  /* 3. Modal Body -----------------------------------------------*/
-
-  /* 4. Modal Footer ---------------------------------------------*/
-
-  /* End Global Reference Point --------------------------------------*/
-
-}
-.fancybox-inner .modal-header h3,
-.fancybox-inner .modal-header div,
-.fancybox-inner .modal-header p {
-  border: 1px solid #e74c3c;
-}
-.fancybox-inner .modal-body .meta-item {
-  float: left;
-  display: inline;
-  margin: 0 10px 10px 0;
-  font-size: 14px;
-}
-.fancybox-inner .modal-body .meta-item .meta-label {
-  font-weight: bold;
-}
-.fancybox-inner .modal-body .main-content {
-  border-top-width: 2px!important;
-}
-.fancybox-inner .modal-body h3 {
-  color: #e74c3c;
-  font-weight: normal;
-  text-transform: uppercase;
-}
-.fancybox-inner .modal-body .row {
-  border: 1px solid #e74c3c;
-  border-left-width: 2px;
-  border-right-width: 2px;
-  margin: -0.05em auto;
-  display: inline-block;
-  position: relative;
-}
-.fancybox-inner .modal-body .row li {
-  margin: 15px 0;
-}
-.fancybox-inner .modal-body .row .image {
-  margin-top: 2%;
-}
-.fancybox-inner .modal-footer {
-  width: 100%;
-  border-bottom-width: 2px!important;
 }
 /* 2. Fonts  ------------------------------------------------------*/
 @font-face {
