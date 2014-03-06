@@ -112,15 +112,20 @@ jQuery(document).ready(function ($) {
         }
     });
 
-        $( "a[data-dropdown='playvideo']" ).click(function(){
+    $( "a[data='video']" ).click(function(){
         if($("#hero-video").hasClass("open")) {
             $( "#hero-video" ).removeClass( "open" );
         } else {
             $( "#hero-video" ).addClass( "open" );
         }
-        $("#video")[0].src += "&autoplay=1";
-        ev.preventDefault();
+
+        if($("#vid-close").hasClass("open")) {
+            $( "#vid-close" ).removeClass( "open" );
+        } else {
+            $( "#vid-close" ).addClass( "open" );
+        }
     });
+
 
 
 	// Store variables

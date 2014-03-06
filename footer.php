@@ -31,14 +31,12 @@
 </div>
 </div>
     
-    <div class="overlay overlay-contentscale">
-         <div class="row">
-            <button type="button" class="overlay-close">Close</button>
-            <?php echo do_shortcode('[userpro template=login force_redirect_uri=1]'); ?>
-        </div>
-        </div>
 
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+
+
+
 </body>
 
 </html>
