@@ -92,7 +92,7 @@ $the_query = new WP_Query( $args );
 			</div>
 			<div class="description">
       <div class="filter">
-				<p> <a class="ajax-modal" data-fancybox-type="ajax" href="<?php echo get_permalink(); ?>"><?php the_field(objective) ?></a></p>
+				<p> <a href="<?php echo get_permalink(); ?>"><?php the_field(objective) ?></a></p>
       </div>
 			</div>
       <div class="comments">

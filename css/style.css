@@ -4499,8 +4499,6 @@ Version:	2.0
 -------------------------------------------------------------------*/
 /* 1. Header ------------------------------------------------------*/
 header {
-  background: #FFF;
-  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 header .header-container {
@@ -5043,6 +5041,7 @@ Version:	2.0
   background: url('../img/teacher-header.jpg');
   min-height: 250px;
   position: relative;
+  z-index: 2;
   max-width: 100%;
 }
 .page-header h1 {
@@ -5165,9 +5164,16 @@ Version:	2.0
   box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
 }
 /* 5. Fixed Element --------------------------------------------------*/
-.menu.fixed {
+.menu.fixed,
+#feed-footer.fixed,
+#feed-header.fixed {
   width: 300px;
   top: 0px;
+}
+#feed.fixed {
+  width: 300px;
+  top: 80px;
+  bottom: 0px;
 }
 @media only screen and (min-width: 64em) {
   .mobile-menu {
@@ -5546,8 +5552,9 @@ Version:	2.0
 footer {
   background: #182638;
   color: #FFF;
-  min-height: 100px;
-  box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.15);
+  min-height: 200px;
+  z-index: 2;
+  position: relative;
 }
 footer .row {
   margin: 0 20px;
@@ -6020,160 +6027,52 @@ Version:	2.0
 /* 1. Globals
 ---------------------------------------------------------*/
 #skill-card {
-  border: 1px solid #012141;
-  /* 3. Card Body -----------------------------------------------*/
-
-  /* 4. Card Footer ---------------------------------------------*/
-
-}
-#skill-card .card-header {
-  padding: 15px;
-  border-bottom: 0!important;
-  background-color: #fff!important;
-}
-#skill-card .card-header h3,
-#skill-card .card-header div,
-#skill-card .card-header p {
-  border: 1px solid #012141;
-}
-#skill-card .card-header .ratings {
-  border: 0;
-}
-#skill-card .card-header .pull-right {
-  display: none;
-}
-#skill-card .card-header h3 {
-  border-bottom-width: 0;
-}
-#skill-card .card-header h3 img {
-  border: 1px solid #012141;
-  border-bottom: 0;
-}
-#skill-card .card-header h3 span {
-  position: absolute;
-  left: 505px;
-  top: 145px;
   z-index: 1;
-  font-size: 20pt;
-}
-#skill-card .card-body {
-  background-color: #fff!important;
-  border-top: 0!important;
-  padding-top: 0;
-  margin-top: -15px;
-}
-#skill-card .card-body .meta {
-  border: 1px solid #012141;
-  border-width: 2px;
-  border-top: 0;
-  border-bottom-width: 0;
-}
-#skill-card .card-body .meta .h-divider {
-  margin-left: 93px!important;
-}
-#skill-card .card-body .group-items span {
-  padding-left: 20px;
-}
-#skill-card .card-body .group-items .meta-item {
-  display: inline;
-  margin: 0 10px 10px 0;
-  font-size: 14px;
-}
-#skill-card .card-body .group-items .meta-description {
-  border-top: 1px solid #012141;
-  padding-top: 10px;
-  padding-left: 10px;
-  margin-bottom: 20px;
-}
-#skill-card .card-body .group-items .h-divider {
-  font-size: 20pt;
   position: relative;
-  top: 5px;
-  margin-left: 44px;
+  background: #FFF;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 0;
+  padding-bottom: 30px;
+  border-right: 1px solid #EEE;
 }
-#skill-card .card-body .group-items:nth-child(2) p:first-child {
-  margin-top: 0;
-  margin-bottom: 20px;
+#skill-card #content p {
+  padding: 0;
+  margin: 20px 0;
 }
-#skill-card .card-body .meta-item {
-  display: block;
-  margin: 0 10px 10px 0;
-  font-size: 14px;
-}
-#skill-card .card-body .meta-item .meta-label {
-  text-transform: uppercase;
+#skill-card h3 {
+  font-size: 18px;
+  line-height: 24px;
   font-weight: bold;
-  font-size: 12pt;
+  margin: 0;
+  padding: 5px;
+  font-family: "futura-pt";
+  color: #4183ba;
+  border-bottom: 1px solid #E1E1E1;
 }
-#skill-card .card-body .main-content {
-  border-top-width: 0!important;
-  border-bottom-width: 0!important;
-  margin: -1.3em auto -0.1em !important;
-  padding-top: 25px;
+#skill-card .header {
+  margin-top: 20px;
+  padding-bottom: 20px;
 }
-#skill-card .card-body .main-content .large-8.columns {
-  padding-left: 0;
+#skill-card .header h2 {
+  font-size: 36px;
 }
-#skill-card .card-body h3 {
-  color: #012141;
-  font-weight: normal;
-  text-transform: uppercase;
+#skill-card .content {
+  padding-bottom: 20px;
 }
-#skill-card .card-body .row {
-  border: 1px solid #012141;
-  border-top: 0;
-  border-left-width: 2px;
-  border-right-width: 2px;
-  margin: -0.05em auto;
-  display: inline-block;
-  position: relative;
+#skill-card .content .image {
+  padding-top: 40px;
+  -webkit-transform: rotate(1deg);
+  -moz-transform: rotate(1eg);
 }
-#skill-card .card-body .row li {
-  margin: 15px 0;
+#skill-card .content .image img {
+  border: 5px solid #FFF;
+  -webkit-box-shadow: inset 0 1px #FFF,0 2px 3px #C8CFE6;
+  -moz-box-shadow: inset 0 1px #fff,0 2px 3px #c8cfe6;
+  box-shadow: inset 0 1px #FFF,0 2px 3px #C8CFE6;
 }
-#skill-card .card-body .row .image {
-  border: 2px dashed #012141;
-  position: absolute;
-  right: .75%;
-  top: 5%;
-}
-#skill-card .card-body .sub-content h2 {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 25pt;
-  margin-top: 0;
-  margin-bottom: -10px;
-}
-#skill-card .card-body .sub-content .large-6 h3 {
-  text-align: center;
-  text-transform: uppercase;
-  background-color: #012141;
-  color: #fff;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
-  margin-left: -15px;
-  margin-right: -15px;
-}
-#skill-card .card-body .sub-content h2 + .large-6 ol {
-  border-right: 1px solid #012141;
-  margin-top: -23px;
-  margin-right: -10px;
-  margin-bottom: -10px;
-  padding-top: 15px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-}
-#skill-card .card-body .sub-content .large-6 + .large-6 ol {
-  border-left: 1px solid #012141;
-  margin-left: -20px;
-  margin-top: -20px;
-  margin-bottom: 0;
-  padding-top: 20px;
-  padding-bottom: 35px;
-}
-#skill-card .card-footer {
-  width: 100%;
-  border-bottom-width: 2px!important;
+#skill-card .footer {
+  padding-bottom: 20px;
 }
 #skill-cards {
   margin: 0 auto;
@@ -6474,6 +6373,76 @@ Version:	2.0
 .modal-footer .btn-block + .btn-block {
   margin-left: 0;
 }
+/*------------------------------------------------------------------
+[Skill Card Stylesheet]
+
+Project:	USA Rugby
+Version:	2.0
+
+1. Globals
+2. Card Header
+3. Card Body
+4. Card Footer
+
+--------------------------------------------------------------------*/
+/* 1. Globals
+---------------------------------------------------------*/
+#feed-header {
+  background: #f1f0f4;
+  height: 80px;
+  width: 300px;
+  padding: 20px 20px;
+  border-bottom: 1px solid #D9E0E2;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+}
+#feed-header a#filter {
+  background: #4183ba;
+  border-radius: 5px;
+  border: none;
+  border-radius: 0.25em;
+  color: #FFF;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875em;
+  font-style: normal;
+  line-height: 36px;
+  padding: 1px 40px 0 .8em;
+  text-transform: uppercase;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  position: relative;
+  transition: all 0.1s ease-out;
+  vertical-align: middle;
+  width: 100%;
+  display: inline-block;
+}
+#feed #feed-content {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  width: 300px;
+  top: 0px;
+  bottom: 0px;
+}
+#feed li .copy a {
+  display: block;
+  font-size: 14px;
+  position: relative;
+  color: #536270;
+  line-height: 50px;
+  padding-left: 20px;
+  border-bottom: 1px solid #E1E1E1;
+  border-top: 1px solid #FFF;
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+}
+#feed li .copy a img {
+  height: 40px;
+  width: 50px;
+  float: left;
+  margin-right: 20px;
+  margin-top: 5px;
+  border: 2px solid #FFF;
+}
 /* 2. Fonts  ------------------------------------------------------*/
 @font-face {
   font-family: 'chunkfiveroman';
@@ -6514,14 +6483,16 @@ h2 {
 body {
   font-family: "proxima-nova";
   color: #555555;
-  background: url('../img/background.jpg') center top repeat;
+  background: #ffffff linear-gradient(to bottom, #3f567c, #b5ccc6) no-repeat;
 }
 #page-content {
   max-width: 1200px;
+  margin: 0 auto;
   position: relative;
   box-shadow: 0 0 50px -2px rgba(0, 0, 0, 0.3);
   background: #FFF;
-  margin: 0 auto;
+  margin: 40px auto;
+  border-radius: 7px;
 }
 main {
   background: #f1f0f4;

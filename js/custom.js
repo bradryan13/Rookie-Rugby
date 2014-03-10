@@ -74,10 +74,10 @@ jQuery(document).ready(function ($) {
 
         $(window).bind('scroll', function() {
             if ($(window).scrollTop() > 320) {
-                $('.menu').addClass('fixed');
+                $('.menu, #feed, #feed-header, #feed-footer').addClass('fixed');
             }
             else {
-                 $('.menu').removeClass('fixed');
+                 $('.menu, #feed, #feed-header, #feed-footer').removeClass('fixed');
              }
         });
 

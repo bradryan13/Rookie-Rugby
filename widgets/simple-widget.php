@@ -57,15 +57,12 @@ class MY_Widget extends WP_Widget {
 $args = array(
   'posts_per_page'=> $postsNumber,
   'post_type' => $postType,
-  'category_name' => $postCat,
 );
 
 // get the view
 
 $viewsource = 'views/'.$widgetView.'.php';
 include $viewsource;
-
-
 		echo $after_widget;
 	}
 
@@ -111,8 +108,9 @@ if( $instance) {
 $post_types = get_post_types( '', 'names' ); 
 unset($post_types['attachment'], $post_types['acf'], $post_types['revision'], $post_types['nav_menu_item'], $post_types['page'] );
 
-$views = array('List View' => 'post-list',
-               'Featured Post'  => 'featured-post' );
+$views = array('List View' 		=> 'post-list',
+               'Featured Post'  => 'featured-post',
+			   'Skill Card List'  => 'skill-cards-list' );
 
 //get categories
 $categories = get_categories(); ?>
@@ -125,8 +123,8 @@ $categories = get_categories(); ?>
 		<p>
 			<label for="<?php echo $this->get_field_id('widgetView'); ?>"><?php _e('Widget View', 'wp_widget_plugin'); ?></label>
 			<select name="<?php echo $this->get_field_name('widgetView'); ?>" id="<?php echo $this->get_field_id('widgetView'); ?>" class="widefat">
-			<?php foreach ($views as $view) {
-				echo '<option value="' . $view . '" id="' . $view . '"', $widgetView == $view ? ' selected="selected"' : '', '>', $view, '</option>'; }?>
+			<?php foreach ($views as $key => $view) {
+				echo '<option value="' . $view . '" id="' . $view . '"', $widgetView == $view ? ' selected="selected"' : '', '>', $key, '</option>'; }?>
 			} ?>
 			</select>
 		</p>
