@@ -73,7 +73,7 @@ jQuery(document).ready(function ($) {
             //Fix side-menu
 
         $(window).bind('scroll', function() {
-            if ($(window).scrollTop() > 320) {
+            if ($(window).scrollTop() > 270) {
                 $('.menu, #feed, #feed-header, #feed-footer').addClass('fixed');
             }
             else {

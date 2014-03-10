@@ -5,7 +5,7 @@ Template Name: Teachers
 
 get_header(); ?>
 
-<div class="row page-header" data-stellar-background-ratio="0.6">
+<div class="row page-header teachers" data-stellar-background-ratio="0.6">
 
 	<div class="large-9 columns">
 		<h1>Teachers</h1>

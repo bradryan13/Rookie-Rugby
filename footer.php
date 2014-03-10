@@ -13,7 +13,7 @@
     <img src="<?php echo get_template_directory_uri(); ?>/img/usar-logo.png">
     </div>
      <div class="large-6 columns copyright">
-     Copyright © 2014 USA Rugby. All rights reserved.<br><span>Designed and Developed by USARugby's Bradley Ryan.</span>
+     Copyright © 2014 USA Rugby. All rights reserved.<br><span>Designed and Developed by USA Rugby</span>
     </div>
      <div class="large-3 columns social">
     <ul class="inline-list">
@@ -43,8 +43,6 @@ $(document).ready(function(){
 })
 
 });
-
-
 
 </script>
 

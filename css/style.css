@@ -3579,7 +3579,7 @@ th.hide-for-touch {
   left: auto;
   width: 265px;
   height: auto;
-  background: #f1f0f4;
+  background: #2c3240;
   background-color: #0C0C0C;
   z-index: 0;
   overflow: auto;
@@ -3607,7 +3607,7 @@ th.hide-for-touch {
   line-height: 50px;
   padding-left: 30px;
   border-bottom: 1px solid #212425;
-  background: #f1f0f4;
+  background: #2c3240;
 }
 .mobile-menu ul li a {
   height: 40px;
@@ -4556,12 +4556,12 @@ header .header-container {
 }
 #main-navigation ul li a {
   color: #536270;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 80px;
   text-transform: capitalize;
   -webkit-font-smoothing: antialiased;
   padding: 0 23px;
-  font-family: "futura-pt";
+  font-family: "ff-meta-web-pro";
   background: url('../img/menu-div.png') right center no-repeat;
 }
 #main-navigation ul li .current-menu-item {
@@ -4685,14 +4685,14 @@ header #main-navigation ul.sub-menu li a {
   font-family: 'chunkfiveroman';
   font-size: 14px;
   position: absolute;
-  bottom: 5px;
+  bottom: 0;
   background: transparent;
 }
 #main-navigation .fa.fa-bars {
   font-size: 11px;
   padding-left: 5px;
 }
-#main-navigation .drop-open .fa.fa-bars:before {
+.drop-open .fa-bars:before {
   content: "\f05c";
 }
 /* 7. Active Section Indicator ------------------------------------------------------*/
@@ -4705,25 +4705,13 @@ header #main-navigation ul.sub-menu li a {
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-bottom: 8px solid #3f74a9;
+  border-bottom: 8px solid #3498db;
   content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
   margin-left: -8px;
   z-index: 1;
-}
-.page-template-page-coaches-php #main-navigation .current-menu-item:after {
-  border-bottom: 8px solid #222;
-}
-.page-template-page-organizations-php #main-navigation .current-menu-item:after {
-  border-bottom: 8px solid green;
-}
-.page-template-page-teachers-php #main-navigation .current-menu-item:after {
-  border-bottom: 8px solid yellow;
-}
-.page-template-page-parents-php #main-navigation .current-menu-item:after {
-  border-bottom: 8px solid red;
 }
 /*------------------------------------------------------------------
 [Home Stylesheet]
@@ -4860,7 +4848,7 @@ Version:	2.0
   font-size: 20px;
   margin-bottom: 24px;
   line-height: 24px;
-  font-family: "futura-pt";
+  font-family: "ff-meta-web-pro";
 }
 #latest .post .meta {
   font-size: 12px;
@@ -4964,7 +4952,7 @@ article .story-header .meta img {
 article .story-content p {
   font-size: 16px;
   line-height: 1.6;
-  font-family: "proxima-nova";
+  font-family: "ff-tisa-web-pro";
   margin: 30px 100px 30px 100px;
 }
 article .story-content p img {
@@ -4997,7 +4985,7 @@ article .story-content .article-aside p {
   background: rgba(0, 0, 0, 0.7);
   color: #FFF;
   font-weight: bold;
-  font-family: "proxima-nova";
+  font-family: "ff-tisa-web-pro";
   -webkit-font-smoothing: antialiased;
   text-align: right;
   line-height: 13px;
@@ -5038,19 +5026,23 @@ Version:	2.0
 -------------------------------------------------------------------*/
 /* 1. Header ------------------------------------------------------*/
 .page-header {
-  background: url('../img/teacher-header.jpg');
-  min-height: 250px;
+  min-height: 150px;
   position: relative;
   z-index: 2;
   max-width: 100%;
+  background: #3498db;
+  -webkit-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.1);
 }
 .page-header h1 {
-  line-height: 250px;
-  font-size: 80px;
+  line-height: 150px;
+  font-size: 40px;
   color: #FFF;
   margin: 0;
   padding-left: 30px;
   font-weight: normal;
+  font-family: "ff-meta-web-pro";
 }
 main.row {
   max-width: 100%;
@@ -5058,35 +5050,52 @@ main.row {
 .content-wrapper {
   background: #FFF;
   padding: 0;
+  -webkit-box-shadow: -5px 1px 0px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -5px 0px 0px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: -5px 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
 #content {
   padding: 0 80px;
 }
 #content .title {
   font-size: 40px;
-  height: 104px;
-  line-height: 104px;
+  height: 100px;
+  line-height: 100px;
   letter-spacing: -1px;
   margin: 0;
   border-bottom: 1px solid #EEE;
   position: relative;
   font-weight: 300;
   padding: 0 30px;
-  font-family: "futura-pt";
+  font-family: "ff-meta-web-pro";
+}
+#content p:first-of-type {
+  font-weight: bold;
+  font-style: italic;
+}
+#content p:first-of-type:first-letter {
+  padding: 0 0.1em 0 0;
+  font-size: 5em;
+  line-height: 68px;
+  float: left;
 }
 #content p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
-  font-family: "proxima-nova";
+  font-family: "ff-tisa-web-pro";
   padding: 0 30px;
   margin: 30px 0;
 }
-#content p:first-of-type {
-  margin: 0 0 30px 0;
+#content img.alignright {
+  float: right;
+  margin: 20px 0 20px 40px;
 }
-#content img {
+#content img.alignleft {
   float: left;
-  margin: 0 30px 30px 0;
+  margin: 20px 40px 20px 0;
+}
+#content h3 {
+  padding: 0 30px;
 }
 .forums-content {
   margin: 40px 0;
@@ -5121,25 +5130,25 @@ Version:	2.0
 /* 1. Sidebar  -----------------------------------------------------*/
 .sidebar {
   padding: 0;
-  background: #f1f0f4;
+  background: #2c3240;
 }
 .sidebar ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid #ffffff;
 }
 /* 2. Menu Level 1 --------------------------------------------------*/
 .menu > li > a {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
   position: relative;
-  color: #536270;
+  color: #FFF;
   line-height: 50px;
   padding-left: 30px;
-  border-bottom: 1px solid #E1E1E1;
-  border-top: 1px solid #FFF;
-  background: #f1f0f4;
+  border-bottom: 1px solid #555861;
+  background: #454B5A;
+  font-family: "ff-meta-web-pro";
 }
 /* 3. Menu Level 2 --------------------------------------------------*/
 .menu ul li a {
@@ -5150,18 +5159,33 @@ Version:	2.0
   padding-left: 40px;
   line-height: 40px;
   font-size: 12px;
-  background: #98A1B2;
+  background: #2c3240;
 }
 .sub-menu {
   display: none;
 }
 /* 4. Active Subpage ---------------------------------------------------*/
-.menu > li > a.active {
-  color: #FFF;
-  background: #4183ba;
-  border-bottom: 0;
-  border-top: 0;
-  box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+.menu > li > a.active:before {
+  left: -5px;
+  bottom: -1px;
+  height: 52px;
+  width: 5px;
+  background: #3498db;
+  content: '';
+  position: absolute;
+}
+.menu > li > a.active:after {
+  right: -7px;
+  bottom: 50%;
+  margin-bottom: -7px;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid #3D424B;
+  z-index: 3;
 }
 /* 5. Fixed Element --------------------------------------------------*/
 .menu.fixed,
@@ -5182,7 +5206,7 @@ Version:	2.0
 }
 @media only screen and (max-width: 64em) {
   body {
-    background: #f1f0f4;
+    background: #2c3240;
   }
   .page-header,
   main.row {
@@ -6046,7 +6070,7 @@ Version:	2.0
   font-weight: bold;
   margin: 0;
   padding: 5px;
-  font-family: "futura-pt";
+  font-family: "ff-meta-web-pro";
   color: #4183ba;
   border-bottom: 1px solid #E1E1E1;
 }
@@ -6388,7 +6412,7 @@ Version:	2.0
 /* 1. Globals
 ---------------------------------------------------------*/
 #feed-header {
-  background: #f1f0f4;
+  background: #2c3240;
   height: 80px;
   width: 300px;
   padding: 20px 20px;
@@ -6458,6 +6482,11 @@ h1,
 h2 {
   font-family: 'chunkfiveroman';
 }
+h3 {
+  font-family: "ff-meta-web-pro";
+  font-weight: 100;
+  font-size: 28px;
+}
 /* 3. Colors ------------------------------------------------------*/
 /* 4. Shadows -----------------------------------------------------*/
 /* 5. Utilities -----------------------------------------------------*/
@@ -6481,7 +6510,7 @@ h2 {
 }
 /* 6. Layout -----------------------------------------------------*/
 body {
-  font-family: "proxima-nova";
+  font-family: "ff-tisa-web-pro";
   color: #555555;
   background: #ffffff linear-gradient(to bottom, #3f567c, #b5ccc6) no-repeat;
 }
@@ -6489,20 +6518,19 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
-  box-shadow: 0 0 50px -2px rgba(0, 0, 0, 0.3);
   background: #FFF;
   margin: 40px auto;
-  border-radius: 7px;
+  border-radius: 8px;
+  box-shadow: 0 0 50px -2px rgba(0, 0, 0, 0.3);
 }
 main {
-  background: #f1f0f4;
+  position: relative;
+  z-index: 1;
+  background: #2c3240;
 }
 .home main {
   box-shadow: none;
   background: transparent;
-}
-.content-wrapper {
-  box-shadow: -3px -5px 10px -3px rgba(0, 0, 0, 0.25);
 }
 #content {
   background: #FFF;

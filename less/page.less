@@ -16,18 +16,22 @@ Version:	2.0
 /* 1. Header ------------------------------------------------------*/
 
 .page-header {
-	background: url('../img/teacher-header.jpg');
-	min-height: 250px;
+	min-height: 150px;
 	position: relative;
 	z-index: 2;
 	max-width: 100%;
+	background: @bright-blue;	
+	-webkit-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow:    0px 5px 0px 0px rgba(0, 0, 0, 0.1);
+    box-shadow:         0px 5px 0px 0px rgba(0, 0, 0, 0.1);
 	h1 {
-		line-height: 250px;
-		font-size: 80px;
+		line-height: 150px;
+		font-size: 40px;
 		color: #FFF;
 		margin: 0;
 		padding-left: 30px;
 		font-weight: normal;
+		font-family: @third-font;
 	}
 }
 
@@ -40,14 +44,17 @@ main.row {
 .content-wrapper {
 	background: #FFF;
 	padding: 0;
+	-webkit-box-shadow: -5px 1px 0px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow:    -5px 0px 0px 0px rgba(0, 0, 0, 0.1);
+    box-shadow:         -5px 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 #content {
 	padding: 0 80px;
 	.title {
 			font-size: 40px;
-			height: 104px;
-			line-height: 104px;
+			height: 100px;
+			line-height: 100px;
 			letter-spacing: -1px;
 			margin: 0;
 			border-bottom: 1px solid #EEE;
@@ -56,19 +63,37 @@ main.row {
 			padding: 0 30px;
 			font-family: @third-font;
 	}
+	p:first-of-type {
+  		font-weight: bold;
+  		font-style: italic;
+	}
+
+	p:first-of-type:first-letter {
+	  padding: 0 0.1em 0 0;
+	  font-size: 5em;
+	  line-height: 68px;
+	  float: left;
+	}
+
 	p {
-		font-size: 16px;
+		font-size: 18px;
 		line-height: 1.6;
 		font-family: @body-font;
 		padding: 0 30px;
 		margin: 30px 0;
-		&:first-of-type {
-			margin: 0 0 30px 0;
-		}
 	}
 	img {
-	float: left;
-	margin: 0 30px 30px 0;
+		&.alignright {
+			float: right;
+			margin: 20px 0 20px 40px;
+		}
+		&.alignleft {
+			float: left;
+			margin: 20px 40px 20px 0;
+		}
+	}
+	h3 {
+		padding: 0 30px;
 	}
 }
 

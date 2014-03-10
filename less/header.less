@@ -79,7 +79,7 @@ header {
 			}
 			a {
 				color: #536270;
-				font-size: 17px;
+				font-size: 16px;
 				line-height: 80px;
 				text-transform: capitalize;
 				-webkit-font-smoothing:antialiased;
@@ -214,7 +214,7 @@ header #main-navigation ul.sub-menu {
 			font-family: @secondary-font;
 			font-size: 14px;
 			position: absolute;
-			bottom: 5px;
+			bottom: 0;
 			background: transparent;
 		}
 	}
@@ -225,10 +225,11 @@ header #main-navigation ul.sub-menu {
 		font-size: 11px;
 		padding-left: 5px;
 	}
-	.drop-open .fa.fa-bars:before {
-		content: "\f05c";
+}
 
-	}
+
+.drop-open .fa-bars:before {
+		content: "\f05c";
 }
 
 /* 7. Active Section Indicator ------------------------------------------------------*/
@@ -243,7 +244,7 @@ header #main-navigation ul.sub-menu {
 			height: 0; 
 			border-left: 8px solid transparent;
 			border-right: 8px solid transparent;
-			border-bottom: 8px solid #3f74a9;
+			border-bottom: 8px solid @bright-blue;	
 			content: '';
 			position: absolute;
 			bottom: 0;
@@ -254,20 +255,5 @@ header #main-navigation ul.sub-menu {
 	}
 }
 
-.page-template-page-coaches-php #main-navigation .current-menu-item:after {
-	border-bottom: 8px solid #222;
-}
-
-.page-template-page-organizations-php #main-navigation .current-menu-item:after {
-	border-bottom: 8px solid green;
-}
-
-.page-template-page-teachers-php #main-navigation .current-menu-item:after {
-	border-bottom: 8px solid yellow;
-}
-
-.page-template-page-parents-php #main-navigation .current-menu-item:after {
-	border-bottom: 8px solid red;
-}
 
 
