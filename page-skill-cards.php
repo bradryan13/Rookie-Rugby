@@ -9,120 +9,112 @@ Template Name: Skill Cards
 <?php get_header(); ?>
 
 <script>
-
- jQuery(document).ready(function ($) {
+    jQuery(document).ready(function ($) {
     
-    var $container = $('#skill-cards')
+        var $container = $('#skill-cards')
       
-    $container.isotope({
-      itemSelector : '.card',
-      layoutMode: 'cellsByRow',
-      cellsByRow: {
-        columnWidth: 275,
-        rowHeight: 390
-      }
+        $container.isotope({
+          itemSelector : '.card',
+          layoutMode: 'cellsByRow',
+          cellsByRow: {
+            columnWidth: 275,
+            rowHeight: 390
+          }
+      });
     });
-
-// filter items when filter link is clicked
-$('#filters li').click(function(){
-  var selector = $(this).attr('data-filter');
-  $container.isotope({ filter: selector });
-  return false;
-});
-
-  });
 </script>
 
 <div class="row page-header" data-stellar-background-ratio="0.6">
 
-  <div class="large-8 columns">
-    <h1><?php echo get_the_title($ID); ?></h1>
-  </div>
+    <div class="large-8 columns">
+        <h1><?php echo get_the_title($ID); ?></h1>
+    </div>
 
-  <div class="large-4 columns">
-    <div id="filters">
-  <label>
-    <select id="filter-options">
-        <option value=".card">All</option>
-        <option value=".Beginner">Beginner</option>
-        <option value=".intermediate">Intermediate</option>
-        <option value=".Advanced">Advanced</option>
-    </select>  
-  </label>  
+    <div class="large-4 columns">
+        <div id="filters">
+            <label>
+                <select id="filter-options">
+                    <option value=".card">All</option>
+                    <option value=".Easy">Beginner</option>
+                    <option value=".intermediate">Intermediate</option>
+                    <option value=".Advanced">Advanced</option>
+                </select>  
+            </label>  
+        </div>
+    </div>
+
 </div>
 
-  </div>
-</div>
 
-<div class="container">
 <?php 
 
-// args
-$args = array(
-	'numberposts' => -1,
-  'posts_per_page'=> -1,
-	'post_type' => 'skill-cards'
-);
- 
-// get results
-$the_query = new WP_Query( $args );
- 
-// The Loop
-?>
-<?php if( $the_query->have_posts() ): ?>
-<div id="options" class="clearfix combo-filters">
+    $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1; // setup pagination
 
+    // args
+    $args = array(
+        'posts_per_page'=> 1,
+        'paged' => $paged,
+    	'post_type' => 'skill-cards'
+    );
+     
+    // get results
+    $the_query = new WP_Query( $args );
+    if( $the_query->have_posts() ): ?>
 
-  
-</div>
 <div id="skill-cards" class="row">
-<section>
-	<ul>
-		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-  
-     <?php if(get_field('objective')) {
-       $difficulty = get_field('difficulty'); $difficulty = implode (" ", $difficulty); 
-      } 
-    ?>
+    
+    <section>
 
+	   <ul>
 
-		<div class="card <?php echo $difficulty; ?>">
-			<div class="image">
-				<img src="<?php the_field(card_image) ?>"/>
-			</div>
-			<div class="description">
-      <div class="filter">
-				<p> <a href="<?php echo get_permalink(); ?>"><?php the_field(objective) ?></a></p>
-      </div>
-			</div>
-      <div class="comments">
-           <?php  echo $comments; ?>
-      </div>
-      <div class="title">
-        <a class="ajax-modal" data-fancybox-type="ajax"  href="?page_id=1178"><?php the_title(); ?></a>
-        <a href="<?php echo get_permalink(); ?>"><p>Submitted by <?php echo get_the_author(); ?></p></a>
-      </div>
-      <div class="meta">
-        <p><?php echo $difficulty; ?></p>
-        <div class="ratings"> <?php if(function_exists('the_ratings')) { the_ratings(); } ?> </div>
-      </div>
-		</div>
-		
-	<?php endwhile; ?>
-	</ul>
-</section>
+        <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?> 
+        <?php if(get_field('objective')) { $difficulty = get_field('difficulty'); $difficulty = implode (" ", $difficulty); } ?>
+
+        	<div class="card <?php echo $difficulty; ?>">
+        		
+                <div class="image">
+            		<?php the_post_thumbnail('card'); ?>
+            	</div>
+        			
+                <div class="description">
+                    <div class="filter">
+          		        <p><a href="<?php echo get_permalink(); ?>"><?php the_field(objective) ?></a></p>
+                    </div>
+                </div>
+
+                <h2 class="title">
+                    <?php the_title(); ?>
+                </h2>
+
+                <div class="meta">
+                    <p>Submitted by <?php echo get_the_author(); ?></p>
+                    <p><?php echo $difficulty; ?></p>
+                </div>
+        		
+            </div>
+
+        <?php endwhile; ?>
+    	
+        </ul>
+
+    </section>
+
 <?php endif; ?>
+
 </div>
 
+<?php
+$big = 999999999; 
 
+echo paginate_links( array(
+    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+    'format' => '?paged=%#%',
+    'current' => max( 1, get_query_var('paged') ),
+    'end_size'     => 1,
+    'mid_size'     => 1,
+    'total' => $the_query->max_num_pages
+) );
 
-<?php wp_reset_query();  // Restore global post data stomped by the_post(). ?>
-
+wp_reset_query(); ?>
 
 <?php get_footer(); ?>
-<script type="text/javascript">
-
-$( function() {     
-  $( '#filter-options' ).dropdown();
-});
-</script>
