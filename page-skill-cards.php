@@ -8,22 +8,6 @@ Template Name: Skill Cards
 
 <?php get_header(); ?>
 
-<script>
-    jQuery(document).ready(function ($) {
-    
-        var $container = $('#skill-cards')
-      
-        $container.isotope({
-          itemSelector : '.card',
-          layoutMode: 'cellsByRow',
-          cellsByRow: {
-            columnWidth: 275,
-            rowHeight: 390
-          }
-      });
-    });
-</script>
-
 <div class="row page-header" data-stellar-background-ratio="0.6">
 
     <div class="large-8 columns">
@@ -52,7 +36,7 @@ Template Name: Skill Cards
 
     // args
     $args = array(
-        'posts_per_page'=> 1,
+        'posts_per_page'=> 12,
         'paged' => $paged,
     	'post_type' => 'skill-cards'
     );
@@ -60,6 +44,24 @@ Template Name: Skill Cards
     // get results
     $the_query = new WP_Query( $args );
     if( $the_query->have_posts() ): ?>
+
+<div id="content">
+
+<script>
+    jQuery(document).ready(function ($) {
+    
+        var $container = $('#skill-cards')
+      
+        $container.isotope({
+          itemSelector : '.card',
+          layoutMode: 'cellsByRow',
+          cellsByRow: {
+            columnWidth: 275,
+            rowHeight: 390
+          }
+      });
+    });
+</script>
 
 <div id="skill-cards" class="row">
     
@@ -104,6 +106,7 @@ Template Name: Skill Cards
 </div>
 
 <?php
+
 $big = 999999999; 
 
 echo paginate_links( array(
@@ -116,5 +119,8 @@ echo paginate_links( array(
 ) );
 
 wp_reset_query(); ?>
+
+</div>
+
 
 <?php get_footer(); ?>

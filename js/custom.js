@@ -82,9 +82,9 @@ jQuery(document).ready(function ($) {
         });
 
 
- 	//menu Menu Functionality 
+ 	//menu Menu Functionality //
  	
- 	$( ".menu a" ).addClass( "ajax" );
+ 	$( ".menu a, .page-numbers" ).addClass( "ajax" );
 
     $( "ul.sub-menu" ).attr( 'id', 'drop' );
 
@@ -161,3 +161,6 @@ jQuery(document).ready(function ($) {
 
 });
 
+$( document ).ajaxComplete(function() { 
+    $( ".menu a, .page-numbers" ).addClass( "ajax" );
+});
