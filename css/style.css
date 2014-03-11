@@ -4732,7 +4732,7 @@ Version:	2.0
   position: relative;
 }
 .intro {
-  margin-top: 160px;
+  margin-top: 130px;
   margin-left: -20px;
   z-index: 1;
   position: relative;
@@ -4740,8 +4740,8 @@ Version:	2.0
 .intro h3 {
   font-family: 'chunkfiveroman';
   color: #FFF;
-  font-size: 42px;
-  line-height: 44px;
+  font-size: 46px;
+  line-height: 48px;
   margin: 0;
   width: 500px;
   margin-left: 10px;
@@ -4762,6 +4762,9 @@ Version:	2.0
 }
 .intro .action a.flat-btn {
   margin-top: 10px;
+}
+.intro i {
+  padding-left: 10px;
 }
 #roles {
   margin-top: -50px;
@@ -4784,10 +4787,11 @@ Version:	2.0
   font-size: 18px;
 }
 #roles p {
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 18px;
   text-align: center;
   margin: 0;
-  color: #536270;
+  color: #A8ADBD;
 }
 #latest {
   background: #F3F5F9;
@@ -4934,7 +4938,7 @@ article .story-header .meta {
   font-size: 14px;
 }
 article .story-header .meta a {
-  color: #555555;
+  color: #454b5a;
   line-height: 32px;
 }
 article .story-header .meta a:hover {
@@ -4966,7 +4970,7 @@ article .story-content blockquote p {
   font-size: 22px;
   line-height: 26px;
   padding: 0;
-  color: #555555;
+  color: #454b5a;
 }
 article .story-content .article-aside {
   float: right;
@@ -5030,7 +5034,7 @@ Version:	2.0
   position: relative;
   z-index: 2;
   max-width: 100%;
-  background: #3498db;
+  background: url('../img/page-header-bg.jpg') center center repeat;
   -webkit-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.1);
@@ -5085,6 +5089,7 @@ main.row {
   font-family: "ff-tisa-web-pro";
   padding: 0 30px;
   margin: 30px 0;
+  color: #616c77;
 }
 #content img.alignright {
   float: right;
@@ -5355,7 +5360,7 @@ Version:	2.0
   margin: 20px 15px 0px 20px;
 }
 #game-cards .card .title a {
-  color: #dddddd;
+  color: #616c77;
   font-size: 28px;
   font-weight: 200;
   line-height: 24px;
@@ -6163,7 +6168,7 @@ Version:	2.0
   margin: 20px 15px 0px 20px;
 }
 #skill-cards .card .title a {
-  color: #dddddd;
+  color: #616c77;
   font-size: 28px;
   font-weight: 200;
   line-height: 24px;
@@ -6494,9 +6499,8 @@ h3 {
   position: fixed;
 }
 .btn {
-  border-radius: 5px;
-  padding: 10px 30px;
-  letter-spacing: 1px;
+  border-radius: 8px;
+  padding: 10px 20px;
   font-size: 16px;
   color: #FFF;
   background: #3CA1F6;
@@ -6504,6 +6508,7 @@ h3 {
   -moz-transition: 300ms;
   -o-transition: 300ms;
   transition: 300ms;
+  font-family: "ff-meta-web-pro";
 }
 .btn:hover {
   background: #3CA1F6;
@@ -6511,7 +6516,7 @@ h3 {
 /* 6. Layout -----------------------------------------------------*/
 body {
   font-family: "ff-tisa-web-pro";
-  color: #555555;
+  color: #454b5a;
   background: #ffffff linear-gradient(to bottom, #3f567c, #b5ccc6) no-repeat;
 }
 #page-content {

@@ -79,14 +79,14 @@ h3 {
 /* 3. Colors ------------------------------------------------------*/
 
 @primary-font-color: #444;
-@midgrey: #DDD;
-@darkgrey: #555;
+@midgrey: #616C77;
+@darkgrey: #454B5A;
 @sidebar: #2c3240;
 @red: #E74C3C;
 @light-grey: #ECF0F1;
 @bright-blue: #3498DB;
 @green-blue: #2980B9;
-@flat-blue: #2C3E50;
+@-blue: #2C3E50;
 @blue: #4183BA;
 
 /* 4. Shadows -----------------------------------------------------*/
@@ -100,9 +100,8 @@ h3 {
 
 .fixed { position: fixed;}
 .btn {
-	border-radius: 5px;
-	padding: 10px 30px;
-	letter-spacing: 1px;
+	border-radius: 8px;
+	padding: 10px 20px;
 	font-size: 16px;
 	color: #FFF;
 	background: #3CA1F6;
@@ -110,6 +109,7 @@ h3 {
 	-moz-transition: 300ms;
 	-o-transition: 300ms;
 	transition: 300ms;
+	font-family: @third-font;
 	&:hover {
 		background: #3CA1F6;
 	}
