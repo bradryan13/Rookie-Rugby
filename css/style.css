@@ -5073,16 +5073,6 @@ main.row {
   padding: 0 30px;
   font-family: "ff-meta-web-pro";
 }
-#content p:first-of-type {
-  font-weight: bold;
-  font-style: italic;
-}
-#content p:first-of-type:first-letter {
-  padding: 0 0.1em 0 0;
-  font-size: 5em;
-  line-height: 68px;
-  float: left;
-}
 #content p {
   font-size: 18px;
   line-height: 1.6;
@@ -5101,6 +5091,16 @@ main.row {
 }
 #content h3 {
   padding: 0 30px;
+}
+#content.page-type p:first-of-type {
+  font-weight: bold;
+  font-style: italic;
+}
+#content.page-type p:first-of-type:first-letter {
+  padding: 0 0.1em 0 0;
+  font-size: 5em;
+  line-height: 68px;
+  float: left;
 }
 .forums-content {
   margin: 40px 0;

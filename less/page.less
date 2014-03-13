@@ -63,18 +63,6 @@ main.row {
 			padding: 0 30px;
 			font-family: @third-font;
 	}
-	p:first-of-type {
-  		font-weight: bold;
-  		font-style: italic;
-	}
-
-	p:first-of-type:first-letter {
-	  padding: 0 0.1em 0 0;
-	  font-size: 5em;
-	  line-height: 68px;
-	  float: left;
-	}
-
 	p {
 		font-size: 18px;
 		line-height: 1.6;
@@ -95,6 +83,19 @@ main.row {
 	}
 	h3 {
 		padding: 0 30px;
+	}
+	&.page-type {
+		p:first-of-type {
+	  		font-weight: bold;
+	  		font-style: italic;
+		}
+
+		p:first-of-type:first-letter {
+		  padding: 0 0.1em 0 0;
+		  font-size: 5em;
+		  line-height: 68px;
+		  float: left;
+		}
 	}
 }
 

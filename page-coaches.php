@@ -27,7 +27,7 @@ get_header(); ?>
 
 
 	<section class="content-wrapper large-9 medium-9 columns">
-		<div id="content">
+		<div class="page-type" id="content">
 		
 			<?php while ( have_posts() ) : the_post(); ?>
 
