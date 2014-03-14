@@ -54,55 +54,46 @@ if ($difficulty) {
     $the_query = new WP_Query( $args );
     if( $the_query->have_posts() ): ?>
 
-<div id="content">
-
-<script>
-    jQuery(document).ready(function ($) {
-    
-        var $container = $('#skill-cards')
-      
-        $container.isotope({
-          itemSelector : '.card',
-          layoutMode: 'cellsByRow',
-          cellsByRow: {
-            columnWidth: 275,
-            rowHeight: 390
-          }
-      });
-    });
-</script>
+<div id="content" class="light-grey-bg">
 
 <div id="skill-cards" class="row">
     
     <section>
 
-       <ul>
+       <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 
         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?> 
-        <?php if(get_field('objective')) { $difficulty = get_field('difficulty'); $difficulty = implode (" ", $difficulty); } ?>
 
-            <div class="card <?php echo $difficulty; ?>">
-                
-                <div class="image">
-                    <?php the_post_thumbnail('card'); ?>
-                </div>
-                    
-                <div class="description">
-                    <div class="filter">
-                        <p><a href="<?php echo get_permalink(); ?>"><?php the_field(objective) ?></a></p>
+        <?php $terms = get_the_terms( $post->ID , 'skill-diff' ); ?>
+
+        <?php $posttags = get_the_tags(); ?> 
+
+            <li class="card-wrapper">
+
+                <div class="card">
+                        
+
+                    <div class="meta">
+                        <?php foreach ( $terms as $term ) { echo $term->name; } ?>
                     </div>
-                </div>
 
-                <h2 class="title">
-                    <?php the_title(); ?>
-                </h2>
+                    <h2>
+                        <a href="<?php echo get_permalink();?>"><?php the_title(); ?></a>
+                    </h2>
 
-                <div class="meta">
-                    <p>Submitted by <?php echo get_the_author(); ?></p>
-                    <p><?php echo $difficulty; ?></p>
+                    <div class="image">
+                        <?php the_post_thumbnail('card'); ?>
+                    </div>
+
+                    <div class="tags">
+                        <ul>
+                            <?php if ($posttags) { foreach($posttags as $tag) { echo '<li>' . $tag->name . '</li>'; } } ?>
+                        </ul>
+                    </div>
+
                 </div>
                 
-            </div>
+            </li>
 
         <?php endwhile; ?>
         

@@ -13,70 +13,57 @@ Version:	2.0
 
 /* 1. Globals
 ---------------------------------------------------------*/
-
-#feed-header {
-	background: @sidebar;
-	height: 80px;
-	width: 300px;
-	padding: 20px 20px;
-	border-bottom: 1px solid #D9E0E2;
-	box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
-	z-index: 1;
-	position: relative;
-	a#filter {
-		background: @blue;
-		color: #FFF;
-		border-radius: 5px;
-		border: none;
-		border-radius: 0.25em;
-		color: #FFF;
-		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 0.875em;
-		font-style: normal;
-		line-height: 36px;
-		padding: 1px 40px 0 .8em;
-		text-transform: uppercase;
-		-webkit-font-smoothing: subpixel-antialiased !important;
-		position: relative;
-		transition: all .1s ease-out;
-		vertical-align: middle;
-		width: 100%;
-		display: inline-block;
-	}
-}
-
-
 #feed {
+	margin-top: 20px;
+	ul {
+		margin: 0;
+		list-style: none;
+	}
+	.card-wrapper {
+		float: left;
+		position: relative;
+		width: 100%;
+	    .card {
+	    	background: #FFF;
+	    	position: relative;
+	    	border-radius: 5px;
+	        -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+	        -moz-box-shadow: 0 1px 0 0 rgba(0,0,0,0.1);
+	        box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+	        padding: 10px 8px 19px 17px;
+	        box-shadow: inset 0 1px #FFF,0 1px 2px #C8CFE6;
+	        margin: 5px 20px;
+	    }
+		.meta {
+			font-size: 12px;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: #A2ADC6;
 
-#feed-content {
-	position: relative;
-	height: 100%;
-	overflow: hidden;
-	width: 300px; 
-	top: 0px; 
-	bottom: 0px;
-}
-	li {
-		.copy {
+		}
+		h2 {
+		margin: 8px 0 6px 0;
 			a {
-				img {
-					height: 40px;
-					width: 50px;
-					float: left;
-					margin-right: 20px;
-					margin-top: 5px;
-					border: 2px solid #FFF;
-				}
-				display: block;
-				font-size: 14px;
-				position: relative;
-				color: #536270;
-				line-height: 50px;
-				padding-left: 20px;
-			    border-bottom: 1px solid #E1E1E1;
-			    border-top: 1px solid #FFF;
-				background: linear-gradient(to bottom, #FFF, #F9F9F9);
+				color: #778095;
+				font-size: 20px;
+				font-family: "ff-meta-web-pro";
+				font-weight: normal;
+				margin: 8px 0 6px 0;
+				width: 150px;
+			}
+		}
+		.image {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			img {
+			height: 79px;
+			width: auto;
+			border-top-right-radius:5px;
+			border-bottom-right-radius:5px;
 			}
 		}
 	}
+	
 }
+

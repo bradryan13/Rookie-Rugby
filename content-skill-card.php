@@ -8,6 +8,9 @@ $skill_progressions = get_field( "skill_progressions");
 $check_and_correct = get_field( "check_and_correct"); 
 ?>
 
+		<?php edit_post_link( __( 'Edit', 'USAWCR' ), '<span class="edit-link">', '</span>' ); ?>
+
+
 <div class="header row">
 	<h2><?php echo get_the_title($post_id); ?></h2>
 
@@ -25,13 +28,8 @@ $check_and_correct = get_field( "check_and_correct");
 
 	<h3>What to Coach</h3>
 
-	<div class="large-7 columns copy">
+			<div class="image"><?php the_post_thumbnail('large'); ?> </div>
 			<div class="description"><?php echo $what_to_coach; ?> </div>
-	</div>
-
-	<div class="large-5 columns image">
-		<?php the_post_thumbnail('card'); ?>
-	</div>
 
 </div>
 
@@ -50,3 +48,11 @@ $check_and_correct = get_field( "check_and_correct");
 	</div>
 
 </div>
+
+
+<?php
+			// If comments are open or we have at least one comment, load up the comment template
+			if ( comments_open() || '0' != get_comments_number() ) :
+				comments_template();
+			endif;
+		?>

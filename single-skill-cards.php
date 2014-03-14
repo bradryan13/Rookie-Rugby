@@ -11,7 +11,7 @@
 
 </div>
 
-<main class="row">
+<main class="row light-grey-bg">
 
 	<section id="skill-card" class="large-9 columns">
 	
@@ -23,7 +23,7 @@
 
 	</section> <!-- End #skill-card  -->
 
-	<aside class="large-3 columns sidebar">
+	<aside class="large-3 columns sidebar light-grey-bg">
 
 		<?php if ( ! dynamic_sidebar( 'skill-cards-sidebar' ) ) : ?>
 		<?php endif; ?>	

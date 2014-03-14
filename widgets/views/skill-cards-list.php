@@ -1,7 +1,7 @@
 <?php 
 
 $skill_args = array(
-  'posts_per_page'=> 20,
+  'posts_per_page'=> 6,
   'post_type' => $postType,
 );
 
@@ -11,27 +11,38 @@ $the_query = new WP_Query( $skill_args );
 
 ?>
 
-<div id="feed-header">
-	<a href="#" id="filter">Skill Cards</a>
-</div>
-
 <div id="feed">
 
+       <ul>
 
+        <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?> 
 
-<ul id="feed-content">
+        <?php $terms = get_the_terms( $post->ID , 'skill-diff' ); ?>
 
-<?php if( $the_query->have_posts() ): ?>
-<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <li class="card-wrapper <?php echo $difficulty; ?>">
 
-	<li class="post">
+                <div class="card">
+                        
 
-		<div class="copy">
-			<a class="<?php echo $linkClass ?>" href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail('small');?> <?php the_title(); ?></a>
-		</div>
+                    <div class="meta">
+                        <?php foreach ( $terms as $term ) { echo $term->name; } ?>
+                    </div>
 
-	</li>
-<?php endwhile; ?>
-<?php endif; ?>
-</ul>
+                    <h2>
+                        <a href="<?php echo get_permalink();?>"><?php the_title(); ?></a>
+                    </h2>
+
+                    <div class="image">
+                        <?php the_post_thumbnail('card'); ?>
+                    </div>
+
+                </div>
+                
+            </li>
+
+        <?php endwhile; ?>
+        
+        </ul>
+
+  
 </div>
