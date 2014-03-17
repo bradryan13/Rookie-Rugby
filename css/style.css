@@ -4975,12 +4975,14 @@ body.remodal_active .remodal {
 }
 /* Remodal buttons(end) */
 /************** Media queries **************/
-.remodal {
-  max-width: 700px;
-  margin: 20px auto;
-  min-height: 0;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
+@media only screen and (min-width: 40.063em) {
+  .remodal {
+    max-width: 700px;
+    margin: 20px auto;
+    min-height: 0;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
 }
 .snap-drawers {
   position: absolute;
