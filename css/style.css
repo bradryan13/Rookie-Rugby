@@ -5920,13 +5920,9 @@ Version:	2.0
 
 -------------------------------------------------------------------*/
 /* 1. Header ------------------------------------------------------*/
-header {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
 header .header-container {
   margin: 0 auto;
   position: relative;
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
 }
 /* 3. Register -----------------------------------------------------*/
 #register {
@@ -7010,6 +7006,7 @@ footer {
   min-height: 200px;
   z-index: 2;
   position: relative;
+  border-radius: 0 0 8px 8px;
 }
 footer .row {
   margin: 0 20px;
@@ -7714,7 +7711,7 @@ body {
   font-family: "ff-tisa-web-pro";
   color: #454b5a;
   height: 100%;
-  background: #94abb1 url('../img/background.jpg') repeat-x;
+  background: #859fa6 url('../img/background.jpg') repeat-x;
 }
 #page-content {
   max-width: 1200px;
