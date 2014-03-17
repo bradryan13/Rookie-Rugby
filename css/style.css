@@ -6496,7 +6496,7 @@ main.row {
   font-family: "ff-meta-web-pro";
 }
 #content p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   font-family: "ff-tisa-web-pro";
   padding: 0 30px;
@@ -7723,7 +7723,7 @@ body {
   background: #FFF;
   margin: 40px auto;
   border-radius: 8px;
-  box-shadow: 0 0 50px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
 }
 main {
   position: relative;
