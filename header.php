@@ -27,7 +27,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="container">
+<div class="container remodal-bg">
 
 <div class="mobile-menu">
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'my-menu') ); ?>
@@ -43,26 +43,22 @@
 
 		<nav id="main-navigation" class="show-for-large-up" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'inline-list') ); ?>
-			<div id="login-reg"><a href="#login-form" class="ajax-modal" id="login">Login • </a><a class="ajax-modal" href="#register-form" id="register">Register</a></div>
+			<div id="login-reg"><a href="#login-form" id="login">Login • </a><a class="ajax-modal" href="#register-form" id="register">Register</a></div>
 		</nav>
 
 
-	<nav id="mobile-navigation" class="hide-for-large-up">
+		<nav id="mobile-navigation" class="hide-for-large-up">
 			<a href="#" id="open-left"><img src="<?php echo get_template_directory_uri(); ?>/img/menu-icon.png"></a>
 		</nav>
 
 </header>
 
-<div style="display:none">
-    <div id="login-form">
-		<?php echo do_shortcode('[userpro template=login]'); ?>
+    <div class="remodal" data-remodal-id="login-form" id="login-form">
+		<?php echo do_shortcode('[userpro template=login facebook_redirect="" force_redirect_uri=1]'); ?>
 	</div>
-</div>
 
-<div style="display:none">
-    <div id="register-form">
-		<?php echo do_shortcode('[userpro template=register]'); ?>
+    <div class="remodal" data-remodal-id="register-form" id="register-form">
+		<?php echo do_shortcode('[userpro template=register force_redirect_uri=1]'); ?>
 	</div>
-</div>
 
 
