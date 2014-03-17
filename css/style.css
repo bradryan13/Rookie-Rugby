@@ -6356,7 +6356,7 @@ article .story-header .meta {
   font-size: 14px;
 }
 article .story-header .meta a {
-  color: #454b5a;
+  color: #616c77;
   line-height: 32px;
 }
 article .story-header .meta a:hover {
@@ -6374,7 +6374,7 @@ article .story-header .meta img {
 article .story-content p {
   font-size: 16px;
   line-height: 1.6;
-  font-family: "ff-tisa-web-pro";
+  font-family: 'Lato', sans-serif;
   margin: 30px 100px 30px 100px;
 }
 article .story-content p img {
@@ -6388,7 +6388,7 @@ article .story-content blockquote p {
   font-size: 22px;
   line-height: 26px;
   padding: 0;
-  color: #454b5a;
+  color: #616c77;
 }
 article .story-content .article-aside {
   float: right;
@@ -6407,7 +6407,7 @@ article .story-content .article-aside p {
   background: rgba(0, 0, 0, 0.7);
   color: #FFF;
   font-weight: bold;
-  font-family: "ff-tisa-web-pro";
+  font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   text-align: right;
   line-height: 13px;
@@ -6494,7 +6494,7 @@ main.row {
 #content p {
   font-size: 16px;
   line-height: 1.6;
-  font-family: "ff-tisa-web-pro";
+  font-family: 'Lato', sans-serif;
   padding: 0 30px;
   margin: 30px 0;
   color: #616c77;
@@ -7708,8 +7708,8 @@ h3 {
 }
 /* 6. Layout -----------------------------------------------------*/
 body {
-  font-family: "ff-tisa-web-pro";
-  color: #454b5a;
+  font-family: 'Lato', sans-serif;
+  color: #616c77;
   height: 100%;
   background: #859fa6 url('../img/background.jpg') repeat-x;
 }

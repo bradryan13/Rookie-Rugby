@@ -18,6 +18,7 @@
 <!-- Type Kit -->
 <script type="text/javascript" src="//use.typekit.net/wtk8eul.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'>
 <!-- test commmit -->
 
 
