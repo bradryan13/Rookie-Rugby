@@ -31,6 +31,5 @@
 	</aside>
 
 </main>
-
 <?php get_footer(); ?>
 

@@ -2,8 +2,23 @@
 
 jQuery(document).ready(function ($) {
 
-	//enable mobile-menu
+    vex.defaultOptions.className = 'vex-theme-default';
 
+   //enable share button //
+    new Share("#share", {
+        ui: {
+            button_background: "#F0F2F7",
+        },
+        networks: {
+            facebook: { 
+                app_id: "1460640320820036",
+                url: "http://www.rookierugby.com",
+                title: $('.header h2').text()
+            }
+        }
+    });
+
+    //enable mobile-menu
     var snapper = new Snap({
         element: document.getElementById('page-content'),
         disable: 'right',
@@ -55,20 +70,8 @@ jQuery(document).ready(function ($) {
 
 
 
-	// //enable fitvids.
- //    jQuery('.video').fitVids();
 
-	// //enable foundation.
-	// $(document).foundation();
-		
 
-	// //enable Fancybox
-	// $(".fancybox").fancybox({
- //        padding : 0,
- //        openEffect : 'elastic',
- //        closeEffect : 'elastic',
- //        iframe: { preload: false }
- //    });
 
             //Fix side-menu
 
@@ -149,15 +152,6 @@ jQuery(document).ready(function ($) {
 
 
 	});
-
-      $('.ajax-modal').fancybox({
-            padding : 0,
-            openEffect: 'elastic',
-            openSpeed: 250,
-            closeEffect: 'elastic',
-        });
-
-
 
 });
 

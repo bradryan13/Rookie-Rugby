@@ -11,10 +11,23 @@ $check_and_correct = get_field( "check_and_correct");
 		<?php edit_post_link( __( 'Edit', 'USAWCR' ), '<span class="edit-link">', '</span>' ); ?>
 
 
-<div class="header row">
-	<h2><?php echo get_the_title($post_id); ?></h2>
+<div class="header">
 
-	<div class="meta">
+	<div class="row">
+
+		<div class="columns small-8">
+			<h2><?php echo get_the_title($post_id); ?></h2>
+		</div>
+
+		<div class="columns small-4">
+	 		<div id="share-button-top" class='share-button right share'><a id="share">Testing</a></div>
+		</div>
+
+
+	</div>
+
+
+	<div class="meta row">
 
 		<h3>Objective</h3>
 
@@ -27,10 +40,10 @@ $check_and_correct = get_field( "check_and_correct");
 <div class="content row">
 
 	<h3>What to Coach</h3>
-
+		<div class="columns large-12">
 			<div class="image"><?php the_post_thumbnail('large'); ?> </div>
 			<div class="description"><?php echo $what_to_coach; ?> </div>
-
+		</div>
 </div>
 
 <div class="sub-content row">

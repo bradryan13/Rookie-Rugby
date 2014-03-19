@@ -44,7 +44,7 @@
 
 		<nav id="main-navigation" class="show-for-large-up" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'inline-list') ); ?>
-			<div id="login-reg"><a data-remodal-target="login-form" >Login • </a><a data-remodal-options='{ "hashTracking": false }' data-remodal-target="register-form">Register</a></div>
+			<div id="login-reg"><a href="#login-form" >Login • </a><a href="#register-form">Register</a></div>
 		</nav>
 
 
@@ -54,12 +54,12 @@
 
 </header>
 
-    <div class="remodal" data-remodal-id="login-form" data-remodal-options='{ "hashTracking": false }'>
+ <!--    <div class="remodal" data-remodal-id="login-form">
 		<?php echo do_shortcode('[userpro template=login facebook_redirect="" force_redirect_uri=1]'); ?>
 	</div>
 
-    <div class="remodal" data-remodal-id="register-form" id="register-form" data-remodal-options='{ "hashTracking": false }'>
+    <div class="remodal" data-remodal-id="register-form" id="register-form">
 		<?php echo do_shortcode('[userpro template=register force_redirect_uri=1]'); ?>
-	</div>
+	</div> -->
 
 
