@@ -33,7 +33,9 @@
 <div class="mobile-menu">
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'my-menu') ); ?>
 </div>
+
 <div id="page-content">
+
 <header>
 	
 		<div id="branding">
@@ -62,4 +64,4 @@
 		<?php echo do_shortcode('[userpro template=register force_redirect_uri=1]'); ?>
 	</div>
 
-
+<div id="content-wrapper">

@@ -2,7 +2,7 @@
 
 jQuery(document).ready(function ($) {
 
-    //enable Fancybox
+    //Enable Fancybox
    $(".modal").fancybox({
          helpers: {
             overlay: {
@@ -12,7 +12,7 @@ jQuery(document).ready(function ($) {
    }); 
 
 
-    //enable mobile-menu
+    //Enable mobile-menu
     var snapper = new Snap({
         element: document.getElementById('page-content'),
         disable: 'right',
@@ -20,11 +20,11 @@ jQuery(document).ready(function ($) {
         addBodyClasses: false
     });
 
-    /* Get reference to toggle button, the html element with ID "open-left" */
+    //Get reference to toggle button, the html element with ID "open-left" */
 
     var myToggleButton = document.getElementById('open-left')
 
-    /* Add event listener to our toggle button */
+    //Add event listener to our toggle button */
     myToggleButton.addEventListener('click', function() {
 
         if (snapper.state().state == "left") {
@@ -35,7 +35,7 @@ jQuery(document).ready(function ($) {
 
     });
 
-    /* Prevent Safari opening links when viewing as a Mobile App */
+    // Prevent Safari opening links when viewing as a Mobile App 
     (function(a, b, c) {
         if (c in b && b[c]) {
             var d, e = a.location,
@@ -49,54 +49,41 @@ jQuery(document).ready(function ($) {
         }
     })(document, window.navigator, "standalone");
 
-    // close mobile menu on resize
+    //Close mobile menu on resize
 
     $(window).on('resize', function() {
       snapper.close();
     });
 
+    //Enable Stellar for Parallax
+
     $(window).stellar({ 
         horizontalScrolling: false
     });
 
+    //Fix side-menu
+
+    $(window).bind('scroll', function() {
+        if ($(window).scrollTop() > 270) {
+            $('.menu ').addClass('fixed');
+        }
+        else {
+            $('.menu').removeClass('fixed');
+        }
+    });
 
 
-
-
-
-
-
-
-            //Fix side-menu
-
-        $(window).bind('scroll', function() {
-            if ($(window).scrollTop() > 270) {
-                $('.menu ').addClass('fixed');
-            }
-            else {
-                 $('.menu').removeClass('fixed');
-             }
-        });
-
-
- 	//menu Menu Functionality //
+ 	//Add Ajax to sidebar menu and pagination
  	
  	$( ".menu a, .page-numbers" ).addClass( "ajax" );
 
-    $( "ul.sub-menu" ).attr( 'id', 'drop' );
-
-    $( "ul.sub-menu" ).addClass( "f-dropdown content" );
-
-    $( "ul.sub-menu" ).attr( 'data-dropdown-content', '' ); 
-
-    $( ".menu-item-has-children a" ).attr( 'data-dropdown', 'drop' );
-
-    //menu Dropdown
-    $( ".menu-item-type-custom a" ).attr( 'data-dropdown', 'drop2' );
-    $( ".menu-item-type-custom ul" ).attr( 'id', 'drop2' );
+    //Resouces Menu Dropdown
+    
+    $( ".menu-item-type-custom a" ).attr( 'data-dropdown', 'resource-drop' );
+    $( ".menu-item-type-custom ul" ).attr( 'id', 'resource-drop' );
 
 
-    $( "a[data-dropdown='drop2']" ).click(function(){
+    $( "a[data-dropdown='resource-drop']" ).click(function(){
         if($("header").hasClass("drop-open")) {
             $( "header" ).removeClass( "drop-open" );
         } else {
@@ -107,48 +94,16 @@ jQuery(document).ready(function ($) {
         } else {
             $( ".drop-down" ).addClass( "drop-open" );
         }
-    });
-
-    $( "a[data='video']" ).click(function(){
-        if($("#hero-video").hasClass("open")) {
-            $( "#hero-video" ).removeClass( "open" );
+        if($("#content-wrapper").hasClass("drop-open")) {
+            $("#content-wrapper").removeClass( "drop-open" );
         } else {
-            $( "#hero-video" ).addClass( "open" );
-        }
-
-        if($("#vid-close").hasClass("open")) {
-            $( "#vid-close" ).removeClass( "open" );
-        } else {
-            $( "#vid-close" ).addClass( "open" );
+            $("#content-wrapper").addClass( "drop-open" );
         }
     });
-
-
-
-	// Store variables
-    var menu_head = $('.menu > li > a'),
-        menu_body = $('.menu li > .sub-menu');
-
-    // Click function
-    menu_head.on('click', function(event) {
-
-    if ($(this).attr('class') == 'active'){
-        menu_body.slideUp('normal');
-    }
-
-    // Show and hide the tabs on click
-    if ($(this).attr('class') != 'active'){
-        menu_body.slideUp('normal');
-        $(this).next().stop(true,true).slideToggle('normal');
-        menu_head.removeClass('active');
-        $(this).addClass('active');
-    }
-
-
-	});
 
 });
 
 $( document ).ajaxComplete(function() { 
+    // Fix for ajax and pagination
     $( ".menu a, .page-numbers" ).addClass( "ajax" );
 });

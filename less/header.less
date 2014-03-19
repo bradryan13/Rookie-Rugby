@@ -2,7 +2,7 @@
 [Header Stylesheet]
 
 Project:	USA Rugby
-Version:	2.0
+Version:	2.1
 
 1. Header
 2. Toolbar
@@ -128,15 +128,7 @@ header {
 /* 6. Drop-Down ------------------------------------------------*/
 
 header {
-	-webkit-transition: .23s cubic-bezier(.694, .0482, .335, 1);
-	-moz-transition: .23s cubic-bezier(.694, .0482, .335, 1);
-	-o-transition: .23s cubic-bezier(.694, .0482, .335, 1);
-	-ms-transition: .23s cubic-bezier(.694, .0482, .335, 1);
-	transition: .23s cubic-bezier(.694, .0482, .335, 1);
-	&.drop-open {
-	margin-bottom: 150px;
-	}
-	#drop2 {
+	#resource-drop {
 		box-shadow: inset -1px 5px 5px -3px rgba(0, 0, 0, 0.1);
 		position: absolute;
 		margin: 0;
@@ -145,9 +137,23 @@ header {
 		width: 100%;
 		background: #30353E;
 		list-style: none;
-		height: 150px;
-		
+		height: 150px;	
 	}	
+}
+
+// move the page content down
+
+#content-wrapper {
+	-webkit-transition: .23s cubic-bezier(.694, .0482, .335, 1);
+	-moz-transition: .23s cubic-bezier(.694, .0482, .335, 1);
+	-o-transition: .23s cubic-bezier(.694, .0482, .335, 1);
+	-ms-transition: .23s cubic-bezier(.694, .0482, .335, 1);
+	transition: .23s cubic-bezier(.694, .0482, .335, 1);
+	&.drop-open {
+	transform: translate3d(0px, 150px, 0px);
+	-ms-transform: translate3d(0px, 150px, 0px);
+	-webkit-transform: translate3d(0px, 150px, 0px);
+	}
 }
 
 header #main-navigation ul.sub-menu {
