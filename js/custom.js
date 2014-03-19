@@ -2,21 +2,15 @@
 
 jQuery(document).ready(function ($) {
 
-    vex.defaultOptions.className = 'vex-theme-default';
-
-   //enable share button //
-    new Share("#share", {
-        ui: {
-            button_background: "#F0F2F7",
-        },
-        networks: {
-            facebook: { 
-                app_id: "1460640320820036",
-                url: "http://www.rookierugby.com",
-                title: $('.header h2').text()
+    //enable Fancybox
+   $(".modal").fancybox({
+         helpers: {
+            overlay: {
+                locked: false
             }
-        }
-    });
+        }  
+   }); 
+
 
     //enable mobile-menu
     var snapper = new Snap({
