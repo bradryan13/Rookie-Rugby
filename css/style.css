@@ -4809,6 +4809,10 @@ th.hide-for-touch {
   top: 0;
   left: 0;
   z-index: 8020;
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
 }
 .fancybox-skin {
   position: relative;
@@ -4818,10 +4822,16 @@ th.hide-for-touch {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  transition: 0.3s ease;
 }
 .fancybox-opened {
   z-index: 8030;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .fancybox-opened .fancybox-skin {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -4954,16 +4964,18 @@ th.hide-for-touch {
   overflow: hidden;
   display: none;
   z-index: 8010;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(33, 36, 46, 0.8);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .fancybox-overlay-fixed {
   position: fixed;
   bottom: 0;
   right: 0;
-}
-.blur {
-  -webkit-filter: blur(2px);
-  transition: 0.3s ease;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .fancybox-lock .fancybox-overlay {
   overflow: auto;

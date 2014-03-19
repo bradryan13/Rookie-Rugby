@@ -4,7 +4,9 @@ jQuery(document).ready(function ($) {
 
     //Enable Fancybox
    $(".modal").fancybox({
-         helpers: {
+        openEffect: 'none',
+        closeEffect: 'none',
+        helpers: {
             overlay: {
                 locked: false
             }
