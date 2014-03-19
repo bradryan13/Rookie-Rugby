@@ -5330,14 +5330,15 @@ header #main-navigation ul.sub-menu li a {
 [Home Stylesheet]
 
 Project:	USA Rugby
-Version:	2.0
+Version:	2.1
 
 1. Hero
-2. News Area
-3. Sidebar
+2. Roles
+3. Latest News Posts
 4. Hero Video
 
 -------------------------------------------------------------------*/
+/* 1. Hero --------------------------------------------------------*/
 #hero {
   height: 500px;
   background: url('../img/leader.jpg');
@@ -5379,6 +5380,7 @@ Version:	2.0
 .intro i {
   padding-left: 10px;
 }
+/* 2. Roles --------------------------------------------------------*/
 #roles {
   margin-top: -50px;
   margin-bottom: 80px;
@@ -5406,6 +5408,7 @@ Version:	2.0
   margin: 0;
   color: #A8ADBD;
 }
+/* 3. Latest News Posts ---------------------------------------------*/
 #latest {
   background: #F0F2F7;
   padding-top: 20px;
@@ -5516,7 +5519,7 @@ Version:	2.0
   text-align: center;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
-/* -------------------------------------------------------------------*/
+/* 4. Hero Video ---------------------------------------------------*/
 #hero-video {
   opacity: 0;
   position: absolute;
