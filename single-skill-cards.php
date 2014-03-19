@@ -17,7 +17,7 @@
 	
 		<div id="content">
 
-		<?php get_template_part( 'content', 'skill-card' ); ?>
+		<?php get_template_part( 'includes/content/content', 'skill-card' ); ?>
 	
 		</div>
 

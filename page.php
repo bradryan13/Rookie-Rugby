@@ -12,17 +12,6 @@
 
 get_header(); ?>
 
-<div class="row page-header" data-stellar-background-ratio="0.6">
-
-	<div class="large-9 columns">
-		<h1>Teachers</h1>
-	</div>
-
-	<div class="large-3 columns">
-		
-	</div>
-</div>
-
 <main class="row">
 
 	<aside class="large-3 medium-3 columns sidebar" data-snap-ignore="true">
@@ -38,7 +27,7 @@ get_header(); ?>
 		
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
+				<?php get_template_part( 'includes/content/content', 'page' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
 		</div>

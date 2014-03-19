@@ -12,7 +12,7 @@ get_header(); ?>
 	<section class="large-9 columns content-wrapper">
 	
 	<?php while ( have_posts() ) : the_post(); ?>
-		<?php get_template_part( 'content', 'single' ); ?>
+		<?php get_template_part( 'includes/content/content', 'single' ); ?>
 
 
 
