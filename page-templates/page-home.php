@@ -1,24 +1,14 @@
-<?php
-/**
- * The home template file.
- * @package USA Wheel Chair Rugby
- */
+<?php  
+/*  
+Template Name: Home
+*/  
 
 get_header(); ?>
 
-<script src="http://vjs.zencdn.net/4.4/video.js"></script>
 
 <div id="hero" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="0">
 	<?php if ( ! dynamic_sidebar( 'hero' ) ) : ?>
 	<?php endif; ?>
-	<div id="hero-video" class="video">
-		<video id="hero-vid" class="video-js vjs-default-skin" controls="controls"
-		 preload="auto" width="1200" height="500" poster="my_video_poster.png"
-		 data-setup="{}">
-         <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/webm">
-		</video>
-		<div id="vid-close"><a data="close" href="#">CLOSE THE VIDEO</a></div>
-	</div>
 </div>
 
 <div class="row" id="roles">
@@ -68,40 +58,6 @@ get_header(); ?>
 
 
 </main>
-
-<script>
-
- jQuery(document).ready(function ($) {
-    
-    var $container = $('#latest .posts')
-      
-    $container.isotope({
-    	itemSelector : '.post',
-    	masonry: {
-    		columnWidth: 333.3333
-  		}
-    });
-
-// filter items when filter link is clicked
-$('#filters li').click(function(){
-  var selector = $(this).attr('data-filter');
-  $container.isotope({ filter: selector });
-  return false;
-});
-});
-
-
-videojs("hero-vid").ready(function(){
-  var myPlayer = this;
-
-  $( "a[data='video']" ).click(function(){
-  myPlayer.play();
-  });
-
-});
-
-</script>
-
 
 
 <?php get_footer(); ?>
