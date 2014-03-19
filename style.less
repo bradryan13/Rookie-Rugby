@@ -23,20 +23,20 @@ Version:	2.0
 @import "less/vendor/mobile-menu.less";
 
 
-//broad
-@import "less/header.less";
-@import "less/home.less";
-@import "less/article.less"; // needs updated
-@import "less/page.less";
-@import "less/sidebar.less";
-@import "less/footer.less";
-@import "less/responsive.less";
+//global
+@import "less/global/header.less";
+@import "less/global/page.less";
+@import "less/global/sidebar.less";
+@import "less/global/footer.less";
+@import "less/global/responsive.less";
+@import "less/global/sidebar-feed.less"; //@TODO could be combined with sidebar
 
 
 //specific
-@import "less/game-cards.less";
-@import "less/skill-cards.less";
-@import "less/sidebar-feed.less";
+@import "less/specific/home.less";
+@import "less/specific/blog.less"; //@TODO needs updated
+@import "less/specific/game-cards.less";
+@import "less/specific/skill-cards.less";
 
 
 /* 2. Fonts  ------------------------------------------------------*/
@@ -92,7 +92,7 @@ h3 {
 @box-shadow-heavy: 0 0 30px 0  rgba(0, 0, 0, 0.8);
 
 
-/* 5. Utilities -----------------------------------------------------*/
+/* 5. Utilities ---------------------------------------------------*/
 
 .fixed { position: fixed;}
 .btn {

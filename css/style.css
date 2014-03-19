@@ -5327,312 +5327,6 @@ header #main-navigation ul.sub-menu li a {
   z-index: 1;
 }
 /*------------------------------------------------------------------
-[Home Stylesheet]
-
-Project:	USA Rugby
-Version:	2.1
-
-1. Hero
-2. Roles
-3. Latest News Posts
-4. Hero Video
-
--------------------------------------------------------------------*/
-/* 1. Hero --------------------------------------------------------*/
-#hero {
-  height: 500px;
-  background: url('../img/leader.jpg');
-  background-position: 50% 20%;
-  position: relative;
-}
-.intro {
-  margin-top: 130px;
-  margin-left: -20px;
-  z-index: 1;
-  position: relative;
-}
-.intro h3 {
-  font-family: 'chunkfiveroman';
-  color: #FFF;
-  font-size: 46px;
-  line-height: 48px;
-  margin: 0;
-  width: 500px;
-  margin-left: 10px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  -webkit-font-smoothing: antialiased;
-}
-.intro p {
-  font-size: 20px;
-  line-height: 26px;
-  margin: 10px 0;
-  color: #FFF;
-  width: 480px;
-  margin-left: 10px;
-}
-.intro .action {
-  margin-top: 30px;
-  margin-left: 10px;
-}
-.intro .action a.flat-btn {
-  margin-top: 10px;
-}
-.intro i {
-  padding-left: 10px;
-}
-/* 2. Roles --------------------------------------------------------*/
-#roles {
-  margin-top: -50px;
-  margin-bottom: 80px;
-}
-#roles .circle img {
-  border-radius: 500px;
-  height: 150px;
-  width: 150px;
-  display: block;
-  margin: 0 auto;
-  border: 5px solid #FFF;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
-}
-#roles a h3 {
-  text-align: center;
-  margin: 10px 0 5px 0;
-  line-height: 18px;
-  color: #536270;
-  font-size: 18px;
-}
-#roles p {
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  margin: 0;
-  color: #A8ADBD;
-}
-/* 3. Latest News Posts ---------------------------------------------*/
-#latest {
-  background: #F0F2F7;
-  padding-top: 20px;
-  min-height: 800px;
-  position: relative;
-}
-#latest:after {
-  width: 0;
-  height: 0;
-  position: absolute;
-  left: 50%;
-  margin-left: -13px;
-  top: -3px;
-  border-left: 26px solid transparent;
-  border-right: 26px solid transparent;
-  border-top: 26px solid #FFF;
-  content: '';
-}
-#latest .posts {
-  max-width: 62.5em;
-  margin: 0 95px 0 105px;
-}
-#latest .title {
-  margin-left: -20px;
-}
-#latest .title h1 {
-  font-family: "ff-meta-web-pro";
-  font-size: 34px;
-  color: #a8adbd;
-  -webkit-font-smoothing: antialiased;
-}
-#latest .post {
-  text-align: left;
-  width: 313px;
-  border-radius: 4px;
-  padding: 20px 18px 29px 27px;
-  margin-bottom: 40px;
-  background: #FFF;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-shadow: inset 0 1px #FFF,0 1px 2px #C8CFE6;
-  -moz-box-shadow: inset 0 1px #fff,0 1px 2px #c8cfe6;
-  box-shadow: inset 0 1px #FFF,0 1px 2px #C8CFE6;
-  position: relative;
-}
-#latest .post:after {
-  background: url('../img/bubble.png') center top no-repeat;
-  height: 21px;
-  width: 28px;
-  content: '';
-  position: absolute;
-  bottom: -21px;
-  left: 30px;
-}
-#latest .post p {
-  color: #778095;
-  font-size: 20px;
-  margin-bottom: 24px;
-  line-height: 24px;
-  font-family: "ff-meta-web-pro";
-}
-#latest .post .meta {
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #A2ADC6;
-}
-#latest .post .author {
-  margin-top: 20px;
-}
-#latest .post .author a {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 22px;
-}
-#latest .post .author .author-image {
-  float: left;
-  height: 50px;
-}
-#latest .post .author .author-image img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50px;
-}
-#latest .post .author .author-info {
-  margin-left: 60px;
-  margin-top: 5px;
-}
-#latest .post .action {
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
-  border: 1px solid #E3EBFF;
-  color: #A2ADC6;
-  padding: 8px 15px;
-  border-radius: 10px;
-}
-#feature {
-  height: 400px;
-  background: url('../img/feature-bg.jpg');
-  background-position: 50% 0;
-}
-#feature h1 {
-  color: #FFF;
-  font-size: 80px;
-  line-height: 400px;
-  text-align: center;
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
-}
-/* 4. Hero Video ---------------------------------------------------*/
-#hero-video {
-  opacity: 0;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 0;
-  -webkit-transition: 0.23s cubic-bezier(0.694, 0.0482, 0.335, 1);
-  -moz-transition: 0.23s cubic-bezier(0.694, 0.0482, 0.335, 1);
-  -o-transition: 0.23s cubic-bezier(0.694, 0.0482, 0.335, 1);
-  -ms-transition: 0.23s cubic-bezier(0.694, 0.0482, 0.335, 1);
-  transition: 0.23s cubic-bezier(0.694, 0.0482, 0.335, 1);
-}
-#hero-video.open {
-  opacity: 1;
-}
-article .story-header {
-  position: relative;
-  margin-bottom: -20px;
-}
-article .story-header .title {
-  font-weight: 900;
-  line-height: 1.2;
-  font-size: 42px;
-  padding: 30px 100px 0 100px;
-  letter-spacing: -1px;
-}
-article .story-header .sub-title {
-  padding: 0 100px;
-  font-size: 20px;
-  margin: 0 0 20px 0;
-}
-article .story-header .meta {
-  font-size: 14px;
-}
-article .story-header .meta a {
-  color: #616c77;
-  line-height: 32px;
-}
-article .story-header .meta a:hover {
-  text-decoration: underline;
-}
-article .story-header .meta img {
-  width: 32px;
-  height: 32px;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  margin-right: 10px;
-  margin-top: -5px;
-}
-article .story-content p {
-  font-size: 16px;
-  line-height: 1.6;
-  font-family: 'Lato', sans-serif;
-  margin: 30px 100px 30px 100px;
-}
-article .story-content p img {
-  float: left;
-  margin: 30px 30px 30px 0;
-}
-article .story-content blockquote p {
-  margin: 0 60px 40px 60px;
-  font-weight: bold;
-  font-style: italic;
-  font-size: 22px;
-  line-height: 26px;
-  padding: 0;
-  color: #616c77;
-}
-article .story-content .article-aside {
-  float: right;
-  width: 300px;
-  margin: 35px 80px 10px 40px;
-  position: relative;
-  transition: .3s;
-}
-article .story-content .article-aside p {
-  margin: 0;
-  font-size: 12px;
-  padding: 5px 10px 5px 50px;
-  position: absolute;
-  bottom: -1px;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  color: #FFF;
-  font-weight: bold;
-  font-family: 'Lato', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-align: right;
-  line-height: 13px;
-  z-index: 1;
-}
-.youtube-cover:after {
-  background: url('../img/youtube-play.png') center center no-repeat;
-  position: absolute;
-  content: '';
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-}
-.youtube-cover:hover:after {
-  background: url('../img/youtube-play-hover.png') center center no-repeat;
-}
-.slideshow {
-  height: 459px;
-  width: 100%;
-  position: relative;
-}
-aside.sidebar .news-feed {
-  height: 100%;
-}
-/*------------------------------------------------------------------
 [Page Stylesheet]
 
 Project:	USA Rugby
@@ -5952,6 +5646,377 @@ footer .social ul li {
     top: 18px;
   }
 }
+/*------------------------------------------------------------------
+[Skill Card Stylesheet]
+
+Project:	USA Rugby
+Version:	2.0
+
+1. Globals
+2. Card Header
+3. Card Body
+4. Card Footer
+
+--------------------------------------------------------------------*/
+/* 1. Globals
+---------------------------------------------------------*/
+#feed {
+  margin-top: 20px;
+}
+#feed ul {
+  margin: 0;
+  list-style: none;
+}
+#feed .card-wrapper {
+  float: left;
+  position: relative;
+  width: 100%;
+}
+#feed .card-wrapper .card {
+  background: #FFF;
+  position: relative;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  padding: 10px 8px 19px 17px;
+  box-shadow: inset 0 1px #FFF,0 1px 2px #C8CFE6;
+  margin: 5px 20px;
+}
+#feed .card-wrapper .meta {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #A2ADC6;
+}
+#feed .card-wrapper h2 {
+  margin: 8px 0 6px 0;
+}
+#feed .card-wrapper h2 a {
+  color: #778095;
+  font-size: 20px;
+  font-family: "ff-meta-web-pro";
+  font-weight: normal;
+  margin: 8px 0 6px 0;
+  width: 150px;
+}
+#feed .card-wrapper .image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#feed .card-wrapper .image img {
+  height: 79px;
+  width: auto;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+/*------------------------------------------------------------------
+[Home Stylesheet]
+
+Project:	USA Rugby
+Version:	2.1
+
+1. Hero
+2. Roles
+3. Latest News Posts
+4. Hero Video
+
+-------------------------------------------------------------------*/
+/* 1. Hero --------------------------------------------------------*/
+#hero {
+  height: 500px;
+  background: url('../img/leader.jpg');
+  background-position: 50% 20%;
+  position: relative;
+}
+.intro {
+  margin-top: 130px;
+  margin-left: -20px;
+  z-index: 1;
+  position: relative;
+}
+.intro h3 {
+  font-family: 'chunkfiveroman';
+  color: #FFF;
+  font-size: 46px;
+  line-height: 48px;
+  margin: 0;
+  width: 500px;
+  margin-left: 10px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-font-smoothing: antialiased;
+}
+.intro p {
+  font-size: 20px;
+  line-height: 26px;
+  margin: 10px 0;
+  color: #FFF;
+  width: 480px;
+  margin-left: 10px;
+}
+.intro .action {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.intro .action a.flat-btn {
+  margin-top: 10px;
+}
+.intro i {
+  padding-left: 10px;
+}
+/* 2. Roles --------------------------------------------------------*/
+#roles {
+  margin-top: -50px;
+  margin-bottom: 80px;
+}
+#roles .circle img {
+  border-radius: 500px;
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  border: 5px solid #FFF;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+#roles a h3 {
+  text-align: center;
+  margin: 10px 0 5px 0;
+  line-height: 18px;
+  color: #536270;
+  font-size: 18px;
+}
+#roles p {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  margin: 0;
+  color: #A8ADBD;
+}
+/* 3. Latest News Posts ---------------------------------------------*/
+#latest {
+  background: #F0F2F7;
+  padding-top: 20px;
+  min-height: 800px;
+  position: relative;
+}
+#latest:after {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  margin-left: -13px;
+  top: -3px;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+  border-top: 26px solid #FFF;
+  content: '';
+}
+#latest .posts {
+  max-width: 62.5em;
+  margin: 0 95px 0 105px;
+}
+#latest .title {
+  margin-left: -20px;
+}
+#latest .title h1 {
+  font-family: "ff-meta-web-pro";
+  font-size: 34px;
+  color: #a8adbd;
+  -webkit-font-smoothing: antialiased;
+}
+#latest .post {
+  text-align: left;
+  width: 313px;
+  border-radius: 4px;
+  padding: 20px 18px 29px 27px;
+  margin-bottom: 40px;
+  background: #FFF;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: inset 0 1px #FFF,0 1px 2px #C8CFE6;
+  -moz-box-shadow: inset 0 1px #fff,0 1px 2px #c8cfe6;
+  box-shadow: inset 0 1px #FFF,0 1px 2px #C8CFE6;
+  position: relative;
+}
+#latest .post:after {
+  background: url('../img/bubble.png') center top no-repeat;
+  height: 21px;
+  width: 28px;
+  content: '';
+  position: absolute;
+  bottom: -21px;
+  left: 30px;
+}
+#latest .post p {
+  color: #778095;
+  font-size: 20px;
+  margin-bottom: 24px;
+  line-height: 24px;
+  font-family: "ff-meta-web-pro";
+}
+#latest .post .meta {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #A2ADC6;
+}
+#latest .post .author {
+  margin-top: 20px;
+}
+#latest .post .author a {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 22px;
+}
+#latest .post .author .author-image {
+  float: left;
+  height: 50px;
+}
+#latest .post .author .author-image img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+}
+#latest .post .author .author-info {
+  margin-left: 60px;
+  margin-top: 5px;
+}
+#latest .post .action {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid #E3EBFF;
+  color: #A2ADC6;
+  padding: 8px 15px;
+  border-radius: 10px;
+}
+#feature {
+  height: 400px;
+  background: url('../img/feature-bg.jpg');
+  background-position: 50% 0;
+}
+#feature h1 {
+  color: #FFF;
+  font-size: 80px;
+  line-height: 400px;
+  text-align: center;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+/* 4. Hero Video ---------------------------------------------------*/
+#hero-video {
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  -webkit-transition: 0.23s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -moz-transition: 0.23s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -o-transition: 0.23s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -ms-transition: 0.23s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  transition: 0.23s cubic-bezier(0.694, 0.0482, 0.335, 1);
+}
+#hero-video.open {
+  opacity: 1;
+}
+article .story-header {
+  position: relative;
+  margin-bottom: -20px;
+}
+article .story-header .title {
+  font-weight: 900;
+  line-height: 1.2;
+  font-size: 42px;
+  padding: 30px 100px 0 100px;
+  letter-spacing: -1px;
+}
+article .story-header .sub-title {
+  padding: 0 100px;
+  font-size: 20px;
+  margin: 0 0 20px 0;
+}
+article .story-header .meta {
+  font-size: 14px;
+}
+article .story-header .meta a {
+  color: #616c77;
+  line-height: 32px;
+}
+article .story-header .meta a:hover {
+  text-decoration: underline;
+}
+article .story-header .meta img {
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  margin-right: 10px;
+  margin-top: -5px;
+}
+article .story-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: 'Lato', sans-serif;
+  margin: 30px 100px 30px 100px;
+}
+article .story-content p img {
+  float: left;
+  margin: 30px 30px 30px 0;
+}
+article .story-content blockquote p {
+  margin: 0 60px 40px 60px;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 26px;
+  padding: 0;
+  color: #616c77;
+}
+article .story-content .article-aside {
+  float: right;
+  width: 300px;
+  margin: 35px 80px 10px 40px;
+  position: relative;
+  transition: .3s;
+}
+article .story-content .article-aside p {
+  margin: 0;
+  font-size: 12px;
+  padding: 5px 10px 5px 50px;
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #FFF;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-align: right;
+  line-height: 13px;
+  z-index: 1;
+}
+.youtube-cover:after {
+  background: url('../img/youtube-play.png') center center no-repeat;
+  position: absolute;
+  content: '';
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+.youtube-cover:hover:after {
+  background: url('../img/youtube-play-hover.png') center center no-repeat;
+}
+.slideshow {
+  height: 459px;
+  width: 100%;
+  position: relative;
+}
+aside.sidebar .news-feed {
+  height: 100%;
+}
 #game-cards {
   margin: 0 auto;
   max-width: 1100px;
@@ -6250,7 +6315,7 @@ Version:	2.1
 7. Active Section Indicator
 
 -------------------------------------------------------------------*/
-/* 1. Header ------------------------------------------------------*/
+/* 1. Multiple view -----------------------------------------------*/
 #skill-cards {
   margin: 0 auto;
   background: #F0F2F7;
@@ -6332,7 +6397,7 @@ Version:	2.1
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-/* 1. Header ------------------------------------------------------*/
+/* 1. Single View -------------------------------------------------*/
 #skill-card {
   z-index: 1;
   position: relative;
@@ -6379,71 +6444,6 @@ Version:	2.1
 #skill-card .footer {
   padding-bottom: 20px;
 }
-/*------------------------------------------------------------------
-[Skill Card Stylesheet]
-
-Project:	USA Rugby
-Version:	2.0
-
-1. Globals
-2. Card Header
-3. Card Body
-4. Card Footer
-
---------------------------------------------------------------------*/
-/* 1. Globals
----------------------------------------------------------*/
-#feed {
-  margin-top: 20px;
-}
-#feed ul {
-  margin: 0;
-  list-style: none;
-}
-#feed .card-wrapper {
-  float: left;
-  position: relative;
-  width: 100%;
-}
-#feed .card-wrapper .card {
-  background: #FFF;
-  position: relative;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
-  padding: 10px 8px 19px 17px;
-  box-shadow: inset 0 1px #FFF,0 1px 2px #C8CFE6;
-  margin: 5px 20px;
-}
-#feed .card-wrapper .meta {
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #A2ADC6;
-}
-#feed .card-wrapper h2 {
-  margin: 8px 0 6px 0;
-}
-#feed .card-wrapper h2 a {
-  color: #778095;
-  font-size: 20px;
-  font-family: "ff-meta-web-pro";
-  font-weight: normal;
-  margin: 8px 0 6px 0;
-  width: 150px;
-}
-#feed .card-wrapper .image {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-#feed .card-wrapper .image img {
-  height: 79px;
-  width: auto;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
 /* 2. Fonts  ------------------------------------------------------*/
 @font-face {
   font-family: 'chunkfiveroman';
@@ -6466,7 +6466,7 @@ h3 {
 }
 /* 3. Colors ------------------------------------------------------*/
 /* 4. Shadows -----------------------------------------------------*/
-/* 5. Utilities -----------------------------------------------------*/
+/* 5. Utilities ---------------------------------------------------*/
 .fixed {
   position: fixed;
 }
