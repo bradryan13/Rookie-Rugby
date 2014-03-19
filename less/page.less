@@ -1,19 +1,18 @@
 /*------------------------------------------------------------------
-[Header Stylesheet]
+[Page Stylesheet]
 
 Project:	USA Rugby
 Version:	2.0
 
 1. Header
-2. Toolbar
-3. Register
-4. Branding
-5. Navigation
+2. Page Layout
+3. Typography
+4. Loaders
 
 -------------------------------------------------------------------*/
 
 
-/* 1. Header ------------------------------------------------------*/
+/* 1. Page Header -------------------------------------------------*/
 
 .page-header {
 	min-height: 150px;
@@ -31,6 +30,7 @@ Version:	2.0
 	}
 }
 
+/* 2. Page Layout ------------------------------------------------*/
 
 
 main.row {
@@ -44,6 +44,10 @@ main.row {
     -moz-box-shadow:    -5px 0px 0px 0px rgba(0, 0, 0, 0.1);
     box-shadow:         -5px 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
+
+
+/* 3. Typography -------------------------------------------------*/
+
 
 #content {
 	padding: 0 80px;
@@ -95,9 +99,12 @@ main.row {
 	}
 }
 
-.forums-content {
-	margin: 40px 0;
+
+main.light-grey-bg, #content.light-grey-bg, .sidebar.light-grey-bg {
+	background: @light-grey;
 }
+
+/* 4. Loader ---------------------------------------------------*/
 
 #loader {
 	background: rgba(255, 255, 255, 0.8);
@@ -115,6 +122,3 @@ main.row {
 }	
 
 
-main.light-grey-bg, #content.light-grey-bg, .sidebar.light-grey-bg {
-	background: #F0F2F7;
-}

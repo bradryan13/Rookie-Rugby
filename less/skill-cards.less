@@ -1,4 +1,21 @@
-//multiple cards view
+/*------------------------------------------------------------------
+[Header Stylesheet]
+
+Project:	USA Rugby
+Version:	2.1
+
+1. Header
+2. Toolbar
+3. Register
+4. Branding
+5. Navigation
+6. Dropdown
+7. Active Section Indicator
+
+-------------------------------------------------------------------*/
+
+/* 1. Header ------------------------------------------------------*/
+
 #skill-cards {
 	margin: 0 auto;
 	background: #F0F2F7;
@@ -81,3 +98,56 @@
 		}
 	}
 }
+
+/* 1. Header ------------------------------------------------------*/
+
+#skill-card {
+	z-index: 1;
+	position: relative;
+	background: #FFF;
+	font-size: 16px;
+	line-height: 1.6;
+	padding: 0;
+	padding-bottom: 30px;
+	border-right: 1px solid #EEE;
+	.header {
+		margin-top: 15px;
+		padding-bottom: px;
+		h2 {
+			font-size: 36px;
+		}
+		#share {
+			margin-top: 45px;
+			position: relative;
+			line-height: 22px;
+		}
+	}
+	#content {
+		p {
+			padding: 0;
+			margin: 20px 0;
+		}
+	}
+	h3 {
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: bold;
+		margin: 0;
+		padding: 5px;
+		font-family: @third-font;
+		color: @blue;
+		border-bottom: 1px solid #E1E1E1;
+	}
+	.content {
+		padding-bottom: 20px;
+		.image {
+			float: right;
+           	margin: 0 40px;
+        }
+	}
+	.footer {
+		padding-bottom: 20px;
+	}
+
+}
+
