@@ -66,7 +66,7 @@ jQuery(document).ready(function ($) {
     //Fix side-menu
 
     $(window).bind('scroll', function() {
-        if ($(window).scrollTop() > 270) {
+        if ($(window).scrollTop() > 288) {
             $('.menu ').addClass('fixed');
         }
         else {
