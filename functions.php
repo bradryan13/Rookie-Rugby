@@ -5,40 +5,18 @@
  * @package USA Wheel Chair Rugby
  */
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
-}
-
 if ( ! function_exists( 'rookie_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
+
 function rookie_setup() {
 
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on USA Wheel Chair Rugby, use a find and replace
-	 * to change 'rookie' to the name of your theme in all the template files
-	 */
+	// Make theme available for translation.
 	load_theme_textdomain( 'rookie', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-	 */
-	//add_theme_support( 'post-thumbnails' );
+	//Enable support for Post Thumbnails on posts and pages.
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -47,25 +25,15 @@ function rookie_setup() {
 		'coaches' 	 		 => __( 'Coaches Menu', 'rookie' ), 
 		'organizations' 	 => __( 'Organizations Menu', 'rookie' ), 
 		'players' 			 => __( 'Players Menu', 'rookie' ), 
-
 	) );
 
-
-	// Enable support for Post Formats.
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
-
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'rookie_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif; // rookie_setup
+
 add_action( 'after_setup_theme', 'rookie_setup' );
 
-/**
- * Register widgetized area and update sidebar with default widgets.
- */
+// Register Widgets --------------------------------------------------------------------------------------------------
+
 function rookie_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Hero', 'rookie' ),
@@ -142,30 +110,27 @@ function rookie_widgets_init() {
 }
 add_action( 'widgets_init', 'rookie_widgets_init' );
 
-/**
- * Enqueue scripts and styles.
- */
+// Enqueue scripts and styles --------------------------------------------------------------------------------------------------
+
 function rookie_scripts() {
 
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', false, '1.1', 'all' );
-	wp_enqueue_script( 'rookie-Foundation', get_template_directory_uri() . '/js/main.min.js', array(), '1', true );
-
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	wp_enqueue_script( 'rookie-Foundation', get_template_directory_uri() . '/js/main.min.js', array(), '1', true );	
 }
 add_action( 'wp_enqueue_scripts', 'rookie_scripts' );
 
-//imclude custom widgets
+//Include custom widgets --------------------------------------------------------------------------------------------------------
+
 include("widgets/simple-widget.php");
 
-//add images
+//Add Image Sizes ---------------------------------------------------------------------------------------------------------------
+
 add_image_size( 'latest', 268, 268, true );
 add_image_size( 'card', 120, 150, true );
 
 
-// require jquery 
+// Require jquery ---------------------------------------------------------------------------------------------------------------
+
 if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
 function my_jquery_enqueue() {
    wp_deregister_script('jquery');
@@ -173,18 +138,19 @@ function my_jquery_enqueue() {
    wp_enqueue_script('jquery');
 }
 
-// Automatically add FitVids to oembed YouTube videos
-function your_theme_embed_filter( $output, $data, $url ) {
- 
-	$return = '<div class="video">'.$output.'</div>';
-	return $return;
- 
-}
-add_filter('oembed_dataparse', 'your_theme_embed_filter', 90, 3 );
-
-// customize embed settings
-add_filter( 'oembed_result', 'hide_youtube_related_videos', 10, 3);
- function hide_youtube_related_videos($data, $url, $args = array()) {
- $data = preg_replace('/(youtube\.com.*)(\?feature=oembed)(.*)/', '$1?' . apply_filters("hyrv_extra_querystring_parameters", "&modestbranding=1&rel=0&showinfo=0&autohide=1&vq=hd720") . 'rel=0$3', $data);
- return $data;
- }
+// Selects Custom Post Type Templates for single and archive pages ---------------------------------------------------------------
+add_filter('template_include', 'custom_template_include');
+function custom_template_include($template) {
+	$custom_template_location = '/includes/single/';
+     if ( get_post_type () ) {
+        if ( is_archive() ) :
+           if(file_exists(get_stylesheet_directory() . $custom_template_location . 'archive-' . get_post_type() . '.php'))
+              return get_stylesheet_directory() . $custom_template_location . 'archive-' . get_post_type() . '.php';
+        endif;
+        if ( is_single() ) :
+           if(file_exists(get_stylesheet_directory() . $custom_template_location . 'single-' . get_post_type() . '.php'))
+              return get_stylesheet_directory() . $custom_template_location . 'single-' . get_post_type() . '.php';
+        endif;
+    }
+    return $template;
+  }
