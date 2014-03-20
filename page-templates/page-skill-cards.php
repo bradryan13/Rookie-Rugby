@@ -4,37 +4,32 @@ Template Name: Skill Cards
 */  
 ?>
 
-
-
 <?php get_header(); ?>
 
-<div class="row page-header" data-stellar-background-ratio="0.6">
+        <div class="row page-header" data-stellar-background-ratio="0.6">
 
 
-    <div class="large-8 columns">
-        <h1><?php echo get_the_title($ID); ?></h1>
-    </div>
+            <div class="large-8 columns">
+                <h1><?php echo get_the_title($ID); ?></h1>
+            </div>
 
-    <div class="large-4 columns">
+            <div class="large-4 columns">
 
-    </div>
+            </div>
 
-</div>
+        </div>
 
 
 <?php
 
-// GET Values for categories
 
 $difficulty = $_GET['difficulty']; 
-
-
 $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1; // setup pagination
 
 
 // args
 $args = array(
-    'posts_per_page'=> 20,
+    'posts_per_page'=> 5,
     'paged' => $paged,
     'post_type' => 'skill-cards',
 );

@@ -6366,6 +6366,9 @@ Version:	2.1
 }
 #skill-cards .card-wrapper h2 {
   margin: 8px 0 6px 0;
+  padding: 0;
+  max-width: 180px;
+  text-transform: none;
 }
 #skill-cards .card-wrapper h2 a {
   color: #778095;
@@ -6426,15 +6429,11 @@ Version:	2.1
 }
 #skill-card .header {
   margin-top: 15px;
-  padding-bottom: px;
 }
-#skill-card .header h2 {
-  font-size: 36px;
-}
-#skill-card .header #share {
-  margin-top: 45px;
-  position: relative;
-  line-height: 22px;
+#skill-card .header h1 {
+  border-bottom: 0;
+  padding: 0;
+  margin-left: -10px;
 }
 #skill-card #content p {
   padding: 0;
