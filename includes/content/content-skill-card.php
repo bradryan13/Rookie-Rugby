@@ -19,7 +19,6 @@ $check_and_correct = get_field( "check_and_correct");
 		</div>
 
 		<div class="columns small-4">
-	 		<div id="share-button-top" class='share-button right share'><a id="share">Testing</a></div>
 		</div>
 
 </div>
