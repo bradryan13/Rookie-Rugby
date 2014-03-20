@@ -5379,7 +5379,7 @@ main.row {
 }
 /* 3. Typography -------------------------------------------------*/
 #content {
-  padding: 0 80px;
+  padding: 0 80px 40px 80px;
 }
 #content .title {
   font-size: 40px;
