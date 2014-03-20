@@ -29,7 +29,7 @@ $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1; // setup pagin
 
 // args
 $args = array(
-    'posts_per_page'=> 5,
+    'posts_per_page'=> 20,
     'paged' => $paged,
     'post_type' => 'skill-cards',
 );
