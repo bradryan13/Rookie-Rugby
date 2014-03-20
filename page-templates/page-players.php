@@ -8,7 +8,7 @@ get_header(); ?>
 <div class="row page-header" data-stellar-background-ratio="0.6">
 
 	<div class="large-9 columns">
-		<h1>Teachers</h1>
+		<h1>Players</h1>
 	</div>
 
 	<div class="large-3 columns">

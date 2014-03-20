@@ -8,7 +8,7 @@ get_header(); ?>
 <div class="row page-header coaches" data-stellar-background-ratio="0.6">
 
 	<div class="large-9 columns">
-		<h1>Coaches</h1>
+		<h1>Parents & Coaches</h1>
 	</div>
 
 	<div class="large-3 columns">
@@ -31,6 +31,7 @@ get_header(); ?>
 		
 			<?php while ( have_posts() ) : the_post(); ?>
 
+				<?php get_template_part( 'includes/content/content', 'page' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
 		</div>
