@@ -1,0 +1,153 @@
+/*------------------------------------------------------------------
+[Header Stylesheet]
+
+Project:	USA Rugby
+Version:	2.1
+
+1. Header
+2. Toolbar
+3. Register
+4. Branding
+5. Navigation
+6. Dropdown
+7. Active Section Indicator
+
+-------------------------------------------------------------------*/
+
+/* 1. Multiple view -----------------------------------------------*/
+
+#videos {
+	margin: 0 auto;
+	background: #F0F2F7;
+	max-width: 1100px;
+	min-height: 1200px;
+	padding-top: 40px;
+	ul {
+		margin: 0;
+		list-style: none;
+	}
+	.card-wrapper {
+		float: left;
+		position: relative;
+        .card {
+        	background: #FFF;
+        	position: relative;
+        	border-radius: 5px;
+	        -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+	        -moz-box-shadow: 0 1px 0 0 rgba(0,0,0,0.1);
+	        box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+	        padding: 20px 20px 30px 15px;
+	        box-shadow: inset 0 1px #FFF,0 1px 2px #C8CFE6;
+	        min-height: 150px;
+        }
+		.meta {
+			font-size: 12px;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: #A2ADC6;
+
+		}
+		h2 {
+		margin: 8px 0 6px 0;
+		padding: 0;
+		max-width: 180px;
+		text-transform: none;
+			a {
+				color: #778095;
+				font-size: 20px;
+				font-family: "ff-meta-web-pro";
+				font-weight: normal;
+				margin: 8px 0 6px 0;
+				width: 150px;
+			}
+		}
+		.tags {
+			position: absolute;
+			left: 15px;
+			bottom: 15px;
+			font-size: 13px;
+			color: #A2ADC6;
+			font-family: @third-font;
+			ul {
+				margin: 0;
+				padding: 0;
+				li {
+					position: relative;
+					border-radius: 3px;
+					padding: 7px 15px;
+					background: #F0F2F4;
+					float: left;
+					margin-right: 5px;
+					&:before {
+						position: absolute;
+						top: 0px;
+						right: 0px;
+						background: url("../img/tag-corner.png") center top no-repeat;
+						width: 8px;
+						height: 8px;
+						content: '';
+					}
+				}
+			}
+		}
+		.image {
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			margin-top: -33px;
+			width: 90px;
+			img {
+				border-radius: 3px;
+			}
+		}
+	}
+}
+
+/* 1. Single View -------------------------------------------------*/
+
+#video {
+	z-index: 1;
+	position: relative;
+	background: #FFF;
+	font-size: 16px;
+	line-height: 1.6;
+	padding: 0;
+	padding-bottom: 30px;
+	border-right: 1px solid #EEE;
+	.header {
+		margin-top: 15px;
+		h1 {
+			border-bottom: 0;
+			padding: 0;
+			margin-left: -10px;
+		}
+	}
+	#content {
+		p {
+			padding: 0;
+			margin: 20px 0;
+		}
+	}
+	h3 {
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: bold;
+		margin: 0;
+		padding: 5px;
+		font-family: @third-font;
+		color: @blue;
+		border-bottom: 1px solid #E1E1E1;
+	}
+	.content {
+		padding-bottom: 20px;
+		.image {
+			float: right;
+           	margin: 0 40px;
+        }
+	}
+	.footer {
+		padding-bottom: 20px;
+	}
+
+}
+
