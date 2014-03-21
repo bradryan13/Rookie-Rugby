@@ -110,7 +110,8 @@ unset($post_types['attachment'], $post_types['acf'], $post_types['revision'], $p
 
 $views = array('List View' 		=> 'post-list',
                'Featured Post'  => 'featured-post',
-			   'Skill Card List'  => 'skill-cards-list' );
+			   'Skill Card List'  => 'skill-cards-list',
+			   'Game Card List'  => 'game-cards-list' );
 
 //get categories
 $categories = get_categories(); ?>

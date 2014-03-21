@@ -1,132 +1,120 @@
 <?php  
 /*  
 Template Name: Game Cards  
-
-TEST COMMIT!!!
-
 */  
 ?>
 
-
-
 <?php get_header(); ?>
 
-<script>
+        <div class="row page-header" data-stellar-background-ratio="0.6">
 
- jQuery(document).ready(function ($) {
-    
-    var $container = $('#game-cards')
-      
-    $container.isotope({
-      itemSelector : '.card',
-      layoutMode: 'cellsByRow',
-      cellsByRow: {
-        columnWidth: 275,
-        rowHeight: 390
-      }
-    });
 
-// filter items when filter link is clicked
-$('#filters li').click(function(){
-  var selector = $(this).attr('data-filter');
-  $container.isotope({ filter: selector });
-  return false;
-});
+            <div class="large-8 columns">
+                <h1><?php echo get_the_title($ID); ?></h1>
+            </div>
 
-  });
-</script>
+            <div class="large-4 columns">
 
-<div class="row page-header" data-stellar-background-ratio="0.6">
+            </div>
 
-  <div class="large-8 columns">
-    <h1><?php echo get_the_title($ID); ?></h1>
-  </div>
+        </div>
 
-  <div class="large-4 columns">
-    <div id="filters">
-  <label>
-    <select id="filter-options">
-        <option value=".card">All</option>
-        <option value=".Beginner">Beginner</option>
-        <option value=".intermediate">Intermediate</option>
-        <option value=".Advanced">Advanced</option>
-    </select>  
-  </label>  
-</div>
 
-  </div>
-</div>
+<?php
 
-<div class="container">
-<?php 
+
+$difficulty = $_GET['difficulty']; 
+$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1; // setup pagination
+
 
 // args
 $args = array(
-	'numberposts' => -1,
-  'posts_per_page'=> -1,
-	'post_type' => 'game-cards'
+    'posts_per_page'=> 20,
+    'paged' => $paged,
+    'post_type' => 'game-cards',
 );
- 
-// get results
-$the_query = new WP_Query( $args );
- 
-// The Loop
-?>
-<?php if( $the_query->have_posts() ): ?>
-<div id="options" class="clearfix combo-filters">
+
+if ($difficulty) {
+    $args['tax_query'] = array(
+        array(
+            'taxonomy'=>'game-diff',
+            'field'=>'slug',
+            'terms'=> $difficulty,
+            ),
+    );
+}
 
 
-  
-</div>
+    // get results
+    $the_query = new WP_Query( $args );
+    if( $the_query->have_posts() ): ?>
+
+<div id="content" class="light-grey-bg">
+
 <div id="game-cards" class="row">
-<section>
-	<ul>
-		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-  
-     <?php if(get_field('principles')) {
-       $princples = get_field('principles'); $princple = implode (" ", $princples); 
-       $diffulties = get_field('difficulty'); $difficulty = implode (" ", $diffulties); 
-      } 
-    ?>
+    
+    <section>
 
+       <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 
-		<div class="card <?php echo $difficulty; ?> <?php echo $princple; ?> ">
-			<div class="image">
-				<img src="<?php the_field(card_image) ?>"/>
-			</div>
-			<div class="description">
-      <div class="filter">
-				<p> <a class="ajax-modal" data-fancybox-type="ajax" href="<?php echo get_permalink(); ?>"><?php the_field(description) ?></a></p>
-      </div>
-			</div>
-      <div class="comments">
-           <?php  echo $comments; ?>
-      </div>
-      <div class="title">
-        <a class="ajax-modal" href="?page_id=162"><?php the_title(); ?></a>
-        <a href="<?php echo get_permalink(); ?>"><p>Submitted by <?php echo get_the_author(); ?></p></a>
-      </div>
-      <div class="meta">
-        <p><?php echo $difficulty; ?></p>
-        <div class="ratings"> <?php if(function_exists('the_ratings')) { the_ratings(); } ?> </div>
-      </div>
-		</div>
-		
-	<?php endwhile; ?>
-	</ul>
-</section>
+        <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?> 
+
+        <?php $terms = get_the_terms( $post->ID , 'game-diff' ); ?>
+
+        <?php $posttags = get_the_tags(); ?> 
+
+            <li class="card-wrapper">
+
+                <div class="card">
+                        
+
+                    <div class="meta">
+                        <?php foreach ( $terms as $term ) { echo $term->name; } ?>
+                    </div>
+
+                    <h2>
+                        <a href="<?php echo get_permalink();?>"><?php the_title(); ?></a>
+                    </h2>
+
+                    <div class="image">
+                        <?php the_post_thumbnail('thumbnail'); ?>
+                    </div>
+
+                    <div class="tags">
+                        <ul>
+                            <?php if ($posttags) { foreach($posttags as $tag) { echo '<li>' . $tag->name . '</li>'; } } ?>
+                        </ul>
+                    </div>
+
+                </div>
+                
+            </li>
+
+        <?php endwhile; ?>
+        
+        </ul>
+
+    </section>
+
 <?php endif; ?>
+
 </div>
 
+<?php
 
+$big = 999999999; 
 
-<?php wp_reset_query();  // Restore global post data stomped by the_post(). ?>
+echo paginate_links( array(
+    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+    'format' => '/page/%#%',
+    'current' => max( 1, get_query_var('paged') ),
+    'end_size'     => 1,
+    'mid_size'     => 1,
+    'total' => $the_query->max_num_pages
+) );
 
+wp_reset_query(); ?>
+
+</div>
 
 <?php get_footer(); ?>
-<script type="text/javascript">
-
-$( function() {     
-  $( '#filter-options' ).dropdown();
-});
-</script>

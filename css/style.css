@@ -1,8 +1,3 @@
-@import url('demo.css');
-
-@import url('common.css');
-
-@import url('icons.css');
 /*------------------------------------------------------------------
 [Master Stylesheet]
 
@@ -6033,288 +6028,151 @@ article .story-content .article-aside p {
 aside.sidebar .news-feed {
   height: 100%;
 }
+/*------------------------------------------------------------------
+[Header Stylesheet]
+
+Project:	USA Rugby
+Version:	2.1
+
+1. Header
+2. Toolbar
+3. Register
+4. Branding
+5. Navigation
+6. Dropdown
+7. Active Section Indicator
+
+-------------------------------------------------------------------*/
+/* 1. Multiple view -----------------------------------------------*/
 #game-cards {
   margin: 0 auto;
+  background: #F0F2F7;
   max-width: 1100px;
   min-height: 1200px;
+  padding-top: 40px;
 }
-#game-cards .card {
+#game-cards ul {
+  margin: 0;
+  list-style: none;
+}
+#game-cards .card-wrapper {
+  float: left;
   position: relative;
-  cursor: pointer;
-  height: 350px;
-  width: 245px;
+}
+#game-cards .card-wrapper .card {
   background: #FFF;
-  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+  position: relative;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  padding: 20px 20px 30px 15px;
+  box-shadow: inset 0 1px #FFF,0 1px 2px #C8CFE6;
+  min-height: 150px;
 }
-#game-cards .card .description {
-  height: 225px;
-  width: 245px;
-  position: absolute;
-  top: 0;
+#game-cards .card-wrapper .meta {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #A2ADC6;
 }
-#game-cards .card .description:hover .filter {
-  display: block;
+#game-cards .card-wrapper h2 {
+  margin: 8px 0 6px 0;
+  padding: 0;
+  max-width: 180px;
+  text-transform: none;
 }
-#game-cards .card .description .filter {
-  background: rgba(27, 38, 50, 0.7);
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-#game-cards .card .description .filter p {
+#game-cards .card-wrapper h2 a {
+  color: #778095;
   font-size: 20px;
-  line-height: 28px;
-  position: absolute;
-  padding: 20px;
-  color: #FFF;
-  font-weight: 200;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
-  margin: 30px 20px;
-}
-#game-cards .card .meta p {
-  font-size: 18px;
+  font-family: "ff-meta-web-pro";
+  font-weight: normal;
+  margin: 8px 0 6px 0;
   width: 150px;
-  padding: 5px 20px;
-  line-height: 24px;
 }
-#game-cards .card .meta .ratings {
+#game-cards .card-wrapper .tags {
   position: absolute;
-  bottom: 18px;
-  right: 22px;
+  left: 15px;
+  bottom: 15px;
+  font-size: 13px;
+  color: #A2ADC6;
+  font-family: "ff-meta-web-pro";
 }
-#game-cards .card .meta .ratings .tooltip.top {
-  width: 140px;
-}
-#game-cards .card .meta .ratings img {
-  width: 16px;
-  height: 16px;
-}
-#game-cards .card .title {
-  margin: 20px 15px 0px 20px;
-}
-#game-cards .card .title a {
-  color: #616c77;
-  font-size: 28px;
-  font-weight: 200;
-  line-height: 24px;
-}
-#game-cards .card .title p {
-  font-size: 14px;
-  margin: 0 0 10px 0;
-  padding: 0;
-}
-#game-cards .card .comments {
-  position: absolute;
-  bottom: 10px;
-  right: 20px;
-  color: #999;
-}
-#filters {
-  position: absolute;
-  top: 90px;
-  right: 80px;
-}
-/**** Isotope CSS3 transitions ****/
-.isotope,
-.isotope .isotope-item {
-  -webkit-transition-duration: 0.8s;
-  -moz-transition-duration: 0.8s;
-  transition-duration: 0.8s;
-}
-.isotope {
-  -webkit-transition-property: height, width;
-  -moz-transition-property: height, width;
-  transition-property: height, width;
-}
-.isotope .isotope-item {
-  -webkit-transition-property: -webkit-transform, opacity;
-  -moz-transition-property: -moz-transform, opacity;
-  transition-property: transform, opacity;
-}
-.cd-dropdown {
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -o-perspective: 800px;
-  -ms-perspective: 800px;
-  perspective: 800px;
-}
-.cd-dropdown > span {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transform-origin: 50% 0%;
-  -moz-transform-origin: 50% 0%;
-  -o-transform-origin: 50% 0%;
-  -ms-transform-origin: 50% 0%;
-  transform-origin: 50% 0%;
-  -webkit-transition: -webkit-transform 0.3s;
-  -moz-transition: -moz-transform 0.3s;
-  -o-transition: -o-transform 0.3s;
-  -ms-transition: -ms-transform 0.3s;
-  transition: transform .3s;
-}
-.cd-dropdown,
-.cd-select {
-  position: relative;
-  width: 200px;
-  margin: 20px auto;
-  display: block;
-}
-.cd-dropdown > span {
-  width: 100%;
-  height: 45px;
-  line-height: 45px;
-  color: #999;
-  font-weight: 700;
-  font-size: 16px;
-  background: #fff;
-  display: block;
-  padding: 0 50px 0 30px;
-  position: relative;
-  cursor: pointer;
-}
-.cd-dropdown > span:after {
-  content: '\25BC';
-  position: absolute;
-  right: 0px;
-  top: 0%;
-  width: 40px;
-  text-align: center;
-  font-size: 10px;
-  padding: 14px;
-  height: 100%;
-  line-height: 24px;
-  border-left: 1px solid #ddd;
-}
-.cd-dropdown.cd-active > span:after {
-  content: '\25B2';
-}
-.cd-dropdown ul {
-  list-style-type: none;
+#game-cards .card-wrapper .tags ul {
   margin: 0;
   padding: 0;
-  display: block;
+}
+#game-cards .card-wrapper .tags ul li {
   position: relative;
+  border-radius: 3px;
+  padding: 7px 15px;
+  background: #F0F2F4;
+  float: left;
+  margin-right: 5px;
 }
-.cd-dropdown ul li {
-  display: block;
-}
-.cd-dropdown ul li span {
-  width: 100%;
-  background: #fff;
-  line-height: 45px;
-  padding: 0 30px 0 30px;
-  display: block;
-  color: #bcbcbc;
-  cursor: pointer;
-  font-weight: 700;
-}
-.cd-dropdown > span,
-.cd-dropdown ul li span {
-  -webkit-backface-visibility: hidden;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.cd-dropdown > span span[class^="icon-"],
-.cd-dropdown > span span[class*=" icon-"] {
-  padding: 0 30px 0 45px;
-}
-/* Select fallback styling */
-.cd-select {
-  border: 1px solid #ddd;
-}
-.cd-dropdown > span:active {
-  -webkit-transform: rotateX(60deg);
-  -moz-transform: rotateX(60deg);
-  -o-transform: rotateX(60deg);
-  -ms-transform: rotateX(60deg);
-  transform: rotateX(60deg);
-}
-.cd-dropdown > span,
-.cd-dropdown ul li:nth-last-child(-n+3) span {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
-.cd-dropdown ul {
+#game-cards .card-wrapper .tags ul li:before {
   position: absolute;
   top: 0px;
-  width: 100%;
+  right: 0px;
+  background: url("../img/tag-corner.png") center top no-repeat;
+  width: 8px;
+  height: 8px;
+  content: '';
 }
-.cd-dropdown ul li {
+#game-cards .card-wrapper .image {
   position: absolute;
-  width: 100%;
+  right: 0;
+  bottom: 0;
 }
-.cd-active.cd-dropdown > span {
-  color: #f8b161;
+#game-cards .card-wrapper .image img {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-.cd-active.cd-dropdown > span,
-.cd-active.cd-dropdown ul li span {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
-.cd-active.cd-dropdown ul li span {
-  -webkit-transition: all 0.2s linear 0s;
-  -moz-transition: all 0.2s linear 0s;
-  -ms-transition: all 0.2s linear 0s;
-  -o-transition: all 0.2s linear 0s;
-  transition: all 0.2s linear 0s;
-}
-.cd-active.cd-dropdown ul li span:hover {
-  background: #f8b161;
-  color: #fff;
-}
-.modal-header {
-  padding: 9px 15px;
-}
-.modal-header .close {
-  margin-top: 2px;
-}
-.modal-header h3 {
-  margin: 0;
-  line-height: 30px;
-}
-.modal-body {
+/* 1. Single View -------------------------------------------------*/
+#game-card {
+  z-index: 1;
   position: relative;
-  overflow-y: auto;
-  padding: 15px;
-  border-top: 1px solid #DDD;
+  background: #FFF;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 0;
+  padding-bottom: 30px;
+  border-right: 1px solid #EEE;
 }
-.modal-form {
-  margin-bottom: 0;
+#game-card .header {
+  margin-top: 15px;
 }
-.modal-footer {
-  padding: 14px 15px 15px;
-  margin-bottom: 0;
-  text-align: right;
-  *zoom: 1;
+#game-card .header h1 {
+  border-bottom: 0;
+  padding: 0;
+  margin-left: -10px;
 }
-.modal-footer:before,
-.modal-footer:after {
-  display: table;
-  content: "";
-  line-height: 0;
+#game-card #content p {
+  padding: 0;
+  margin: 20px 0;
 }
-.modal-footer:after {
-  clear: both;
+#game-card h3 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px;
+  font-family: "ff-meta-web-pro";
+  color: #4183ba;
+  border-bottom: 1px solid #E1E1E1;
 }
-.modal-footer .btn + .btn {
-  margin-left: 5px;
-  margin-bottom: 0;
+#game-card .content {
+  padding-bottom: 20px;
 }
-.modal-footer .btn-group .btn + .btn {
-  margin-left: -1px;
+#game-card .content .image {
+  float: right;
+  margin: 20px 40px 10px;
 }
-.modal-footer .btn-block + .btn-block {
-  margin-left: 0;
+#game-card .content .image img {
+  width: 308px;
+}
+#game-card .footer {
+  padding-bottom: 20px;
 }
 /*------------------------------------------------------------------
 [Header Stylesheet]
