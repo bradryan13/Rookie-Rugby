@@ -5728,6 +5728,7 @@ Version:	2.1
 2. Roles
 3. Latest News Posts
 4. Hero Video
+5. Page Overrides
 
 -------------------------------------------------------------------*/
 /* 1. Hero --------------------------------------------------------*/
@@ -5806,6 +5807,8 @@ Version:	2.1
   padding-top: 20px;
   min-height: 800px;
   position: relative;
+  margin-bottom: -40px;
+  padding-bottom: 40px;
 }
 #latest:after {
   width: 0;
@@ -5926,6 +5929,11 @@ Version:	2.1
 }
 #hero-video.open {
   opacity: 1;
+}
+/* 5. Page overrides ---------------------------------------------------*/
+.home main {
+  box-shadow: none;
+  background: #F0F2F7;
 }
 article .story-header {
   position: relative;
@@ -6518,10 +6526,6 @@ main {
   position: relative;
   z-index: 1;
   background: #2c3240;
-}
-.home main {
-  box-shadow: none;
-  background: transparent;
 }
 #content {
   background: #FFF;
