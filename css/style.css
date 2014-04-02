@@ -6503,7 +6503,7 @@ body {
   font-family: 'Lato', sans-serif;
   color: #616c77;
   height: 100%;
-  background: #8aa3ae url('../img/background.jpg') repeat-x;
+  background: #364367 url('../img/background.jpg') center top repeat-x;
 }
 #page-content {
   max-width: 1200px;
