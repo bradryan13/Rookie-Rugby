@@ -5839,7 +5839,7 @@ Version:	2.1
   text-align: left;
   width: 313px;
   border-radius: 4px;
-  padding: 20px 18px 29px 27px;
+  padding: 20px 20px 30px 20px;
   margin-bottom: 40px;
   background: #FFF;
   -webkit-box-sizing: border-box;
@@ -5934,6 +5934,9 @@ Version:	2.1
 .home main {
   box-shadow: none;
   background: #F0F2F7;
+}
+.grid-sizer {
+  width: 33%;
 }
 article .story-header {
   position: relative;

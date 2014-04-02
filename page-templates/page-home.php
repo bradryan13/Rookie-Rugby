@@ -32,6 +32,8 @@ get_header(); ?>
 
 		<div class="posts">
 
+		<div class="grid-sizer"></div>
+
 			<?php $args = array( 'post_type' => 'latest', 'posts_per_page' => 10 );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
@@ -54,10 +56,26 @@ get_header(); ?>
 			
 		</div>
 
+
 	</section> 
 
 
 </main>
+
+<script>
+
+$( document ).ready(function() {
+
+var $container = $('#latest .posts').isotope({
+    itemSelector: '.post',
+    masonry: {
+    columnWidth: '.grid-sizer'
+    }
+});
+
+});
+
+</script>
 
 
 <?php get_footer(); ?>
