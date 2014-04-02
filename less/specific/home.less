@@ -16,17 +16,17 @@ Version:	2.1
 
 #hero {
 	height: 500px;
-	background: url('../img/leader.jpg');
-	background-position: 50% 20%;
 	position: relative;
+	background: @blue;
+	overflow: hidden;
 }
 
 
 .intro {
-	margin-top: 130px;
-	margin-left: -20px;
+	position: absolute;
 	z-index: 1;
-	position: relative;
+	top: 140px;
+	left: 60px;
 	h3 {
 	font-family: @secondary-font;
 	color: #FFF;
@@ -45,6 +45,8 @@ Version:	2.1
 	color: #FFF;
 	width: 480px;
 	margin-left: 10px;
+	font-family: @third-font;
+	-webkit-font-smoothing: antialiased;
 	}
 	.action {
 	margin-top: 30px;
@@ -55,6 +57,33 @@ Version:	2.1
 	}
 	i {
 		padding-left: 10px;
+	}
+}
+
+#hero .rsDefaultInv .rsBullets {
+	position: absolute;
+	right: 30px;
+	top: 50%;
+	margin-top: -52px;
+	z-index: 1;
+	width: 25px;
+	.rsBullet {
+		padding: 10px;
+		width: 25px;
+		height: 25px;
+		span {
+			border-radius: 50%;
+			box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+			background: rgba(255, 255, 255, 0.5);
+			width: 12px;
+			height: 12px;
+			-webkit-transition: box-shadow 0.3s ease, background-color 0.3s ease;
+			transition: box-shadow 0.3s ease, background-color 0.3s ease;
+		}
+		&.rsNavSelected span {
+			background: @blue;
+			box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
+		}
 	}
 }
 

@@ -38,7 +38,7 @@ function rookie_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Hero', 'rookie' ),
 		'id'            => 'hero',
-		'before_widget' => '<div class="row">',
+		'before_widget' => '<div>',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="hide">',
 		'after_title'   => '</h2>',

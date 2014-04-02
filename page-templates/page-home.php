@@ -6,7 +6,7 @@ Template Name: Home
 get_header(); ?>
 
 
-<div id="hero" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="0">
+<div id="hero">
 	<?php if ( ! dynamic_sidebar( 'hero' ) ) : ?>
 	<?php endif; ?>
 </div>
