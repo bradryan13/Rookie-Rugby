@@ -4901,6 +4901,7 @@ th.hide-for-touch {
   text-decoration: none;
   background: transparent url('blank.gif');
   /* helps IE */
+
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   z-index: 8040;
 }
@@ -5000,6 +5001,7 @@ th.hide-for-touch {
   padding: 2px 20px;
   background: transparent;
   /* Fallback for web browsers that doesn't support RGBa */
+
   background: rgba(0, 0, 0, 0.8);
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -5036,11 +5038,13 @@ th.hide-for-touch {
     background-image: url('../img/fancybox_sprite@2x.png');
     background-size: 44px 152px;
     /*The size of the normal image, half the size of the hi-res image*/
+  
   }
   #fancybox-loading div {
     background-image: url('../img/fancybox_loading@2x.gif');
     background-size: 24px 24px;
     /*The size of the normal image, half the size of the hi-res image*/
+  
   }
 }
 .snap-drawers {
@@ -6503,7 +6507,7 @@ body {
   font-family: 'Lato', sans-serif;
   color: #616c77;
   height: 100%;
-  background: #8aa3ae url('../img/background.jpg') repeat-x;
+  background: #313854 url('../img/background.jpg') repeat-x;
 }
 #page-content {
   max-width: 1200px;
@@ -6543,8 +6547,11 @@ header,
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   /* Chrome and Safari */
+
   -moz-backface-visibility: hidden;
   /* Firefox */
+
   -ms-backface-visibility: hidden;
   /* Internet Explorer 10+ */
+
 }
