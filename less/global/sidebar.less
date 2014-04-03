@@ -32,11 +32,32 @@ Version:	2.0
 	position: relative;
 	color: #FFF;
 	line-height: 50px;
-	padding-left: 30px;
+	padding-left: 55px;
     border-bottom: 1px solid #555861;
 	background: #454B5A;
 	font-family: @third-font;
 }
+
+.menu > li {
+	position: relative;
+}
+
+//dots
+.menu > li {
+	&:after {
+		border-radius: 50%;
+		box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+		background: @darkgrey;
+		width: 8px;
+		height: 8px;
+		content: '';
+		position: absolute;
+		left: 35px;
+		top: 50%;
+		margin-top: -4px;
+	}
+}
+
 
 /* 3. Menu Level 2 --------------------------------------------------*/
 
@@ -45,7 +66,7 @@ Version:	2.0
 	display: block;
 	position: relative;
 	color: #FFF;
-	padding-left: 40px;
+	padding-left: 60px;
 	line-height: 40px;
 	font-size: 12px;
 	background: @sidebar;
@@ -58,7 +79,7 @@ Version:	2.0
 
 /* 4. Active Subpage ---------------------------------------------------*/
 
-.menu > li > a.active:before {
+.menu > li > a.active:before, .menu > li.current_page_item > a:before {
 	left: -5px;
 	bottom: -1px;
 	height: 52px;
@@ -69,7 +90,7 @@ Version:	2.0
 }
 
 
-.menu > li > a.active:after {
+.menu > li > a.active:after, .menu > li.current_page_item > a:after {
 	right: -7px;
 	bottom: 50%;
 	margin-bottom: -7px;
