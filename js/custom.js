@@ -107,6 +107,12 @@ jQuery(document).ready(function ($) {
         }
     });
 
+  // Remove current-menu-item for ajax loading purposes
+    
+    $(".menu").click(function(){
+        $(".menu li").removeClass("current_page_item");
+    });
+
 });
 
 $( document ).ajaxComplete(function() { 
