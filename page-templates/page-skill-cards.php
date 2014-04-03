@@ -55,7 +55,7 @@ if ($difficulty) {
     
     <section>
 
-       <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+       <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
 
         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?> 
 
@@ -73,7 +73,7 @@ if ($difficulty) {
                     </div>
 
                     <h2>
-                        <a href="<?php echo get_permalink();?>"><?php the_title(); ?></a>
+                        <a class="ajax" href="<?php echo get_permalink();?>"><?php the_title(); ?></a>
                     </h2>
 
                     <div class="image">

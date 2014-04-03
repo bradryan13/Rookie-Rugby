@@ -10,6 +10,7 @@ $check_and_correct = get_field( "check_and_correct");
 
 		<?php edit_post_link( __( 'Edit', 'USAWCR' ), '<span class="edit-link">', '</span>' ); ?>
 
+<div id="skill-card">
 
 <div class="header row">
 
@@ -58,8 +59,9 @@ $check_and_correct = get_field( "check_and_correct");
 
 
 <?php
-			// If comments are open or we have at least one comment, load up the comment template
-			if ( comments_open() || '0' != get_comments_number() ) :
-				comments_template();
-			endif;
-		?>
+	// If comments are open or we have at least one comment, load up the comment template
+	if ( comments_open() || '0' != get_comments_number() ) :
+		comments_template();
+	endif;
+?>
+</div>
