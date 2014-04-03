@@ -113,6 +113,8 @@ jQuery(document).ready(function ($) {
         $(".menu li").removeClass("current_page_item");
     });
 
+  // Change background color of #content for game cards, videos, skill cards
+  
 });
 
 $( document ).ajaxComplete(function() { 

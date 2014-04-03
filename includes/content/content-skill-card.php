@@ -8,12 +8,11 @@ $skill_progressions = get_field( "skill_progressions");
 $check_and_correct = get_field( "check_and_correct"); 
 ?>
 
-		<?php edit_post_link( __( 'Edit', 'USAWCR' ), '<span class="edit-link">', '</span>' ); ?>
-
 <div id="skill-card">
 
 <div class="header row">
 
+		<a class="ajax close" href="game-cards"><i class="fa fa-times-circle-o"></i></a>
 
 		<div class="columns small-8">
 			<h1 class="title"><?php echo get_the_title($post_id); ?></h1>
@@ -64,4 +63,8 @@ $check_and_correct = get_field( "check_and_correct");
 		comments_template();
 	endif;
 ?>
+
+		<?php edit_post_link( __( 'Edit', 'USAWCR' ), '<span class="edit-link">', '</span>' ); ?>
+
+
 </div>

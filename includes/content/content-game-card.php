@@ -8,13 +8,11 @@ $key_skills = get_field( "key_skills");
 $key_concepts = get_field("key_concepts");
 ?>
 
-		<?php edit_post_link( __( 'Edit', 'USAWCR' ), '<span class="edit-link">', '</span>' ); ?>
-
 <div id="game-card">
 
 <div class="header row">
 
-		<a class="ajax" href="game-cards">BACK</a>
+		<a class="ajax close" href="game-cards"><i class="fa fa-times-circle-o"></i></a>
 
 		<div class="columns small-8">
 			<h1 class="title"><?php echo get_the_title($post_id); ?></h1>
@@ -67,4 +65,7 @@ if ( comments_open() || '0' != get_comments_number() ) :
 	comments_template();
 endif;
 ?>
+
+		<?php edit_post_link( __( 'Edit', 'USAWCR' ), '<span class="edit-link">', '</span>' ); ?>
+
 </div>
