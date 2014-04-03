@@ -13,7 +13,7 @@
 
 <main class="row light-grey-bg">
 
-	<section id="video" class="large-9 columns">
+	<section class="large-9 columns">
 	
 		<div id="content">
 

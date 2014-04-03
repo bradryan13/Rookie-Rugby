@@ -5487,6 +5487,72 @@ Version:	2.0
   top: 50%;
   margin-top: -4px;
 }
+.menu > li.skill-cards:after {
+  width: 22px;
+  height: 22px;
+  background: url('../img/skill-cards-icon.png') no-repeat;
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 18px;
+  z-index: 1;
+  background-size: contain;
+}
+.menu > li.game-cards:after {
+  width: 22px;
+  height: 22px;
+  background: url('../img/game-cards-icon.png') no-repeat;
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 18px;
+  z-index: 1;
+  background-size: contain;
+}
+.menu > li.course:after {
+  width: 22px;
+  height: 22px;
+  background: url('../img/course-icon.png') no-repeat;
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 18px;
+  z-index: 1;
+  background-size: contain;
+}
+.menu > li.videos:after {
+  width: 22px;
+  height: 22px;
+  background: url('../img/video-icon.png') no-repeat;
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 19px;
+  z-index: 1;
+  background-size: contain;
+}
+.menu > li.directory:after {
+  width: 22px;
+  height: 22px;
+  background: url('../img/directory-icon.png') no-repeat;
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 18px;
+  z-index: 1;
+  background-size: contain;
+}
+.menu > li.forums:after {
+  width: 22px;
+  height: 22px;
+  background: url('../img/forums-icon.png') no-repeat;
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 18px;
+  z-index: 1;
+  background-size: contain;
+}
 /* 3. Menu Level 2 --------------------------------------------------*/
 .menu ul li a {
   height: 40px;
@@ -6189,7 +6255,6 @@ Version:	2.1
   line-height: 1.6;
   padding: 0;
   padding-bottom: 30px;
-  border-right: 1px solid #EEE;
 }
 #game-card .header {
   margin-top: 15px;
@@ -6335,7 +6400,6 @@ Version:	2.1
   line-height: 1.6;
   padding: 0;
   padding-bottom: 30px;
-  border-right: 1px solid #EEE;
 }
 #skill-card .header {
   margin-top: 15px;

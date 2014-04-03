@@ -42,7 +42,7 @@ $args = array(
 
     <section>
 
-       <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+       <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
 
         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?> 
         
@@ -57,7 +57,7 @@ $args = array(
                     </div>
 
                     <h2>
-                        <a href="<?php cbc_video_post_permalink();?>"<?php cbc_output_video_data();?>><?php the_title(); ?></a>
+                        <a class="ajax" href="<?php cbc_video_post_permalink();?>"<?php cbc_output_video_data();?>><?php the_title(); ?></a>
                     </h2>
 
                     <div class="image">

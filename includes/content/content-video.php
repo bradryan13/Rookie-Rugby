@@ -1,6 +1,6 @@
 <?php $video = get_post_meta($post->ID, '__cbc_video_data'); ?>
 
-
+<div id="video">
 <div class="header row">
 
 
@@ -36,8 +36,7 @@ _e(wp_oembed_get($youtube_link));
 	</div>
 
 </div>
-
-
+</div>
 
 <?php
 	// If comments are open or we have at least one comment, load up the comment template
