@@ -116,6 +116,15 @@ function rookie_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 
+		register_sidebar( array(
+		'name'          => __( 'Videos Sidebar', 'rookie' ),
+		'id'            => 'videos-sidebar',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="hide">',
+		'after_title'   => '</h2>',
+	) );
+
 }
 add_action( 'widgets_init', 'rookie_widgets_init' );
 
