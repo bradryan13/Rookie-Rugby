@@ -14,6 +14,10 @@ jQuery(document).ready(function ($) {
    }); 
 
 
+   //Enable FitVid
+   
+   $("#content").fitVids();
+
     //Enable mobile-menu
     var snapper = new Snap({
         element: document.getElementById('page-content'),
@@ -108,4 +112,5 @@ jQuery(document).ready(function ($) {
 $( document ).ajaxComplete(function() { 
     // Fix for ajax and pagination
     $( ".menu a, .page-numbers" ).addClass( "ajax" );
+    $("#content").fitVids();
 });
