@@ -29,7 +29,7 @@ $the_query = new WP_Query( $game_args );
                     </div>
 
                     <h2>
-                        <a href="<?php echo get_permalink();?>"><?php the_title(); ?></a>
+                        <a class="ajax" href="<?php echo get_permalink();?>"><?php the_title(); ?></a>
                     </h2>
 
                     <div class="image">
