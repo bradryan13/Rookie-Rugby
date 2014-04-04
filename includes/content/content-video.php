@@ -3,6 +3,7 @@
 <div id="video">
 <div class="header row">
 
+		<a class="ajax close" href="videos"><i class="fa fa-times-circle-o"></i></a>
 
 		<div class="columns small-8">
 			<h1 class="title"><?php echo get_the_title($post_id); ?></h1>
