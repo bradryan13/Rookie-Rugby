@@ -6346,6 +6346,7 @@ Version:	2.1
 #game-cards .card-wrapper .image img {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  max-width: 135px;
 }
 /* 1. Single View -------------------------------------------------*/
 #game-card {
