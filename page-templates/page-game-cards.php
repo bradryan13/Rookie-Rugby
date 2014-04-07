@@ -77,7 +77,7 @@ if ($difficulty) {
                     </h2>
 
                     <div class="image">
-                        <?php the_post_thumbnail('thumbnail'); ?>
+                        <img src="<?php the_field('image'); ?>">
                     </div>
 
                     <div class="tags">
