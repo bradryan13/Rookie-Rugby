@@ -32,7 +32,7 @@ $key_concepts = get_field("key_concepts");
 
 	<h3>How to Play</h3>
 		<div class="columns large-12">
-			<div class="image"><?php the_post_thumbnail('large'); ?> </div>
+		<div class="image"><img src="<?php the_field('image'); ?>"></div>
 			<div class="description"><?php echo $how_to_play; ?> </div>
 		</div>
 </div>
