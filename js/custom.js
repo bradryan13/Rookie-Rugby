@@ -113,7 +113,12 @@ jQuery(document).ready(function ($) {
         $(".menu li").removeClass("current_page_item");
     });
 
-  // Change background color of #content for game cards, videos, skill cards
+  // Go Back Button
+
+    $('a.close').click(function(){
+        parent.history.back();
+        return false;
+    });  
   
 });
 
@@ -121,4 +126,9 @@ $( document ).ajaxComplete(function() {
     // Fix for ajax and pagination
     $( ".menu a, .page-numbers" ).addClass( "ajax" );
     $("#content").fitVids();
+
+     $('a.close').click(function(){
+        parent.history.back();
+        return false;
+    });
 });

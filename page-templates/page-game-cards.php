@@ -23,7 +23,9 @@ Template Name: Game Cards
 <?php
 
 
-$difficulty = $_GET['difficulty']; 
+$difficulty = $_GET['difficulty'];
+$tags = $_GET['tags']; 
+
 $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1; // setup pagination
 
 
@@ -40,6 +42,16 @@ if ($difficulty) {
             'taxonomy'=>'game-diff',
             'field'=>'slug',
             'terms'=> $difficulty,
+            ),
+    );
+}
+
+if ($tags) {
+    $args['tax_query'] = array(
+        array(
+            'taxonomy'=>'tags',
+            'field'=>'slug',
+            'terms'=> $tags,
             ),
     );
 }
@@ -69,7 +81,7 @@ if ($difficulty) {
                         
 
                     <div class="meta">
-                        <?php foreach ( $terms as $term ) { echo $term->name; } ?>
+                        <?php foreach ( $terms as $term ) { echo '<a class="ajax" href="?difficulty=' . $term->name . '">' . $term->name . '</a>'  ; } ?>
                     </div>
 
                     <h2>
@@ -82,7 +94,7 @@ if ($difficulty) {
 
                     <div class="tags">
                         <ul>
-                            <?php if ($posttags) { foreach($posttags as $tag) { echo '<li>' . $tag->name . '</li>'; } } ?>
+                            <?php if ($posttags) { foreach($posttags as $tag) { echo '<li><a class="ajax" href="?tag=' . $tag->name . ' "> ' . $tag->name . '</a></li>'; } } ?>
                         </ul>
                     </div>
 
