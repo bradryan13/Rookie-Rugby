@@ -5180,19 +5180,6 @@ header .header-container {
 #main-navigation ul li .current-menu-item {
   position: relative;
 }
-#main-navigation ul li .current-menu-item:after {
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #3f74a9;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -8px;
-  z-index: 1;
-}
 #main-navigation ul li:last-child a {
   background: transparent;
 }
@@ -5315,19 +5302,6 @@ header #main-navigation ul.sub-menu li a {
   position: relative;
   font-weight: bold;
 }
-#main-navigation .current-menu-item:after {
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #3498db;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -8px;
-  z-index: 1;
-}
 /*------------------------------------------------------------------
 [Page Stylesheet]
 
@@ -5367,6 +5341,14 @@ main.row {
 article {
   padding: 0 50px 40px 50px;
 }
+a.close {
+  color: #BEC6CE;
+  font-size: 48px;
+  position: absolute;
+  right: 35px;
+  top: 10px;
+  z-index: 1;
+}
 /* 3. Typography -------------------------------------------------*/
 #content .title {
   font-size: 40px;
@@ -5379,6 +5361,10 @@ article {
   font-weight: 300;
   padding: 0 30px;
   font-family: "ff-meta-web-pro";
+}
+#content .description p {
+  margin: 15px 0 30px 0;
+  padding: 0;
 }
 #content p {
   font-size: 16px;
@@ -5416,7 +5402,7 @@ article {
 main.light-grey-bg,
 #content.light-grey-bg,
 .sidebar.light-grey-bg {
-  background: #ecf0f1;
+  background: #f0f2f7;
 }
 /* 4. Loader ---------------------------------------------------*/
 #loader {
@@ -6102,7 +6088,7 @@ Version:	2.1
 }
 #articles article {
   padding: 10px 50px;
-  border-bottom: 1px solid #ecf0f1;
+  border-bottom: 1px solid #f0f2f7;
 }
 #articles article .story-header {
   position: relative;
@@ -6289,7 +6275,7 @@ Version:	2.1
   box-shadow: inset 0 1px #FFF,0 1px 2px #C8CFE6;
   min-height: 150px;
 }
-#game-cards .card-wrapper .meta {
+#game-cards .card-wrapper .meta a {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
@@ -6308,35 +6294,6 @@ Version:	2.1
   font-weight: normal;
   margin: 8px 0 6px 0;
   width: 150px;
-}
-#game-cards .card-wrapper .tags {
-  position: absolute;
-  left: 15px;
-  bottom: 15px;
-  font-size: 13px;
-  color: #A2ADC6;
-  font-family: "ff-meta-web-pro";
-}
-#game-cards .card-wrapper .tags ul {
-  margin: 0;
-  padding: 0;
-}
-#game-cards .card-wrapper .tags ul li {
-  position: relative;
-  border-radius: 3px;
-  padding: 7px 15px;
-  background: #F0F2F4;
-  float: left;
-  margin-right: 5px;
-}
-#game-cards .card-wrapper .tags ul li:before {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  background: url("../img/tag-corner.png") center top no-repeat;
-  width: 8px;
-  height: 8px;
-  content: '';
 }
 #game-cards .card-wrapper .image {
   position: absolute;
@@ -6357,20 +6314,8 @@ Version:	2.1
   line-height: 1.6;
   padding: 0 50px 40px 50px;
 }
-#game-card a.close {
-  color: #BEC6CE;
-  font-size: 48px;
-  position: absolute;
-  right: 15px;
-  top: 0;
-}
 #game-card .header {
   margin-top: 15px;
-}
-#game-card .header h1 {
-  border-bottom: 0;
-  padding: 0;
-  margin-left: -10px;
 }
 #game-card #content p {
   padding: 0;
@@ -6384,7 +6329,7 @@ Version:	2.1
   padding: 5px;
   font-family: "ff-meta-web-pro";
   color: #4183ba;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #EEE;
 }
 #game-card .content {
   padding-bottom: 20px;
@@ -6398,6 +6343,83 @@ Version:	2.1
 }
 #game-card .footer {
   padding-bottom: 20px;
+}
+#game-card .inc-meta {
+  height: 70px;
+  line-height: 70px;
+  margin-top: 15px;
+  padding: 0 15px;
+  border-bottom: 1px solid #EEE;
+}
+#game-card .meta {
+  margin-bottom: 15px;
+  line-height: 45px;
+  height: 45px;
+  font-size: 13px;
+  color: #A2ADC6;
+}
+#game-card .meta a {
+  color: #A2ADC6;
+  font-weight: 300;
+}
+#game-card .meta .author {
+  border-right: 1px solid #EEE;
+  padding-left: 28px;
+  font-weight: bold;
+}
+#game-card .meta .author img {
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  margin: -5px 10px 0 10px;
+}
+#game-card .meta .category {
+  border-right: 1px solid #EEE;
+  font-weight: bold;
+}
+#game-card .meta .tags {
+  position: relative;
+  line-height: 15px;
+  height: 15px;
+}
+#game-card .meta .tags li {
+  top: 18px;
+  left: -55px;
+}
+.tags {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-size: 13px;
+  font-family: "ff-meta-web-pro";
+}
+.tags a {
+  color: #A2ADC6;
+}
+.tags ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+.tags ul li {
+  position: relative;
+  border-radius: 3px;
+  padding: 7px 15px;
+  background: #F0F2F4;
+  float: left;
+  margin-right: 5px;
+}
+.tags ul li:before {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: url("../img/tag-corner.png") center top no-repeat;
+  width: 8px;
+  height: 8px;
+  content: '';
 }
 /*------------------------------------------------------------------
 [Header Stylesheet]
@@ -6508,13 +6530,6 @@ Version:	2.1
   font-size: 16px;
   line-height: 1.6;
   padding-bottom: 30px;
-}
-#skill-card a.close {
-  color: #BEC6CE;
-  font-size: 48px;
-  position: absolute;
-  right: 10px;
-  top: 0;
 }
 #skill-card .header h1 {
   border-bottom: 0;
@@ -6655,15 +6670,6 @@ Version:	2.1
   font-size: 16px;
   line-height: 1.6;
   padding-bottom: 30px;
-}
-#video a.close {
-  color: #616c77;
-  color: #BEC6CE;
-  font-size: 48px;
-  position: absolute;
-  right: 30px;
-  right: 15px;
-  top: 0;
 }
 #video .header {
   margin-top: 15px;

@@ -24,14 +24,14 @@ Template Name: Game Cards
 
 
 $difficulty = $_GET['difficulty'];
-$tags = $_GET['tags']; 
+$tags = $_GET['tag']; 
 
 $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1; // setup pagination
 
 
 // args
 $args = array(
-    'posts_per_page'=> 20,
+    'posts_per_page'=> -1,
     'paged' => $paged,
     'post_type' => 'game-cards',
 );
@@ -46,22 +46,19 @@ if ($difficulty) {
     );
 }
 
-if ($tags) {
-    $args['tax_query'] = array(
-        array(
-            'taxonomy'=>'tags',
-            'field'=>'slug',
-            'terms'=> $tags,
-            ),
-    );
+if ($tag) {
+    $args['tag'] = $tag;
 }
 
+$game_difficulties = get_terms( 'game-diff', 'orderby=count&hide_empty=0' );
 
-    // get results
-    $the_query = new WP_Query( $args );
-    if( $the_query->have_posts() ): ?>
+// get results
+$the_query = new WP_Query( $args );
+if( $the_query->have_posts() ): ?>
 
 <div id="content" class="light-grey-bg">
+
+
 
 <div id="game-cards" class="row">
     
@@ -75,7 +72,7 @@ if ($tags) {
 
         <?php $posttags = get_the_tags(); ?> 
 
-            <li class="card-wrapper">
+            <li class="card-wrapper mix <?php foreach ( $terms as $term ) { echo $term->name; } ?>">
 
                 <div class="card">
                         

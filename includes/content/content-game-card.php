@@ -28,8 +28,8 @@ $posttags = get_the_tags();
 
 	<div class="row meta">
 		<div class="columns medium-5 author">Submitted by:  <a href="<?php echo $author_link ?>">  <?php echo $image . $author ?></a></div>
-		<div class="columns medium-3 category">Difficulty: <a href=""><?php foreach ( $terms as $term ) { echo $term->name; } ?></a></div>
-		<div class="columns medium-4 tags"><ul><?php if ($posttags) { foreach($posttags as $tag) { echo '<li><a href=" ' . $tag->name . ' "> ' . $tag->name . '</a></li>'; } } ?></ul></div>
+		<div class="columns medium-3 category">Difficulty: <?php foreach ( $terms as $term ) { echo $term->name; } ?></div>
+		<div class="columns medium-4 tags"><ul><?php if ($posttags) { foreach($posttags as $tag) { echo '<li>' . $tag->name . '</li>'; } } ?></ul></div>
 	</div>
 
 
