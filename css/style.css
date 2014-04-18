@@ -5946,14 +5946,11 @@ Version:	2.1
   margin: 0;
   color: #A8ADBD;
 }
-/* 3. Latest News Posts ---------------------------------------------*/
+/* 3. Latest from Rookie Rugby -------------------------------------*/
 #latest {
   background: #F0F2F7;
   padding-top: 20px;
-  min-height: 800px;
   position: relative;
-  margin-bottom: -40px;
-  padding-bottom: 40px;
 }
 #latest:after {
   width: 0;
@@ -5967,97 +5964,11 @@ Version:	2.1
   border-top: 26px solid #FFF;
   content: '';
 }
-#latest .posts {
-  max-width: 62.5em;
-  margin: 0 95px 0 105px;
-}
-#latest .title {
-  margin-left: -20px;
-}
-#latest .title h1 {
+#latest h1 {
   font-family: "ff-meta-web-pro";
   font-size: 34px;
   color: #a8adbd;
   -webkit-font-smoothing: antialiased;
-}
-#latest .post {
-  text-align: left;
-  width: 313px;
-  border-radius: 4px;
-  padding: 20px 20px 30px 20px;
-  margin-bottom: 40px;
-  background: #FFF;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-shadow: inset 0 1px #FFF,0 1px 2px #C8CFE6;
-  -moz-box-shadow: inset 0 1px #fff,0 1px 2px #c8cfe6;
-  box-shadow: inset 0 1px #FFF,0 1px 2px #C8CFE6;
-  position: relative;
-}
-#latest .post:after {
-  background: url('../img/bubble.png') center top no-repeat;
-  height: 21px;
-  width: 28px;
-  content: '';
-  position: absolute;
-  bottom: -21px;
-  left: 30px;
-}
-#latest .post p {
-  color: #778095;
-  font-size: 20px;
-  margin-bottom: 24px;
-  line-height: 24px;
-  font-family: "ff-meta-web-pro";
-}
-#latest .post .meta {
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #A2ADC6;
-}
-#latest .post .author {
-  margin-top: 20px;
-}
-#latest .post .author a {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 22px;
-}
-#latest .post .author .author-image {
-  float: left;
-  height: 50px;
-}
-#latest .post .author .author-image img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50px;
-}
-#latest .post .author .author-info {
-  margin-left: 60px;
-  margin-top: 5px;
-}
-#latest .post .action {
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
-  border: 1px solid #E3EBFF;
-  color: #A2ADC6;
-  padding: 8px 15px;
-  border-radius: 10px;
-}
-#feature {
-  height: 400px;
-  background: url('../img/feature-bg.jpg');
-  background-position: 50% 0;
-}
-#feature h1 {
-  color: #FFF;
-  font-size: 80px;
-  line-height: 400px;
-  text-align: center;
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
 /* 4. Hero Video ---------------------------------------------------*/
 #hero-video {
