@@ -47,7 +47,7 @@ function rookie_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Top-A', 'rookie' ),
 		'id'            => 'top-a',
-		'before_widget' => '<div>',
+		'before_widget' => '<div class="role">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="hide">',
 		'after_title'   => '</h2>',
@@ -172,3 +172,12 @@ function custom_template_include($template) {
     }
     return $template;
   }
+
+
+// Read More text ---------------------------------------------------------------------------------------------------------------
+
+function new_content_more($more) {
+       global $post;
+       return ' <a href="' . get_permalink() . ' " class="more-link ajax">Read More...</a> ';
+}   
+add_filter( 'the_content_more_link', 'new_content_more' );

@@ -10,7 +10,7 @@ Template Name: Blog Page
 
 
             <div class="large-8 columns">
-                <h1><?php echo get_the_title($ID); ?></h1>
+                <h1>Blog</h1>
             </div>
 
             <div class="large-4 columns">
@@ -56,7 +56,7 @@ if ($difficulty) {
 
                     <div class="story-header">
 
-                        <a href="<?php echo get_permalink(); ?>"><h1 class="title"><?php the_title(); ?></h1></a>
+                        <a class="ajax" href="<?php echo get_permalink(); ?>"><h1 class="title"><?php the_title(); ?></h1></a>
 
                          <p class="meta">
                                 <?php 

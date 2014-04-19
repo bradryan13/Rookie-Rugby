@@ -5341,7 +5341,8 @@ main.row {
 article {
   padding: 0 50px 40px 50px;
 }
-a.close {
+a.close,
+a.close-blog {
   color: #BEC6CE;
   font-size: 48px;
   position: absolute;
@@ -5858,8 +5859,8 @@ Version:	2.1
 .intro {
   position: absolute;
   z-index: 1;
-  top: 140px;
-  left: 60px;
+  top: 120px;
+  left: 70px;
 }
 .intro h3 {
   font-family: 'chunkfiveroman';
@@ -5922,6 +5923,8 @@ Version:	2.1
 #roles {
   margin-top: -50px;
   margin-bottom: 50px;
+  padding: 0 30px;
+  cursor: pointer;
 }
 #roles .circle img {
   border-radius: 500px;
@@ -5931,6 +5934,11 @@ Version:	2.1
   margin: 0 auto;
   border: 5px solid #FFF;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+}
+#roles .circle img:hover {
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
 }
 #roles a h3 {
   text-align: center;
@@ -5965,6 +5973,8 @@ Version:	2.1
   content: '';
 }
 #latest h1 {
+  margin-left: 60px;
+  letter-spacing: -1px;
   font-family: "ff-meta-web-pro";
   font-size: 34px;
   color: #a8adbd;
@@ -5997,14 +6007,13 @@ Version:	2.1
 #articles {
   margin: 20px 0;
 }
-#articles article {
+article {
   padding: 10px 50px;
-  border-bottom: 1px solid #f0f2f7;
 }
-#articles article .story-header {
+article .story-header {
   position: relative;
 }
-#articles article .story-header a .title {
+article .story-header a .title {
   font-weight: 900;
   line-height: 1.6;
   font-size: 42px;
@@ -6013,51 +6022,6 @@ Version:	2.1
   height: 100%;
   color: #616c77;
 }
-#articles article .story-header .sub-title {
-  padding: 0 100px;
-  font-size: 20px;
-  margin: 0 0 20px 0;
-}
-#articles article .story-header .meta {
-  font-size: 14px;
-  margin: 0;
-}
-#articles article .story-header .meta a {
-  color: #616c77;
-  line-height: 32px;
-}
-#articles article .story-header .meta a:hover {
-  text-decoration: underline;
-}
-#articles article .story-header .meta img {
-  width: 32px;
-  height: 32px;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  margin-right: 10px;
-  margin-top: -5px;
-}
-#articles article .story-content blockquote p {
-  margin: 0 60px 40px 60px;
-  font-weight: bold;
-  font-style: italic;
-  font-size: 22px;
-  line-height: 26px;
-  padding: 0;
-  color: #616c77;
-}
-article .story-header {
-  position: relative;
-  margin-bottom: -20px;
-}
-article .story-header .title {
-  font-weight: 900;
-  line-height: 1.2;
-  font-size: 42px;
-  padding: 30px 100px 0 100px;
-  letter-spacing: -1px;
-}
 article .story-header .sub-title {
   padding: 0 100px;
   font-size: 20px;
@@ -6065,6 +6029,7 @@ article .story-header .sub-title {
 }
 article .story-header .meta {
   font-size: 14px;
+  margin: 0;
 }
 article .story-header .meta a {
   color: #616c77;
@@ -6082,16 +6047,6 @@ article .story-header .meta img {
   margin-right: 10px;
   margin-top: -5px;
 }
-article .story-content p {
-  font-size: 16px;
-  line-height: 1.6;
-  font-family: 'Lato', sans-serif;
-  margin: 30px 100px 30px 100px;
-}
-article .story-content p img {
-  float: left;
-  margin: 30px 30px 30px 0;
-}
 article .story-content blockquote p {
   margin: 0 60px 40px 60px;
   font-weight: bold;
@@ -6100,29 +6055,6 @@ article .story-content blockquote p {
   line-height: 26px;
   padding: 0;
   color: #616c77;
-}
-article .story-content .article-aside {
-  float: right;
-  width: 300px;
-  margin: 35px 80px 10px 40px;
-  position: relative;
-  transition: .3s;
-}
-article .story-content .article-aside p {
-  margin: 0;
-  font-size: 12px;
-  padding: 5px 10px 5px 50px;
-  position: absolute;
-  bottom: -1px;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  color: #FFF;
-  font-weight: bold;
-  font-family: 'Lato', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-align: right;
-  line-height: 13px;
-  z-index: 1;
 }
 .youtube-cover:after {
   background: url('../img/youtube-play.png') center center no-repeat;

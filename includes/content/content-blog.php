@@ -1,29 +1,42 @@
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-header">
-		<h1 class="title"><?php the_title(); ?></h1>
-	</div><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'USAWCR' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-	<?php edit_post_link( __( 'Edit', 'USAWCR' ), '<div class="entry-meta"><span class="edit-link">', '</span></div>' ); ?>
+<article class="row" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+            <div class="story-header">
 
-	<?php
-		// If comments are open or we have at least one comment, load up the comment template
-		if ( comments_open() || '0' != get_comments_number() ) :
-			comments_template();
-		endif;
-	?>
+                <h1 class="title"><?php the_title(); ?></h1>
 
-</article><!-- #post-## -->
+				<a class="ajax close-blog" href="/blog"> <i class="fa fa-times-circle-o"></i></a>
+
+                 <p class="meta">
+                        <?php 
+                        $categories = get_the_category($post->ID);
+                        foreach($categories as $category) :
+                            $children = get_categories( array ('parent' => $category->term_id ));
+                            $has_children = count($children);
+                            if ( $has_children == 0 ) {
+                            $cat = $category->name;
+                            }
+                        endforeach;
+                            $author = get_the_author();
+                            $author_link = get_the_author_meta('user_url');
+                            $email = get_the_author_meta('email');
+                            $image = get_avatar($email, 64);
+                            $category = get_the_category();
+                            $date = get_the_date('F j, Y');
+                            echo '<a href="'.$author_link.'">'.$image . '<span class="author">' . $author .'</span></a> on '. $date;
+                        ?>
+                </p>
+
+            </div>
+
+            <div class="story-content">
+
+                <?php the_content(); ?>
+
+            </div>
+
+</article>
 
 
 <?php edit_post_link( __( 'Edit', 'USAWCR' ), '<span class="edit-link">', '</span>' ); ?>

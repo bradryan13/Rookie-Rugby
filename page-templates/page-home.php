@@ -23,9 +23,7 @@ get_header(); ?>
 	<h1>Latest from Rookie Rugby</h1>
 
 
-	<script type="text/javascript" class="rebelmouse-embed-script" src="https://www.rebelmouse.com/static/js-build/embed/embed.js?site=usayouthrugby&height=1500&flexible=1&theme=162"></script>
-
-	</section> 
+<script type="text/javascript" class="rebelmouse-embed-script" src="https://www.rebelmouse.com/static/js-build/embed/embed.js?site=usayouthrugby&height=1500&flexible=1&show_rebelnav=1"></script>	</section> 
 
 
 </main>

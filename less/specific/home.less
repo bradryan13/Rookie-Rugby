@@ -25,8 +25,8 @@ Version:	2.1
 .intro {
 	position: absolute;
 	z-index: 1;
-	top: 140px;
-	left: 60px;
+	top: 120px;
+	left: 70px;
 	h3 {
 	font-family: @secondary-font;
 	color: #FFF;
@@ -92,6 +92,8 @@ Version:	2.1
 #roles {
 	margin-top: -50px;
 	margin-bottom: 50px;
+	padding: 0 30px;
+	cursor: pointer;
 	.circle img {
 	border-radius: 500px;
 	height: 150px;
@@ -100,6 +102,11 @@ Version:	2.1
 	margin: 0 auto;
 	border: 5px solid #FFF;
 	box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+	-webkit-transition: box-shadow 0.3s ease;
+			transition: box-shadow 0.3s ease;
+	&:hover {
+		box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+		}
 	}
 	a h3 {
 	text-align: center;
@@ -136,6 +143,8 @@ Version:	2.1
 		content: '';
 	}
 	h1 {
+		margin-left: 60px;
+		letter-spacing: -1px;
 		font-family: @third-font;
 		font-size: 34px;
 		color: #a8adbd;

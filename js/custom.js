@@ -14,6 +14,16 @@ jQuery(document).ready(function ($) {
    }); 
 
 
+   //make #Roles all clickable
+   
+   $(".role").click(function(){
+     window.location=$(this).find("a").attr("href"); 
+     return false;
+    });
+   
+
+
+
    //Enable FitVid
    
    $("#content").fitVids();
