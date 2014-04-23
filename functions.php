@@ -159,7 +159,7 @@ function my_jquery_enqueue() {
 // Selects Custom Post Type Templates for single and archive pages ---------------------------------------------------------------
 add_filter('template_include', 'custom_template_include');
 function custom_template_include($template) {
-	$custom_template_location = '/includes/single/';
+	$custom_template_location = '/includes/templates/';
      if ( get_post_type () ) {
         if ( is_archive() ) :
            if(file_exists(get_stylesheet_directory() . $custom_template_location . 'archive-' . get_post_type() . '.php'))
@@ -181,3 +181,35 @@ function new_content_more($more) {
        return ' <a href="' . get_permalink() . ' " class="more-link ajax">Read More...</a> ';
 }   
 add_filter( 'the_content_more_link', 'new_content_more' );
+
+
+// Pagination ------------------------------------------------------------------------------------------------------------------
+
+
+function paginate() {
+    global $wp_query, $wp_rewrite;
+    $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
+    $pagination = array(
+        'base' => @add_query_arg('page','%#%'),
+        'format' => '',
+        'total' => $wp_query->max_num_pages,
+        'current' => $current,
+        'show_all' => true,
+        'type' => 'plain'
+    );
+    if ( $wp_rewrite->using_permalinks() ) $pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
+    if ( !empty($wp_query->query_vars['s']) ) $pagination['add_args'] = array( 's' => get_query_var( 's' ) );
+    echo paginate_links( $pagination );
+}
+
+
+// CUSTOM POSTS PER PAGE
+
+function game_posts_per_page($query) {
+    if ( $query->query_vars['post_type'] == 'game-cards' ) $query->query_vars['posts_per_page'] = 3;
+    return $query;
+}
+if ( !is_admin() ) add_filter( 'pre_get_posts', 'game_posts_per_page' );
+
+
+?>

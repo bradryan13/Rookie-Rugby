@@ -1,27 +1,6 @@
-<?php  
-/*  
-Template Name: Game Cards  
-*/  
-?>
+<?php get_header();
 
-<?php get_header(); ?>
-
-        <div class="row page-header" data-stellar-background-ratio="0.6">
-
-
-            <div class="large-8 columns">
-                <h1><?php echo get_the_title($ID); ?></h1>
-            </div>
-
-            <div class="large-4 columns">
-
-            </div>
-
-        </div>
-
-
-<?php
-
+get_template_part( 'includes/page-header');
 
 $difficulty = $_GET['difficulty'];
 $tags = $_GET['tag']; 
