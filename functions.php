@@ -206,7 +206,7 @@ function paginate() {
 // CUSTOM POSTS PER PAGE
 
 function game_posts_per_page($query) {
-    if ( $query->query_vars['post_type'] == 'game-cards' ) $query->query_vars['posts_per_page'] = 3;
+    if ( $query->query_vars['post_type'] == 'game-cards' ) $query->query_vars['posts_per_page'] = 12;
     return $query;
 }
 if ( !is_admin() ) add_filter( 'pre_get_posts', 'game_posts_per_page' );

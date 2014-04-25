@@ -9,8 +9,33 @@ include(locate_template('includes/page-header.php')); ?>
 <?php if ( have_posts() ) : ?>
 
 <div id="game-cards" class="row">
-    
-    <section>
+
+<section>
+
+
+
+<?php $difficulty = $_GET["difficulty"]; ?>
+
+<?php  $game_diff = get_terms('game-diff' ); 
+
+?>
+<select id="dynamic_select">
+  <option value="/games">All</option>
+  <?php foreach ($game_diff as $term) : ?> <option <?php if ($term->name == $difficulty ) echo 'selected'; ?> value="/games/?difficulty=<?php echo $term->name ?>"><?php echo $term->name ?></option> <?php endforeach; ?>
+</select>
+
+<script>
+    $(function(){
+      // bind change event to select
+      $('#dynamic_select').bind('change', function () {
+          var url = $(this).val(); // get selected value
+          if (url) { // require a URL
+              window.location = url; // redirect
+          }
+          return false;
+      });
+    });
+</script>
 
        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
 
